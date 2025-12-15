@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Facile-Sans";
+  src: url("/fonts/Facile Sans.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-stack-sans: "Stack Sans Text", sans-serif;
+  --font-facile: "Facile", sans-serif;
+
+  --h1-heading: 60px;
+  --h2-heading: 50px;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+
+  --ink-black: #0e171b;
+  --navy-blue: #223843;
+  --amaranth: #89043d;
+  --berry-crush: #aa4465;
+  --platinum: #eff1f3;
+  --dust-gray: #dbd3d8;
+  --desert-sand: #d8b4a0;
+
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+}
