@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap");
-@import "tailwindcss";
 
 @font-face {
   font-family: "Facile-Sans";
@@ -10,7 +9,7 @@
 }
 
 @theme {
-  --font-stack-sans: "Stack Sans Text", sans-serif;
+  /* --font-stack-sans: "Stack Sans Text", sans-serif;
   --font-facile: "Facile", sans-serif;
 
   --h1-heading: 60px;
@@ -28,6 +27,5 @@
 
   --breakpoint-mobile: 480px;
   --breakpoint-tablet: 768px;
-  --breakpoint-desktop: 1024px;
+  --breakpoint-desktop: 1024px; */
 }
-@import "tailwindcss";
