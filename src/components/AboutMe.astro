@@ -1,0 +1,94 @@
+---
+import Image1 from "../assets/me-and-clem.png";
+import Image2 from "../assets/cats-drawing.png";
+import Image3 from "../assets/hobbies.png";
+---
+
+<section class="aboutme">
+  <div class="about-images">
+    <div class="large-image">
+      <img
+        class="about-me-img"
+        src={Image1.src}
+        width="100%"
+        height="10%"
+        alt="Me and Clementine"
+      />
+    </div>
+
+    <div class="small-images">
+      <img
+        class="about-me-img small-img-1"
+        src={Image2.src}
+        width="100%"
+        height="10%"
+        alt="Doodle of My Cats"
+      /><img
+        class="about-me-img small-img-1"
+        src={Image3.src}
+        width="100%"
+        height="10%"
+        alt="Switch Controller and Hot Cocoa and Candle"
+      />
+    </div>
+  </div>
+  <div class="about-text">
+    <h2>A Little About Me</h2>
+    <p>
+      I spend my days designing websites and digital experiences, and my nights
+      hanging out with my cats, gaming, or obsessing over something creative,
+      whether it's the latest animated TV show or doodling something on my iPad!
+      I love what I do because it lets me mix storytelling, problem-solving, and
+      a little bit of art into something people actually get to use. I'm drawn
+      to clean but bold visuals, intuitive UX, and projects that make me think.
+      I'd love to creatively obsess over your next project with you! :)
+    </p>
+    <a class="btn secondary-btn" href="#">Learn More</a>
+  </div>
+</section>
+
+<style>
+  .about-me-img {
+    border-radius: 30px;
+  }
+
+  .small-images {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .small-images img {
+    flex: 1;
+    display: flex;
+    object-fit: cover;
+    width: 50%;
+    height: 170px;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .large-image img {
+    object-fit: cover;
+    height: 350px;
+  }
+
+  .aboutme {
+    background: var(--dark-gradient);
+    color: var(--platinum);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .aboutme h2,
+  .aboutme p {
+    color: var(--platinum);
+  }
+</style>

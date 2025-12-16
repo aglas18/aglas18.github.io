@@ -1,0 +1,69 @@
+---
+import { servicesList } from "../content/servicesList.ts";
+import { toolsList } from "../content/servicesList.ts";
+---
+
+<section>
+  <div class="card card-one">
+    <h2>What I like to do</h2>
+    <div class="item-group services">
+      {
+        servicesList.map((item) => (
+          <p class="service-item item">{item.service}</p>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="card card-two">
+    <h2>tOOLS I USE</h2>
+    <div class="item-group tools">
+      {toolsList.map((item) => <p class="tool-item item">{item.tool}</p>)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+  }
+
+  .item-group p {
+    text-align: center;
+  }
+
+  .item-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .card-one {
+    background-color: var(--dust-gray);
+  }
+
+  .item {
+    border-radius: 30px;
+    padding: 5px 20px;
+    margin: 0px;
+  }
+
+  .service-item {
+    border: solid 1px var(--ink-black);
+  }
+
+  .tool-item {
+    background-color: var(--dust-gray);
+  }
+
+  .card-two {
+    border: solid 1px var(--dust-gray);
+    margin-top: 20px;
+  }
+</style>
