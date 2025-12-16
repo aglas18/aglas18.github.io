@@ -8,15 +8,7 @@
   font-display: swap;
 }
 
-@theme {
-  /* --font-stack-sans: "Stack Sans Text", sans-serif;
-  --font-facile: "Facile", sans-serif;
-
-  --h1-heading: 60px;
-  --h2-heading: 50px;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-
+:root {
   --ink-black: #0e171b;
   --navy-blue: #223843;
   --amaranth: #89043d;
@@ -24,8 +16,45 @@
   --platinum: #eff1f3;
   --dust-gray: #dbd3d8;
   --desert-sand: #d8b4a0;
+}
 
-  --breakpoint-mobile: 480px;
-  --breakpoint-tablet: 768px;
-  --breakpoint-desktop: 1024px; */
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px 18px;
+}
+
+.btn {
+  background-color: var(--ink-black);
+  padding: 15px 25px 14px 25px;
+  border-radius: 100px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--platinum);
+  text-decoration: none;
+  font-family: "Facile", sans-serif;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburger-menu {
+  background-color: var(--dust-gray);
+  padding: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
 }
