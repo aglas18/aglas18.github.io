@@ -1,0 +1,75 @@
+---
+import { testimonialList } from "../content/testimonials/TestimonialList.ts";
+---
+
+<section> 
+<h2 class="flower-heading centered-heading">hEAR FROM MY COLLEAGUES</h2>
+<div class="testimonials-list">
+ {
+    testimonialList.map((item) => (
+      <div class="testimonial-item">
+        <p class="testimonial-content">{item.testimonial}</p>
+          <div class="testimonial-headings">
+            <h4>{item.name}</h4>
+            <h5>{item.title}</h5>
+          </div>
+
+        </summary>
+
+        
+      </div>
+    ))
+  } 
+</div>
+</section>
+
+<style>
+  .flower-heading.centered-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .centered-heading::before {
+    content: "";
+    position: relative;
+    left: 0;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: var(--flower-stroke) no-repeat center / contain;
+  }
+
+  .testimonial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px var(--dust-gray);
+    border-radius: 20px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+}
+
+.testimonial-item:last-of-type {
+  margin-bottom:0px;
+}
+
+.testimonial-content {
+    text-align: center;
+}
+
+.testimonial-headings {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-headings h4 {
+    color: var(--ink-black);
+    opacity: 1;
+}
+
+</style>

@@ -1,20 +1,36 @@
 ---
-const { items = [] } = Astro.props;
+import { experienceList, jobList } from "../content/experiences/Experiences.ts";
 ---
 
-<section class="accordion">
-  {
-    items.map((item) => (
-      <details class="accordion-item">
-        <summary class="accordion-title">
-          {item.title}
-          <span class="accordion-icon" />
-        </summary>
+<section>
+  <h2 class="flower-heading">Experiences</h2>
+  <div class="accordion">
+    {
+      experienceList.map((experience, index) => (
+        <details class="accordion-item" open={index === 0 ? true : undefined}>
+          <summary class="accordion-title">
+            <div>
+              <h4>{experience.date}</h4>
+              <h3>{experience.company}</h3>
+            </div>
+            <span class="accordion-icon" />
+          </summary>
 
-        <div class="accordion-content">{item.content}</div>
-      </details>
-    ))
-  }
+          <div class="accordion-content">
+            {jobList
+              .filter((job) => job.company === experience.company)
+              .map((job) => (
+                <div class="job-item">
+                  <h5>{job.date}</h5>
+                  <h3>{job.title}</h3>
+                  <p>{job.content}</p>
+                </div>
+              ))}
+          </div>
+        </details>
+      ))
+    }
+  </div>
 </section>
 
 <style>
@@ -24,8 +40,10 @@ const { items = [] } = Astro.props;
   }
 
   .accordion-item {
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
+    background-color: var(--dust-gray);
+    padding: 20px 26px;
+    margin-bottom: 20px;
+    border-radius: 20px;
   }
 
   .accordion-title {
@@ -55,4 +73,37 @@ const { items = [] } = Astro.props;
     background: currentColor;
     transition: transform 0.25s ease;
   }
+
+  .accordion-item[open] .accordion-title {
+    margin-bottom: 25px;
+  }
+
+  .job-item {
+    background-color: var(--platinum);
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+
+  .job-item :last-of-type {
+    margin-bottom: 0px;
+  }
+
+  .job-item h4 {
+    color: var(--amaranth);
+  }
 </style>
+
+<script>
+  const accordions = document.querySelectorAll(".accordion-item");
+
+  accordions.forEach((acc) => {
+    acc.addEventListener("toggle", () => {
+      if (acc.open) {
+        accordions.forEach((other) => {
+          if (other !== acc) other.removeAttribute("open");
+        });
+      }
+    });
+  });
+</script>
