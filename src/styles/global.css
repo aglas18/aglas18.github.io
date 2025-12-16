@@ -19,6 +19,7 @@
   --font-primary: "Facile Sans", system-ui, -apple-system, sans-serif;
   --font-body: "Stack Sans Text", system-ui, -apple-system, sans-serif;
   --gradient-accent: linear-gradient(45deg, #89043d, #aa4465);
+  --flower-stroke: url("/src/assets/flower-stroke.svg");
 }
 
 body {
@@ -81,6 +82,22 @@ p {
   font-family: var(--font-primary);
   font-size: 20px;
   text-decoration: none;
+}
+
+.flower-heading {
+  position: relative;
+  padding-left: 45px;
+}
+
+.flower-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 63%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: var(--flower-stroke) no-repeat center / contain;
 }
 
 @media (min-width: 768px) {

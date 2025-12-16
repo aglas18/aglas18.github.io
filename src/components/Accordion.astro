@@ -1,0 +1,58 @@
+---
+const { items = [] } = Astro.props;
+---
+
+<section class="accordion">
+  {
+    items.map((item) => (
+      <details class="accordion-item">
+        <summary class="accordion-title">
+          {item.title}
+          <span class="accordion-icon" />
+        </summary>
+
+        <div class="accordion-content">{item.content}</div>
+      </details>
+    ))
+  }
+</section>
+
+<style>
+  .accordion {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+  }
+
+  .accordion-title {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion-title::-webkit-details-marker {
+    display: none;
+  }
+
+  .accordion-icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+  }
+
+  .accordion-icon::before,
+  .accordion-icon::after {
+    content: "";
+    position: absolute;
+    background: currentColor;
+    transition: transform 0.25s ease;
+  }
+</style>

@@ -5,10 +5,10 @@ const allWork = Object.values(
 );
 ---
 
-<div class="project-item">
+<div class="project-items">
   {
     allWork.map((work: any) => (
-      <div>
+      <div class="project-item">
         <img
           class="project-image"
           src={work.frontmatter.image.url}
@@ -22,14 +22,53 @@ const allWork = Object.values(
             Lorem ipsum dolor sit amet consectetur. Mi non tellus aliquet amet
             mi massa. Tortor porta.
           </p>
+          <div class="link-btn">
+            <a href="#">View Project</a>
+            <a class="icon-circle">
+              <img
+                class="arrow"
+                src={arrow.src}
+                width="18"
+                height="18"
+                alt="arrow"
+              />
+            </a>
+          </div>
         </div>
       </div>
     ))
   }
 </div>
-<div class="link-btn">
-  <a href="#">View Project</a>
-  <a class="icon-circle">
-    <img class="arrow" src={arrow.src} width="18" height="18" alt="arrow" />
-  </a>
-</div>
+
+<style>
+  .icon-circle {
+    background-color: var(--berry-crush);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+  }
+
+  .link-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .project-item {
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+
+  .project-image {
+    border-radius: 20px;
+  }
+
+  .project-items {
+    margin-bottom: 30px;
+  }
+</style>
