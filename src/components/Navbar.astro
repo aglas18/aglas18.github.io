@@ -10,7 +10,29 @@ import hamburger from '../assets/hamburger.svg';
     <div class="right-nav">
     <a class="btn" href="#">Contact</a>
     <a class="hamburger-menu" href="#"
-			><img src={hamburger.src} width="24" height="22" alt="mobile menu" /></a
-			>
+			><img src={hamburger.src} width="24" height="22" alt="mobile menu" /></a>
     </div>
 </div>
+
+
+<style>
+    .mobile-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburger-menu {
+  background-color: var(--dust-gray);
+  padding: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+</style>

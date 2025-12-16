@@ -1,0 +1,35 @@
+---
+import arrow from "../assets/arrow.svg";
+const allWork = Object.values(
+  import.meta.glob("../content/work/*.md", { eager: true })
+);
+---
+
+<div class="project-item">
+  {
+    allWork.map((work: any) => (
+      <div>
+        <img
+          class="project-image"
+          src={work.frontmatter.image.url}
+          alt={work.frontmatter.image.alt}
+          width="100%"
+          height="100%"
+        />
+        <div>
+          <h3>Fat Pineapple Logo & branding refresh</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Mi non tellus aliquet amet
+            mi massa. Tortor porta.
+          </p>
+        </div>
+      </div>
+    ))
+  }
+</div>
+<div class="link-btn">
+  <a href="#">View Project</a>
+  <a class="icon-circle">
+    <img class="arrow" src={arrow.src} width="18" height="18" alt="arrow" />
+  </a>
+</div>

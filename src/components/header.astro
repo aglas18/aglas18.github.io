@@ -1,9 +1,72 @@
 ---
-
+import flower from '../assets/flower.svg';
 ---
 
 <div class="header">
     <div class="subheading">adrian glasmyre</div>
     <h1>Creative and Self-Motivated Designer</h1>
     <p>Passionate about transforming ideas into engaging digital experiences. Specialized in delivering website redesigns and digital assets that balance design, UX, and brand storytelling. Detail-oriented and collaborative with a strong understanding of how design translates across platforms to create seamless, user-centered experiences.</p>
+    <img class="decorative-flower" src={flower.src} width="100" height="100" alt="decorative flower" />
 </div>
+
+<style>
+    .header {
+  position: relative;
+  border-radius: 20px;
+  padding: 130px 20px 40px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Gradient layer (100% opacity) */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-accent);
+  z-index: 0;
+}
+
+/* Image layer (30% opacity) */
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/assets/mobile-header-background.png") center / cover
+    no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.header > * {
+  position: relative;
+  z-index: 2;
+}
+
+.header h1 {
+  margin-top: 0px;
+}
+
+.header h1,
+.header p {
+  color: var(--platinum);
+  margin-bottom: 0px;
+}
+
+.header p {
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.header .subheading {
+  color: var(--dust-gray);
+  margin-bottom: 0px;
+}
+
+.decorative-flower {
+  position: absolute !important;
+  top: 25px;
+  right: 25px;
+}
+
+</style>
