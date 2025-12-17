@@ -147,6 +147,9 @@ p {
 }
 
 @media (min-width: 768px) {
+  .main-wrapper {
+    padding: 0px 40px;
+  }
 }
 
 @media (min-width: 1024px) {

@@ -61,14 +61,33 @@ const allWork = Object.values(
     background-color: #fff;
     padding: 18px;
     border-radius: 30px;
-    margin-bottom: 20px;
   }
 
   .project-image {
     border-radius: 20px;
+    height: auto;
   }
 
   .project-items {
-    margin-bottom: 30px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .project-items {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .project-item {
+      width: 42%;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .project-item[data-astro-cid-zmauy3r6] {
+      width: 29%;
+    }
   }
 </style>

@@ -3,7 +3,7 @@ import { servicesList } from "../content/servicesList.ts";
 import { toolsList } from "../content/servicesList.ts";
 ---
 
-<section>
+<section class="cards">
   <div class="card card-one">
     <h2>What I like to do</h2>
     <div class="item-group services">
@@ -64,6 +64,17 @@ import { toolsList } from "../content/servicesList.ts";
 
   .card-two {
     border: solid 1px var(--dust-gray);
-    margin-top: 20px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (min-width: 1280px) {
+    .cards {
+      flex-direction: row;
+    }
   }
 </style>

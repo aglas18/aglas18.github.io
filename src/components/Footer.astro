@@ -1,0 +1,59 @@
+---
+import LinkedIn from "../assets/linkedin.svg";
+import Email from "../assets/Email.svg";
+import Messaging from "../assets/Messaging.svg";
+import logo from "../assets/logo.svg";
+---
+
+<div class="footer">
+  <a class="logo" href="#"
+    ><img
+      src={logo.src}
+      width="100"
+      height="45"
+      alt="Adrian Glasmyre Logo"
+    /></a
+  >
+  <div class="right-footer">
+    <div class="icons">
+      <a class="icon-btn" href="#"
+        ><img src={LinkedIn.src} width="17" height="17" alt="LinkedIn" /></a
+      >
+      <a class="icon-btn" href="#"
+        ><img src={Email.src} width="20" height="20" alt="Email" /></a
+      >
+      <a class="icon-btn" href="#"
+        ><img src={Messaging.src} width="20" height="20" alt="Messaging" /></a
+      >
+    </div>
+  </div>
+</div>
+
+<style>
+  .footer {
+    border-top: solid 1px var(--ink-black);
+    padding-top: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+  }
+
+  .icon-btn {
+    background-color: var(--ink-black);
+    padding: 15px 15px;
+    border-radius: 100px;
+    color: var(--platinum);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+</style>

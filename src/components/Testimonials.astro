@@ -2,7 +2,7 @@
 import { testimonialList } from "../content/testimonials/TestimonialList.ts";
 ---
 
-<section>
+<section class="testimonials">
   <h2 class="flower-heading centered-heading">hEAR FROM MY COLLEAGUES</h2>
   <div class="testimonials-list">
     {
@@ -45,7 +45,6 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
     border: solid 1px var(--dust-gray);
     border-radius: 20px;
     padding: 20px 25px;
-    margin-bottom: 20px;
   }
 
   .testimonial-item:last-of-type {
@@ -66,5 +65,39 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
   .testimonial-headings h4 {
     color: var(--ink-black);
     opacity: 1;
+  }
+
+  .testimonials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial-headings h4,
+  .testimonial-headings h5 {
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    .testimonials-list {
+      flex-direction: row;
+    }
+
+    .testimonial-item {
+      flex: 1;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .testimonials {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .project-item[data-astro-cid-zmauy3r6] {
+      width: 29%;
+    }
   }
 </style>

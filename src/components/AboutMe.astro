@@ -91,4 +91,36 @@ import Image3 from "../assets/hobbies.png";
   .aboutme p {
     color: var(--platinum);
   }
+
+  @media (min-width: 768px) {
+    .aboutme {
+      flex-direction: row;
+    }
+
+    .about-images {
+      width: 50%;
+    }
+
+    .about-text {
+      width: 50%;
+    }
+
+    .aboutme {
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .about-images {
+      width: 30%;
+    }
+
+    .about-text {
+      width: 70%;
+    }
+
+    .large-image img {
+      height: 286px;
+    }
+  }
 </style>
