@@ -14,4 +14,19 @@ export const testimonialList = [
     name: "Elise Forry",
     title: "Associate Lead Web Designer, WebFX",
   },
+  {
+    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac tincidunt libero. Morbi at tellus ornare, tempus est vitae, semper purus. Ut iaculis, sapien a congue feugiat, augue leo facilisis velit, ac pharetra ipsum ipsum vitae libero. Aenean pulvinar viverra accumsan. Cras eget eros ante. "`,
+    name: "Turd Burgler",
+    title: "Mcdonald worker",
+  },
+  {
+    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac tincidunt libero. Morbi at tellus ornare, tempus est vitae, semper purus. Ut iaculis, sapien a congue feugiat, augue leo facilisis velit, ac pharetra ipsum ipsum vitae libero. Aenean pulvinar viverra accumsan. Cras eget eros ante. "`,
+    name: "Seymour Butts",
+    title: "bomb.com employee",
+  },
+  {
+    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac tincidunt libero. Morbi at tellus ornare, tempus est vitae, semper purus. Ut iaculis, sapien a congue feugiat, augue leo facilisis velit, ac pharetra ipsum ipsum vitae libero. Aenean pulvinar viverra accumsan. Cras eget eros ante. "`,
+    name: "Henry Toots",
+    title: "Pen15 Land",
+  },
 ];

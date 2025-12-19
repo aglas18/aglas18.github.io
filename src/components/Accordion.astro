@@ -60,17 +60,20 @@ import { experienceList, jobList } from "../content/experiences/Experiences.ts";
   }
 
   .accordion-icon {
-    width: 16px;
-    height: 16px;
-    position: relative;
+    width: 32px;
+    height: 32px;
+    background: url("/assets/add.svg") no-repeat center / contain;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
   }
 
-  .accordion-icon::before,
-  .accordion-icon::after {
-    content: "";
-    position: absolute;
-    background: currentColor;
-    transition: transform 0.25s ease;
+  /* When accordion is open, show minus */
+  .accordion-item[open] .accordion-icon {
+    background-image: url("/assets/minus.svg");
+  }
+
+  .accordion-item[open] .accordion-icon {
+    transform: rotate(180deg);
   }
 
   .accordion-item[open] .accordion-title {

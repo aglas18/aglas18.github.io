@@ -1,9 +1,20 @@
 ---
 import logo from "../assets/logo.svg";
 import hamburger from "../assets/hamburger.svg";
+import close from "../assets/close.svg";
 ---
 
-<div class="mobile-nav">
+<script>
+  const hamburgerMenu = document.getElementById("hamburgerToggle");
+  const mobileNavWrapper = document.getElementById("mobile-nav-wrapper");
+  hamburgerMenu?.addEventListener("click", () => {
+    // Toggle the 'active' class on both elements
+    hamburgerMenu?.classList.toggle("active");
+    mobileNavWrapper?.classList.toggle("active");
+  });
+</script>
+
+<div class="navbar">
   <a class="logo" href="#"
     ><img
       src={logo.src}
@@ -13,15 +24,92 @@ import hamburger from "../assets/hamburger.svg";
     /></a
   >
   <div class="right-nav">
+    <div class="nav-links">
+      <ul class="desktop-links">
+        <li><a class="link" href="#">About</a></li>
+        <li><a class="link" href="#">Work</a></li>
+        <li><a class="link" href="#">Resume</a></li>
+      </ul>
+    </div>
     <a class="btn" href="#">Contact</a>
-    <a class="hamburger-menu" href="#"
-      ><img src={hamburger.src} width="24" height="22" alt="mobile menu" /></a
-    >
+    <a class="hamburger-menu" href="#" id="hamburgerToggle">
+      <img
+        class="icon hamburger"
+        src={hamburger.src}
+        width="24"
+        height="22"
+        alt="Open menu"
+      />
+      <img
+        class="icon close"
+        src={close.src}
+        width="26"
+        height="26"
+        alt="Close menu"
+      />
+    </a>
+    <div class="mobile-nav-wrapper" id="mobile-nav-wrapper">
+      <ul class="mobile-nav-links" id="mobile-nav-links">
+        <li><a class="link" href="#">About</a></li>
+        <li><a class="link" href="#">Work</a></li>
+        <li><a class="link" href="#">Resume</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <style>
-  .mobile-nav {
+  .nav-links {
+    display: none;
+  }
+  .nav-links ul {
+    list-style: none;
+    gap: 50px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-links li a {
+    text-decoration: none;
+  }
+
+  .mobile-nav-wrapper {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dust-gray);
+    z-index: 998;
+  }
+  .mobile-nav-wrapper.active {
+    display: flex;
+  }
+
+  .mobile-nav-wrapper.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #mobile-nav-links li {
+    list-style: none;
+    text-align: center;
+  }
+
+  #mobile-nav-links .link {
+    font-size: 50px;
+  }
+
+  ul#mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .navbar {
     display: flex;
     justify-content: space-between;
   }
@@ -39,9 +127,22 @@ import hamburger from "../assets/hamburger.svg";
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    z-index: 999;
   }
 
-  .mobile-nav .btn {
+  .hamburger-menu .close {
+    display: none;
+  }
+
+  .hamburger-menu.active .hamburger {
+    display: none;
+  }
+
+  .hamburger-menu.active .close {
+    display: block;
+  }
+
+  .navbar .btn {
     margin-top: 0px;
   }
 
@@ -49,8 +150,31 @@ import hamburger from "../assets/hamburger.svg";
     margin-bottom: 10px;
   }
 
-  .mobile-nav {
+  .navbar {
     margin-top: 20px;
+  }
+
+  .link {
+    font-family: var(--font-primary);
+    text-decoration: none;
+    color: var(--ink-black);
+  }
+
+  @media (min-width: 768px) {
+    .nav-links {
+      display: block;
+    }
+
+    .hamburger-menu {
+      display: none;
+    }
+
+    .right-nav {
+      gap: 50px;
+    }
+  }
+
+  @media (min-width: 1024px) {
   }
 
   @media (min-width: 1280px) {
