@@ -2,7 +2,7 @@
 import flower from "../assets/flower.svg";
 ---
 
-<section>
+<section class="masthead">
   <div class="header">
     <div class="subheading">adrian glasmyre</div>
     <h1>Creative and Self-Motivated Designer</h1>
@@ -14,7 +14,16 @@ import flower from "../assets/flower.svg";
       platforms to create seamless, user-centered experiences.
     </p>
     <img
-      class="decorative-flower"
+      class="decorative-flower mobile"
+      src={flower.src}
+      width="100"
+      height="100"
+      alt="decorative flower"
+    />
+  </div>
+  <div class="header-desktop">
+    <img
+      class="decorative-flower desktop"
       src={flower.src}
       width="100"
       height="100"
@@ -84,5 +93,71 @@ import flower from "../assets/flower.svg";
     position: absolute !important;
     top: 25px;
     right: 25px;
+  }
+
+  .header-desktop {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .header::before {
+      display: none;
+    }
+
+    .header::after {
+      display: none;
+    }
+
+    .masthead {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .header {
+      width: 50%;
+    }
+
+    .header .subheading {
+      color: var(--amaranth);
+    }
+
+    .header h1,
+    .header p {
+      color: var(--ink-black);
+    }
+
+    .header {
+      padding-bottom: 0px;
+    }
+
+    .header-desktop {
+      display: block;
+      background: var(--gradient-accent);
+      width: 50%;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .header-desktop::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("/assets/desktop-header-background.png") center / cover
+        no-repeat;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    .decorative-flower.mobile {
+      display: none;
+    }
+
+    .decorative-flower.desktop {
+      bottom: 25px;
+      right: 25px;
+      width: 200px;
+      height: 200px;
+      top: auto;
+    }
   }
 </style>

@@ -3,39 +3,57 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
 ---
 
 <section class="testimonials">
-  <h2 class="flower-heading centered-heading">hEAR FROM MY COLLEAGUES</h2>
-  <div class="testimonials-list">
-    {
-      testimonialList.map((item) => (
-        <div class="testimonial-item">
-          <p class="testimonial-content">{item.testimonial}</p>
-          <div class="testimonial-headings">
-            <h4>{item.name}</h4>
-            <h5>{item.title}</h5>
+  <h2 class="flower-heading centered-heading">HEAR FROM MY COLLEAGUES</h2>
+
+  <div class="testimonials-carousel" id="testimonials-carousel">
+    <div class="testimonials-list" id="testimonials-list">
+      {
+        testimonialList.map((item) => (
+          <div class="testimonial-item">
+            <p class="testimonial-content">{item.testimonial}</p>
+            <div class="testimonial-headings">
+              <h4>{item.name}</h4>
+              <h5>{item.title}</h5>
+            </div>
           </div>
-        </div>
-      ))
-    }
+        ))
+      }
+    </div>
+    <div class="carousel-dots" id="carousel-dots"></div>
   </div>
 </section>
 
-<style>
+<style is:global>
   .flower-heading.centered-heading {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0px;
+    padding: 0;
   }
 
   .centered-heading::before {
     content: "";
-    position: relative;
+    position: relative !important;
     left: 0;
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
     background: var(--flower-stroke) no-repeat center / contain;
+  }
+
+  .testimonials-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px; /* space for dots */
+  }
+
+  .testimonials-list {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.6s ease;
+    will-change: transform;
   }
 
   .testimonial-item {
@@ -45,10 +63,8 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
     border: solid 1px var(--dust-gray);
     border-radius: 20px;
     padding: 20px 25px;
-  }
-
-  .testimonial-item:last-of-type {
-    margin-bottom: 0px;
+    width: 100%;
+    min-width: 0;
   }
 
   .testimonial-content {
@@ -57,9 +73,43 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
 
   .testimonial-headings {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+
+  .testimonial-headings h4,
+  .testimonial-headings h5 {
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Carousel Dots */
+  #carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  #carousel-dots > .carousel-dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--dust-gray);
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      transform 0.3s;
+  }
+
+  #carousel-dots > .carousel-dot:hover {
+    transform: scale(1.2);
+  }
+
+  #carousel-dots > .carousel-dot.active {
+    background-color: var(--ink-black);
   }
 
   .testimonial-headings h4 {
@@ -67,37 +117,145 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
     opacity: 1;
   }
 
-  .testimonials-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .testimonial-headings h4,
-  .testimonial-headings h5 {
-    text-align: center;
+  @media (max-width: 1023px) {
+    .testimonial-item {
+      display: none;
+    }
+    .testimonial-item.active {
+      display: flex;
+    }
   }
 
   @media (min-width: 1024px) {
-    .testimonials-list {
-      flex-direction: row;
-    }
-
     .testimonial-item {
-      flex: 1;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .testimonials {
+      flex: 0 0 calc((100% - 203px) / 3);
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .project-item {
-      width: 29%;
+      justify-content: space-between;
     }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("testimonials-carousel");
+    const list = document.getElementById("testimonials-list");
+    const items = Array.from(list.querySelectorAll(".testimonial-item"));
+    const total = items.length;
+    const visibleCount = 3;
+    const intervalTime = 5000;
+    let index = 0;
+    let intervalId;
+
+    // -------------------- Create Dots --------------------
+    const dotsContainer = document.getElementById("carousel-dots");
+    items.forEach((_, i) => {
+      const dot = document.createElement("div");
+      dot.classList.add("carousel-dot");
+      if (i === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function updateDots() {
+      const dots = Array.from(dotsContainer.children);
+      dots.forEach((dot) => dot.classList.remove("active"));
+      dots[index % total].classList.add("active");
+    }
+
+    // -------------------- Clone for infinite loop --------------------
+    for (let i = 0; i < visibleCount; i++) {
+      const clone = items[i].cloneNode(true);
+      clone.classList.add("is-clone");
+      list.appendChild(clone);
+    }
+    const allItems = Array.from(list.querySelectorAll(".testimonial-item"));
+
+    // -------------------- Carousel Update --------------------
+    function updateCarousel() {
+      const isDesktop = window.innerWidth >= 1024;
+
+      if (!isDesktop) {
+        items.forEach((item) => item.classList.remove("active"));
+        items[index].classList.add("active");
+        index = (index + 1) % total;
+        updateDots();
+        return;
+      }
+
+      const gap = 20;
+      const itemWidth = allItems[0].offsetWidth + gap;
+      index++;
+      list.style.transition = "transform 0.6s ease";
+      list.style.transform = `translateX(-${itemWidth * index}px)`;
+
+      if (index === total) {
+        setTimeout(() => {
+          list.style.transition = "none";
+          list.style.transform = "translateX(0)";
+          index = 0;
+        }, 600);
+      }
+
+      updateDots();
+    }
+
+    function goToSlide(i) {
+      index = i;
+      updateCarousel();
+    }
+
+    // -------------------- Auto Rotate --------------------
+    function startCarousel() {
+      intervalId = setInterval(updateCarousel, intervalTime);
+    }
+    function stopCarousel() {
+      clearInterval(intervalId);
+    }
+
+    items[0].classList.add("active");
+    startCarousel();
+
+    carousel.addEventListener("mouseenter", stopCarousel);
+    carousel.addEventListener("mouseleave", startCarousel);
+
+    // -------------------- Swipe / Drag Support --------------------
+    let startX = 0;
+    let isDragging = false;
+
+    list.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      startX = e.pageX;
+    });
+    list.addEventListener("touchstart", (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+    });
+
+    function handleDragEnd(endX) {
+      if (!isDragging) return;
+      isDragging = false;
+      const diff = endX - startX;
+      if (Math.abs(diff) > 50) {
+        if (diff < 0) index++;
+        else index--;
+        if (index < 0) index = 0;
+        if (index > total - 1) index = total - 1;
+        updateCarousel();
+      }
+    }
+
+    list.addEventListener("mouseup", (e) => handleDragEnd(e.pageX));
+    list.addEventListener("mouseleave", (e) => handleDragEnd(e.pageX));
+    list.addEventListener("touchend", (e) =>
+      handleDragEnd(e.changedTouches[0].clientX)
+    );
+
+    window.addEventListener("resize", () => {
+      index = 0;
+      list.style.transition = "none";
+      list.style.transform = "translateX(0)";
+      items.forEach((item, i) => item.classList.toggle("active", i === 0));
+      updateDots();
+    });
+  });
+</script>

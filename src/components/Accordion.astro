@@ -38,6 +38,12 @@ import { experienceList, jobList } from "../content/experiences/Experiences.ts";
     margin: 0 auto;
   }
 
+  .accordion-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .accordion-item {
     background-color: var(--dust-gray);
     padding: 20px 26px;
@@ -84,7 +90,6 @@ import { experienceList, jobList } from "../content/experiences/Experiences.ts";
     background-color: var(--platinum);
     padding: 20px;
     border-radius: 30px;
-    margin-bottom: 20px;
   }
 
   .job-item :last-of-type {
@@ -93,6 +98,16 @@ import { experienceList, jobList } from "../content/experiences/Experiences.ts";
 
   .job-item h4 {
     color: var(--amaranth);
+  }
+
+  @media (min-width: 1280px) {
+    .accordion-content {
+      flex-direction: row;
+    }
+
+    .job-item {
+      flex: 1;
+    }
   }
 </style>
 

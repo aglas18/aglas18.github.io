@@ -15,18 +15,18 @@ export const testimonialList = [
     title: "Associate Lead Web Designer, WebFX",
   },
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac tincidunt libero. Morbi at tellus ornare, tempus est vitae, semper purus. Ut iaculis, sapien a congue feugiat, augue leo facilisis velit, ac pharetra ipsum ipsum vitae libero. Aenean pulvinar viverra accumsan. Cras eget eros ante. "`,
-    name: "Turd Burgler",
-    title: "Mcdonald worker",
+    testimonial: `"Adrian has been helping me with a few Rainmaker projects lately, and working with her has been so fun! Her eye for design has been amazing, and she has offered plenty of creative solutions with the limited block options! I also really appreciate how quickly she has completed her work under the already tight deadlines that a Rainmaker redesign entails."`,
+    name: "Hailey Carey",
+    title: "Project Manager, WebFX",
   },
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac tincidunt libero. Morbi at tellus ornare, tempus est vitae, semper purus. Ut iaculis, sapien a congue feugiat, augue leo facilisis velit, ac pharetra ipsum ipsum vitae libero. Aenean pulvinar viverra accumsan. Cras eget eros ante. "`,
-    name: "Seymour Butts",
-    title: "bomb.com employee",
+    testimonial: `"Adrian created some of the best designs I've ever seen for [client]'s BuyFlow redesign prototypes and deserves a HUGE shout out! These designs are 1000x more visually appealing and easier to follow compared to the client's current BuyFlow process. She absolutely knocked it out of the park with simplifying the entire sign up process for a user, adding strategic visual elements, and making a V2 of the BuyFlow, removing & adding a step in record time. I cannot wait for the client to see these designs -- I'm confident they'll love them just as much as Amanda and I do! "`,
+    name: "Rachel Cataldo",
+    title: "Internet Marketer, WebFX",
   },
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac tincidunt libero. Morbi at tellus ornare, tempus est vitae, semper purus. Ut iaculis, sapien a congue feugiat, augue leo facilisis velit, ac pharetra ipsum ipsum vitae libero. Aenean pulvinar viverra accumsan. Cras eget eros ante. "`,
-    name: "Henry Toots",
-    title: "Pen15 Land",
+    testimonial: `"I've worked with Adrian on a few HP projects to help WOW clients and she has become a go-to for client-wow projects because of her excellent attention to detail and communication within projects. Most recently Adrian helped with a project for [client] to implement some quick design wins and UX suggestions to improve their site. This was a client who has been evaluating their partnership with WebFX and Adrian's work here goes a long way to strengthening that relationship! I appreciate you Adrian and all you do to help our clients :) "`,
+    name: "Alex White",
+    title: "Title, WebFX",
   },
 ];
