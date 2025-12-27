@@ -150,6 +150,26 @@ p {
   .main-wrapper {
     padding: 0px 40px;
   }
+
+  .btn:hover {
+    border: solid 1px var(--ink-black);
+    color: var(--ink-black);
+    background-color: transparent;
+  }
+
+  .secondary-btn:hover {
+    border: solid 1px var(--dust-gray);
+    color: var(--dust-gray);
+    background-color: transparent;
+  }
+
+  .link-btn:hover a {
+    color: var(--amaranth);
+  }
+
+  .link-btn:hover .icon-circle {
+    background-color: var(--amaranth);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -158,31 +178,31 @@ p {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   h1 {
     font-size: 60px;
     line-height: 70px;
   }
-  /* 
+
   h2 {
     font-size: 50px;
     line-height: 50px;
   }
 
   h3 {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 32px;
+    line-height: 38px;
   }
 
   h4 {
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 25px;
+    line-height: 35px;
   }
 
   h5 {
-    font-size: 30px;
-    line-height: 35px;
-  } */
+    font-size: 22px;
+    line-height: 32px;
+  }
 
   p {
     font-size: 18px;
@@ -190,7 +210,20 @@ p {
   }
 
   .btn {
-    padding: 13px 25px 15px 25px;
+    padding: 15px 35px 18px 35px;
+    font-size: 20px;
+  }
+
+  .flower-heading::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .flower-heading {
+    padding-left: 55px;
+  }
+
+  .link {
     font-size: 20px;
   }
 }

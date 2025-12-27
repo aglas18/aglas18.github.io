@@ -69,6 +69,8 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
 
   .testimonial-content {
     text-align: center;
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .testimonial-headings {
@@ -131,6 +133,30 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
       flex: 0 0 calc((100% - 203px) / 3);
       display: flex;
       justify-content: space-between;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .testimonials {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .testimonial-headings h5 {
+      font-size: 18px;
+    }
+
+    .testimonial-headings h4 {
+      font-size: 22px;
+    }
+
+    .testimonial-content {
+      margin-bottom: 0px;
+    }
+
+    .flower-heading.centered-heading {
+      width: 30%;
     }
   }
 </style>
