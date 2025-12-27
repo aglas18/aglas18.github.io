@@ -81,14 +81,22 @@ const allWork = Object.values(
 
     .project-item:hover {
       box-shadow: 0px 0px 20px #0e171b29;
+      transform: translateY(-2px);
     }
 
     .project-item:hover .link-btn a {
-      color: var(--amaranth);
+      color: var(--navy-blue);
     }
 
     .project-item:hover .link-btn .icon-circle {
-      background-color: var(--amaranth);
+      background-color: var(--navy-blue);
+    }
+
+    .project-item {
+      transition:
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
     }
   }
 
@@ -99,6 +107,14 @@ const allWork = Object.values(
 
     .project-item p {
       margin: 10px 0;
+    }
+
+    .project-item {
+      padding: 25px;
+    }
+
+    .project-image {
+      margin-bottom: 20px;
     }
   }
 </style>
