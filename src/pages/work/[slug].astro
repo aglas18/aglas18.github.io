@@ -1,0 +1,338 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import CTA from "../../components/CTA.astro";
+import "../../../src/styles/global.css";
+
+import type { WorkFile } from "../../pages/work/types";
+
+// -------------------------------
+// Dynamic routes
+// -------------------------------
+export async function getStaticPaths() {
+  const allWork = Object.values(
+    import.meta.glob("../../content/work/*.md", { eager: true })
+  ) as WorkFile[];
+
+  return allWork.map((work) => ({
+    params: { slug: work.frontmatter.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const allWork = Object.values(
+  import.meta.glob("../../content/work/*.md", { eager: true })
+) as WorkFile[];
+
+const project = allWork.find((w) => w.frontmatter.slug === slug);
+
+if (!project) {
+  throw new Error(`Project not found: ${slug}`);
+}
+
+const { frontmatter } = project;
+---
+
+<div class="main-wrapper">
+  <Navbar />
+
+  <!-- Hero Image -->
+  <section class="hero">
+    <div>
+      <h5>{frontmatter.projectType}</h5>
+      <h1>{frontmatter.title}</h1>
+    </div>
+    <img src={frontmatter.heroImage.src} alt={frontmatter.heroImage.alt} />
+  </section>
+
+  <!-- Title & Long Description -->
+  <section class="project-info">
+    <div class="project-cards">
+      <div class="card card-one">
+        <h3>About the Project</h3>
+        <ul>
+          {frontmatter.about.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+
+      <div class="card card-two">
+        <h3>tOOLS used</h3>
+        <ul>
+          {frontmatter.tools.map((tool) => <li>{tool}</li>)}
+        </ul>
+      </div>
+    </div>
+
+    <div class="project-description">
+      <h2>The Brief</h2>
+      <p>{frontmatter.longDescription}</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <!-- Row 1 -->
+    <div class="row row-1">
+      <div class="col col-left">
+        <img
+          src={frontmatter.gallery[0].src}
+          alt={frontmatter.gallery[0].alt}
+        />
+        <div class="bottom-row">
+          <img
+            src={frontmatter.gallery[1].src}
+            alt={frontmatter.gallery[1].alt}
+          />
+          <img
+            src={frontmatter.gallery[2].src}
+            alt={frontmatter.gallery[2].alt}
+          />
+        </div>
+      </div>
+      <div class="col col-right">
+        <img
+          src={frontmatter.gallery[3].src}
+          alt={frontmatter.gallery[3].alt}
+        />
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row row-2">
+      <img src={frontmatter.gallery[4].src} alt={frontmatter.gallery[4].alt} />
+      <img src={frontmatter.gallery[5].src} alt={frontmatter.gallery[5].alt} />
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row row-3">
+      <img src={frontmatter.gallery[6].src} alt={frontmatter.gallery[6].alt} />
+      <img
+        src={frontmatter.gallery[7]?.src}
+        alt={frontmatter.gallery[7]?.alt}
+      />
+      <img
+        src={frontmatter.gallery[8]?.src}
+        alt={frontmatter.gallery[8]?.alt}
+      />
+    </div>
+  </section>
+  <CTA />
+</div>
+
+<style>
+  .hero img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .hero img {
+    flex: 1 !important;
+    width: 40% !important;
+  }
+
+  .hero {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
+  .hero h1 {
+    margin-top: 0px;
+  }
+
+  .project-info {
+    background-color: var(--ink-black);
+  }
+
+  .project-info {
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+    padding-bottom: 80px !important;
+    border-radius: 30px;
+  }
+
+  .project-description h2,
+  .project-description p {
+    color: var(--platinum);
+  }
+
+  .project-description h2 {
+    margin-bottom: 20px;
+  }
+
+  .project-description {
+    flex: 1;
+  }
+
+  .project-cards {
+    width: 35%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card li {
+    list-style: none;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 100px;
+  }
+
+  .card ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 9px;
+    justify-content: center;
+    padding-left: 0px;
+  }
+
+  .card-one li {
+    border: solid 1px var(--navy-blue);
+  }
+
+  .card-two li {
+    background-color: var(--platinum);
+  }
+
+  .project-info {
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+    padding-bottom: 80px !important;
+    gap: 50px;
+  }
+
+  .project-description h2,
+  .project-description p {
+    color: var(--platinum);
+  }
+
+  .project-description h2 {
+    margin-bottom: 20px;
+  }
+
+  .card {
+    border-radius: 30px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-one {
+    background-color: var(--platinum);
+  }
+
+  .card-two {
+    border: solid 1px var(--platinum);
+  }
+
+  .card-two h3 {
+    color: var(--platinum);
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Row 1: 2 columns */
+  .row-1 {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .row-1 .col-left {
+    width: 50%;
+    flex: 1;
+  }
+
+  .col-left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .col-left img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* limit height */
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .col-left .bottom-row {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .col-left .bottom-row img {
+    flex: 1;
+    width: 49%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .col-right {
+    flex: 1;
+  }
+
+  .col-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Row 2: 2 columns */
+  .row-2 {
+    display: flex;
+    gap: 1rem;
+    height: 625px;
+  }
+
+  .row-2 img {
+    flex: 1;
+    width: 50%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  /* Row 3: 3 columns */
+  .row-3 {
+    display: flex;
+    gap: 1rem;
+    height: 430px;
+  }
+
+  .row-3 img {
+    flex: 1;
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  /* Responsive: stack rows vertically on small screens */
+  @media (max-width: 768px) {
+    .row-1,
+    .row-2,
+    .row-3 {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .col-left .bottom-row {
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+  }
+</style>

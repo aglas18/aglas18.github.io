@@ -98,7 +98,8 @@ h5 {
   text-transform: uppercase;
 }
 
-p {
+p,
+li {
   font-family: var(--font-body);
   font-size: 16px;
   color: var(--navy-blue);
@@ -144,6 +145,30 @@ p {
   width: 30px;
   height: 30px;
   background: var(--flower-stroke) no-repeat center / contain;
+}
+
+.main-wrapper {
+  position: relative;
+}
+
+/* Bottom gradient */
+.main-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px; /* taller than visible gradient to ensure smooth fade */
+  background: radial-gradient(
+    circle at bottom center,
+    rgba(197, 109, 138, 0.64) 0%,
+    /* fully opaque at bottom */ rgba(197, 109, 138, 0.4) 40%,
+    /* start fading gradually */ rgba(197, 109, 138, 0.1) 70%,
+    /* mostly transparent */ rgba(239, 241, 243, 0) 100%
+      /* fully transparent at top */
+  );
+  z-index: -1;
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {

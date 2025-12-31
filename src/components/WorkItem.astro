@@ -1,5 +1,6 @@
 ---
 import arrow from "../assets/arrow.svg";
+
 const allWork = Object.values(
   import.meta.glob("../content/work/*.md", { eager: true })
 );
@@ -11,19 +12,18 @@ const allWork = Object.values(
       <div class="project-item">
         <img
           class="project-image"
-          src={work.frontmatter.image.url}
-          alt={work.frontmatter.image.alt}
+          src={work.frontmatter.cardImage.src}
+          alt={work.frontmatter.cardImage.alt}
           width="100%"
           height="100%"
         />
+
         <div>
-          <h3>Fat Pineapple Logo & branding refresh</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Mi non tellus aliquet amet
-            mi massa. Tortor porta.
-          </p>
+          <h3>{work.frontmatter.title}</h3>
+          <p>{work.frontmatter.shortDescription}</p>
+
           <div class="link-btn">
-            <a href="#">View Project</a>
+            <a href={`/work/${work.frontmatter.slug}`}>View Project</a>
             <a class="icon-circle">
               <img
                 class="arrow"
