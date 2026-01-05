@@ -33,21 +33,21 @@ tools:
 
 gallery:
   - src: /assets/images/fat-pineapple/fp-gradient-logo.png
-    alt: Logo exploration
+    alt: Gradient Logo
   - src: /assets/images/fat-pineapple/fp-color-logo.png
-    alt: Packaging mockup
+    alt: Color logo
   - src: /assets/images/fat-pineapple/fp-bw-logo.png
-    alt: Social media assets
+    alt: Black & White Logo
   - src: /assets/images/fat-pineapple/fat-pineapple-branding-guidelines.png
-    alt: Color palette
+    alt: Branding Guidelines
   - src: /assets/images/fat-pineapple/fp-shirt.png
-    alt: Typography system
+    alt: Fat Pineapple Shirt
   - src: /assets/images/fat-pineapple/fat-pineapple-social-media.png
-    alt: Brand guidelines
+    alt: Social Media
   - src: /assets/images/fat-pineapple/fp-logo-colors.png
-    alt: Final logo lockup
+    alt: FP Color Logo
   - src: /assets/images/fat-pineapple/fp-mockup.png
-    alt: Final logo lockup
+    alt: FP Meal Mockup
   - src: /assets/images/fat-pineapple/fp-business-carsd.png
-    alt: Final logo lockup
+    alt: Business Cards
 ---

@@ -1,6 +1,6 @@
 ---
-title: Another Thing
-slug: anotherthing
+title: Stop Modern Day Slavery Stickers & Illustrations
+slug: smds
 
 # Homepage / shared content
 cardImage:
@@ -10,15 +10,12 @@ cardImage:
 shortDescription: >
   Lorem ipsum dolor sit amet consectetur. Mi non tellus aliquet amet mi massa.
 
-
-  projectType: >
+projectType: >
   Logo & branding Refresh
 
 # Individual project page content
 longDescription: >
-  This branding refresh focused on clarifying the Fat Pineapple identity while
-  maintaining its playful, welcoming tone. The project included logo refinement,
-  typography updates, and a flexible visual system designed to scale across platforms.
+  As seen in Nasdaq - https://www.nasdaq.com/articles/rachel-ramenda%3A-shining-a-light-on-human-trafficking-2021-01-22
 
 heroImage:
   src: src\content\images\fat-pineapple\fat-pineapple-branding.png
