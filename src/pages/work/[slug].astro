@@ -120,39 +120,37 @@ const { frontmatter } = project;
 </div>
 
 <style>
+  /* ===== HERO ===== */
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
   .hero img {
     width: 100%;
     border-radius: 20px;
     margin-bottom: 2rem;
   }
 
-  .hero img {
-    flex: 1 !important;
-    width: 40% !important;
-  }
-
-  .hero {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: row;
-  }
-
   .hero h1 {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
+  /* ===== PROJECT INFO ===== */
   .project-info {
     background-color: var(--ink-black);
-  }
-
-  .project-info {
     display: flex;
-    align-items: center;
-    padding: 80px 60px;
-    padding-bottom: 80px !important;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 40px 24px;
     border-radius: 30px;
   }
 
+  .project-description {
+    width: 100%;
+  }
+
   .project-description h2,
   .project-description p {
     color: var(--platinum);
@@ -162,56 +160,12 @@ const { frontmatter } = project;
     margin-bottom: 20px;
   }
 
-  .project-description {
-    flex: 1;
-  }
-
+  /* ===== CARDS ===== */
   .project-cards {
-    width: 35%;
-    gap: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-  }
-
-  .card li {
-    list-style: none;
-    padding: 10px 20px;
-    width: fit-content;
-    border-radius: 100px;
-  }
-
-  .card ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 9px;
-    justify-content: center;
-    padding-left: 0px;
-  }
-
-  .card-one li {
-    border: solid 1px var(--navy-blue);
-  }
-
-  .card-two li {
-    background-color: var(--platinum);
-  }
-
-  .project-info {
-    display: flex;
-    align-items: center;
-    padding: 80px 60px;
-    padding-bottom: 80px !important;
-    gap: 50px;
-  }
-
-  .project-description h2,
-  .project-description p {
-    color: var(--platinum);
-  }
-
-  .project-description h2 {
-    margin-bottom: 20px;
+    gap: 20px;
   }
 
   .card {
@@ -222,48 +176,74 @@ const { frontmatter } = project;
     align-items: center;
   }
 
+  .card ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .card li {
+    list-style: none;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 100px;
+  }
+
   .card-one {
     background-color: var(--platinum);
+  }
+
+  .card-one li {
+    border: solid 1px var(--navy-blue);
   }
 
   .card-two {
     border: solid 1px var(--platinum);
   }
 
+  .card-two li {
+    background-color: var(--platinum);
+  }
+
   .card-two h3 {
     color: var(--platinum);
   }
 
+  /* ===== GALLERY (mobile stacked) ===== */
   .gallery {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  /* Row 1: 2 columns */
-  .row-1 {
+  .row-1,
+  .row-2,
+  .row-3 {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
   }
 
-  .row-1 .col-left {
-    width: 50%;
-    flex: 1;
+  .row-1 img,
+  .row-2 img,
+  .row-3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .col-left,
+  .col-right {
+    width: 100%;
   }
 
   .col-left {
-    flex: 2;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  .col-left img {
-    width: 100%;
-    height: auto;
-    max-height: 300px; /* limit height */
-    object-fit: cover;
-    border-radius: 15px;
   }
 
   .col-left .bottom-row {
@@ -272,67 +252,79 @@ const { frontmatter } = project;
   }
 
   .col-left .bottom-row img {
-    flex: 1;
-    width: 49%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .col-right {
-    flex: 1;
-  }
-
-  .col-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-
-  /* Row 2: 2 columns */
-  .row-2 {
-    display: flex;
-    gap: 1rem;
-    height: 625px;
-  }
-
-  .row-2 img {
-    flex: 1;
     width: 50%;
-    height: 100%;
-
-    object-fit: cover;
-    border-radius: 15px;
   }
 
-  /* Row 3: 3 columns */
-  .row-3 {
-    display: flex;
-    gap: 1rem;
-    height: 430px;
-  }
-
-  .row-3 img {
-    flex: 1;
-    width: 30%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-  }
-
-  /* Responsive: stack rows vertically on small screens */
-  @media (max-width: 768px) {
-    .row-1,
-    .row-2,
-    .row-3 {
-      flex-direction: column;
-      gap: 1rem;
+  @media (min-width: 769px) {
+    .hero {
+      flex-direction: row;
+      align-items: flex-end;
     }
 
-    .col-left .bottom-row {
+    .hero img {
+      flex: 1 !important;
+      width: 40% !important;
+    }
+
+    .project-info {
       flex-direction: row;
-      gap: 0.5rem;
+      align-items: center;
+      padding: 80px 60px;
+      gap: 50px;
+    }
+
+    .project-cards {
+      width: 35%;
+    }
+
+    /* Gallery desktop layout */
+    .row-1 {
+      flex-direction: row;
+    }
+
+    .row-1 .col-left {
+      width: 50%;
+      flex: 1;
+    }
+
+    .col-left img {
+      max-height: 300px;
+    }
+
+    .col-left .bottom-row img {
+      flex: 1;
+      width: 49%;
+      height: 100%;
+      border-radius: 8px;
+    }
+
+    .col-right {
+      flex: 1;
+    }
+
+    .col-right img {
+      height: 100%;
+      border-radius: 20px;
+    }
+
+    .row-2 {
+      flex-direction: row;
+      height: 585px;
+    }
+
+    .row-2 img {
+      width: 50%;
+      height: 100%;
+    }
+
+    .row-3 {
+      flex-direction: row;
+      height: 430px;
+    }
+
+    .row-3 img {
+      width: 33.3%;
+      height: 100%;
     }
   }
 </style>
