@@ -27,6 +27,6 @@ export const testimonialList = [
   {
     testimonial: `"I've worked with Adrian on a few HP projects to help WOW clients and she has become a go-to for client-wow projects because of her excellent attention to detail and communication within projects. Most recently Adrian helped with a project for [client] to implement some quick design wins and UX suggestions to improve their site. This was a client who has been evaluating their partnership with WebFX and Adrian's work here goes a long way to strengthening that relationship! I appreciate you Adrian and all you do to help our clients :) "`,
     name: "Alex White",
-    title: "Title, WebFX",
+    title: "Interactive Customer Success Manager, WebFX",
   },
 ];

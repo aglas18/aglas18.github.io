@@ -1,21 +1,23 @@
 ---
-title: Rosewood Bourbon Distillery Logo & Branding
+title: Rosewood Bourbon Distillery Logo & Branding Concept
 slug: rosewood
 
 # Homepage / shared content
 cardImage:
-  src: /assets/images/rosewood/rosewood-logos.png
+  src: /assets/images/rosewood/rosewood-card.png
   alt: Rosewood Bourbon Logos
 
 shortDescription: >
-  Lorem ipsum dolor sit amet consectetur. Mi non tellus aliquet amet mi massa.
+  A conceptual bourbon brand exploring logo design, product and packaging concepts, stationery, and a promotional website.
 
 projectType: >
-  Logo & branding Refresh
+  Concept Brand & Packaging Design
 
 # Individual project page content
-longDescription: >
-  As part of my Corporate Branding course in college, I created this bourbon distellery brand. Beyond the specs for this project, I wanted to create a brand that was women-focused in a male dominated field, while aiming to design a visual identity that exudes luxury & history.
+longDescription: |
+  Rosewood Bourbon is a conceptual spirits brand developed as part of LVC's Corporate Branding course. The project explores what a refined, high-end bourbon brand could look like when rooted in tradition but presented with a modern sensibility.
+
+  The work includes logo design, product and label design, stationery, and web design. Particular emphasis was placed on crafting a strong, timeless logo and visual system that communicates luxury, craftsmanship, and depth-setting the tone for the entire brand experience.
 
 heroImage:
   src: /assets/images/rosewood/rosewood-logos.png
@@ -26,10 +28,14 @@ about:
   - Brand Identity
   - Stationary Design
   - Merch Design
+  - Packaging & Label Design
+  - Social Media Design
+  - UI/UX Design
 
 tools:
   - Illustrator
   - Photoshop
+  - Figma
 
 gallery:
   - src: /assets/images/rosewood/horizontal-logo.png

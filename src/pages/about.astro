@@ -1,0 +1,126 @@
+---
+import Navbar from "../components/Navbar.astro";
+import CTA from "../components/CTA.astro";
+import "../styles/global.css";
+---
+
+<div class="main-wrapper">
+  <Navbar />
+
+  <section class="about-hero">
+    <h1>Hi, I'm Adrian!</h1>
+    <p>
+      A creative designer and problem-solver focused on developing thoughtful
+      and visually compelling digital experiences and brands.
+    </p>
+  </section>
+
+  <section class="about-content">
+    <div class="about-text">
+      <h2>My Background</h2>
+      <p>
+        I fell in love with graphic design through my art classes in high
+        school. I loved drawing and creating, but I ultimately found my passion
+        in visual storytelling and using design to solve problems. I enjoy
+        digging into the why behind a challenge just as much as crafting the
+        final solution, whether that means refining a design system, shaping a
+        brand's visual language, or polishing the small details that make an
+        experience feel intentional.
+      </p>
+
+      <p>
+        As a fan of TV shows, books, and video games, storytelling and
+        problem-solving sit at the core of my work. I am fascinated by how
+        thoughtful design can guide someone, clarify an idea, and make an
+        experience feel effortless.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="/images/about-me.jpg" alt="Portrait of Adrian" />
+    </div>
+  </section>
+
+  <section class="education">
+    <h2>Education</h2>
+
+    <p>B.S. in Digital Communications and Creative Arts</p>
+    <p>Lebanon Valley College</p>
+    <p>Graduated 2022</p>
+    <p>
+      My education gave me a strong foundation in visual design, typography,
+      color theory, and concept development, while also encouraging
+      experimentation and critical thinking. Through studio courses and
+      collaborative projects, I learned how to translate ideas into visual
+      systems and communicate effectively through design.
+    </p>
+  </section>
+
+  <CTA />
+</div>
+<style>
+  .about-hero {
+    padding: 60px 25px 40px;
+    max-width: 900px;
+  }
+
+  .about-hero h1 {
+    margin-bottom: 15px;
+  }
+
+  .about-hero p {
+    max-width: 600px;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .education {
+    background-color: var(--ink-black);
+    padding: 60px;
+    border-radius: 30px;
+  }
+
+  .education h2 {
+    color: var(--platinum);
+  }
+
+  .education p {
+    color: var(--platinum);
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) {
+    .about-content {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1.2;
+    }
+
+    .about-image {
+      flex: 1;
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .about-hero {
+      padding: 80px 0px 60px;
+    }
+
+    .about-content {
+      gap: 60px;
+    }
+  }
+</style>

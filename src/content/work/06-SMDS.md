@@ -4,32 +4,32 @@ slug: smds
 
 # Homepage / shared content
 cardImage:
-  src: /assets/images/fat-pineapple/fat-pineapple-branding.png
+  src: /assets/images/smds/smds-card.png
   alt: Fat Pineapple Branding
 
 shortDescription: >
-  Lorem ipsum dolor sit amet consectetur. Mi non tellus aliquet amet mi massa.
+  Illustration and graphic design work focused on advocacy, including custom sticker designs and graphic illustrations.
 
 projectType: >
-  Logo & branding Refresh
+  Illustration & Visual Advocacy
 
 # Individual project page content
-longDescription: >
-  As seen in Nasdaq - https://www.nasdaq.com/articles/rachel-ramenda%3A-shining-a-light-on-human-trafficking-2021-01-22
+longDescription: |
+  This project focuses on creating impactful sticker and graphic illustrations in support of Stop Modern Day Slavery. The designs aim to communicate heavy subject matter in a way that feels accessible, shareable, and visually compelling.
+
+  Through bold illustration styles and clear messaging, the work is designed to raise awareness, spark conversation, and encourage engagement across both physical and digital platforms. <strong>As seen in <a href="https://www.nasdaq.com/articles/rachel-ramenda%3A-shining-a-light-on-human-trafficking-2021-01-22" target="_blank" rel="noopener noreferrer">Nasdaq.</a></strong>
 
 heroImage:
   src: src\content\images\fat-pineapple\fat-pineapple-branding.png
   alt: Fat Pineapple brand hero image
 
 about:
-  - Brand strategy
-  - Logo refinement
-  - Visual system
+  - Graphic Illustration
+  - Sticker Design
 
 tools:
   - Illustrator
-  - InDesign
-  - Figma
+  - PhotoShop
 
 gallery:
   - src: ../images/fat-pineapple/gallery-1.jpg

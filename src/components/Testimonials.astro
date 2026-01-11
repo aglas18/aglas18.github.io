@@ -47,6 +47,7 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
     overflow: hidden;
     position: relative;
     padding-bottom: 40px; /* space for dots */
+    padding-left: 1px; /* prevent left border clipping */
   }
 
   .testimonials-list {
@@ -54,6 +55,7 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
     gap: 20px;
     transition: transform 0.6s ease;
     will-change: transform;
+    margin-left: -1px; /* offset the padding to maintain alignment */
   }
 
   .testimonial-item {
@@ -83,6 +85,16 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
   .testimonial-headings h5 {
     text-align: center;
     margin: 0;
+    line-height: 22px;
+    padding: 5px 0px;
+  }
+
+  .testimonial-headings h5 {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 5px 0px;
   }
 
   /* Carousel Dots */

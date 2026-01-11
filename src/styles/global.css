@@ -105,6 +105,30 @@ li {
   color: var(--navy-blue);
 }
 
+/* General link styles (excludes buttons and nav links via more specific selectors) */
+a {
+  color: var(--berry-crush);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--amaranth);
+}
+
+/* Links in dark backgrounds - more specific, overrides general link styles */
+.project-description a,
+.dark-bg a {
+  color: var(--desert-sand);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.project-description a:hover,
+.dark-bg a:hover {
+  color: var(--platinum);
+}
+
 .btn {
   background-color: var(--ink-black);
   padding: 13px 25px 15px 25px;

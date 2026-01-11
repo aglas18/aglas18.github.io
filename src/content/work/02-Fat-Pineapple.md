@@ -8,7 +8,7 @@ cardImage:
   alt: Fat Pineapple Branding
 
 shortDescription: >
-  Lorem ipsum dolor sit amet consectetur. Mi non tellus aliquet amet mi massa.
+  Brand identity, logo, and merchandise design for a catering company, including social media visuals and cohesive branding guidelines.
 
 projectType: >
   Logo & branding Refresh
