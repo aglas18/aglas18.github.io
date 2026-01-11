@@ -183,6 +183,10 @@ a:hover {
   background-size: 100% 700px;
 }
 
+.main-wrapper:has(.footer-section) {
+  background-image: none;
+}
+
 @media (min-width: 768px) {
   .main-wrapper {
     padding: 0px 40px;

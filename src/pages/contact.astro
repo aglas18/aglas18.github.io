@@ -1,0 +1,143 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<div class="main-wrapper">
+  <Navbar />
+
+  <section class="contact">
+    <div class="contact-intro">
+      <h1>Let's Work Together</h1>
+      <p>
+        Have a project in mind, a question, or just want to say hi? Fill out the
+        form below and I'll get back to you.
+      </p>
+    </div>
+
+    <form
+      class="contact-form"
+      action="https://getform.io/f/bolqqmja"
+      method="post"
+    >
+      <div class="form-group">
+        <input id="name" name="name" type="text" placeholder=" " required />
+        <label for="name">Name</label>
+      </div>
+
+      <div class="form-group">
+        <input id="email" name="email" type="email" placeholder=" " required />
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" name="message" rows="5" placeholder=" " required
+        ></textarea>
+        <label for="message">Message</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+
+  <Footer />
+</div>
+
+<style>
+  .contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-intro h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 12px;
+  }
+
+  .contact-intro p {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  .contact-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .form-group {
+    position: relative;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 16px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--ink-black);
+    font-family: inherit;
+    font-size: 16px;
+    background: transparent;
+    font-family: var(--font-body);
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--navy-blue);
+  }
+
+  /* Floating labels */
+  label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: var(--dust-gray);
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    font-family: var(--font-body);
+  }
+
+  input:focus + label,
+  textarea:focus + label,
+  input:not(:placeholder-shown) + label,
+  textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    background-color: var(--platinum);
+    padding: 0 6px;
+    color: var(--navy-blue);
+  }
+
+  .submit-btn {
+    margin-top: 10px;
+    padding: 14px 20px;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--navy-blue);
+    color: var(--platinum);
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .submit-btn:hover {
+    background-color: var(--ink-black);
+  }
+</style>
