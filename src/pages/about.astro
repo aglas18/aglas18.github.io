@@ -2,17 +2,29 @@
 import Navbar from "../components/Navbar.astro";
 import CTA from "../components/CTA.astro";
 import "../styles/global.css";
+import ProfilePic from "../assets/profile-pic.png";
 ---
 
 <div class="main-wrapper">
   <Navbar />
 
   <section class="about-hero">
-    <h1>Hi, I'm Adrian!</h1>
-    <p>
-      A creative designer and problem-solver focused on developing thoughtful
-      and visually compelling digital experiences and brands.
-    </p>
+    <div class="left-content">
+      <h1>Hi, I'm Adrian!</h1>
+      <p>
+        A creative designer and problem-solver focused on developing thoughtful
+        and visually compelling digital experiences and brands.
+      </p>
+    </div>
+    <div class="right-content">
+      <img
+        class="profile-pic"
+        src={ProfilePic.src}
+        width="100%"
+        height="100%"
+        alt="profile picture"
+      />
+    </div>
   </section>
 
   <section class="about-content">
@@ -35,24 +47,23 @@ import "../styles/global.css";
         experience feel effortless.
       </p>
     </div>
-    <div class="about-image">
-      <img src="/images/about-me.jpg" alt="Portrait of Adrian" />
+    <div class="education">
+      <h2>Education</h2>
+      <div class="education-stuff">
+        <p class="item major">
+          B.S. in Digital Communications and Creative Arts
+        </p>
+        <p class="item school">Lebanon Valley College | Graduated 2022</p>
+      </div>
+
+      <p>
+        My education gave me a strong foundation in visual design, typography,
+        color theory, and concept development, while also encouraging
+        experimentation and critical thinking. Through studio courses and
+        collaborative projects, I learned how to translate ideas into visual
+        systems and communicate effectively through design.
+      </p>
     </div>
-  </section>
-
-  <section class="education">
-    <h2>Education</h2>
-
-    <p>B.S. in Digital Communications and Creative Arts</p>
-    <p>Lebanon Valley College</p>
-    <p>Graduated 2022</p>
-    <p>
-      My education gave me a strong foundation in visual design, typography,
-      color theory, and concept development, while also encouraging
-      experimentation and critical thinking. Through studio courses and
-      collaborative projects, I learned how to translate ideas into visual
-      systems and communicate effectively through design.
-    </p>
   </section>
 
   <CTA />
@@ -60,15 +71,10 @@ import "../styles/global.css";
 <style>
   .about-hero {
     padding: 60px 25px 40px;
-    max-width: 900px;
   }
 
   .about-hero h1 {
     margin-bottom: 15px;
-  }
-
-  .about-hero p {
-    max-width: 600px;
   }
 
   .about-content {
@@ -83,18 +89,57 @@ import "../styles/global.css";
     object-fit: cover;
   }
 
+  .item {
+    border-radius: 30px;
+    padding: 5px 20px;
+    margin: 0px;
+    width: fit-content;
+  }
+  .major {
+    background-color: var(--dust-gray);
+    color: var(--ink-black) !important;
+  }
+
+  .school {
+    border: solid 1px var(--platinum);
+  }
+
+  .education-stuff {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .education {
     background-color: var(--ink-black);
     padding: 60px;
     border-radius: 30px;
   }
 
-  .education h2 {
+  .education h2,
+  .education p {
     color: var(--platinum);
   }
 
-  .education p {
+  .about-hero h1,
+  .about-hero p {
     color: var(--platinum);
+  }
+
+  .about-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-hero {
+    background-color: var(--amaranth);
+    border-radius: 30px;
+    padding: 50px !important;
+  }
+
+  .profile-pic {
+    width: 400px;
+    border-radius: 30px;
   }
 
   /* Tablet */
@@ -105,11 +150,29 @@ import "../styles/global.css";
     }
 
     .about-text {
-      flex: 1.2;
+      flex: 1;
     }
 
-    .about-image {
+    .education {
       flex: 1;
+    }
+
+    .about-hero {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    .left-content {
+      flex: 1;
+    }
+
+    .right-content {
+      flex: 1;
+    }
+
+    .right-content {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
