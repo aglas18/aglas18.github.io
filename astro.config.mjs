@@ -5,7 +5,6 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://aglas18.github.io",
   base: "/",
-  output: "static",
 
   devToolbar: {
     enabled: false,
