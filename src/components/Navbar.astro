@@ -1,9 +1,3 @@
----
-import logo from "../assets/logo.svg";
-import hamburger from "../assets/hamburger.svg";
-import close from "../assets/close.svg";
----
-
 <script>
   const hamburgerMenu = document.getElementById("hamburgerToggle");
   const mobileNavWrapper = document.getElementById("mobile-nav-wrapper");
@@ -17,7 +11,7 @@ import close from "../assets/close.svg";
 <div class="navbar">
   <a class="logo" href="/"
     ><img
-      src={logo.src}
+      src="../../public/assets/logo.svg"
       width="100"
       height="45"
       alt="Adrian Glasmyre Logo"
@@ -35,14 +29,14 @@ import close from "../assets/close.svg";
     <a class="hamburger-menu" href="#" id="hamburgerToggle">
       <img
         class="icon hamburger"
-        src={hamburger.src}
+        src="../../public/assets/hamburger.svg"
         width="24"
         height="22"
         alt="Open menu"
       />
       <img
         class="icon close"
-        src={close.src}
+        src="../../public/assets/close.svg"
         width="26"
         height="26"
         alt="Close menu"
