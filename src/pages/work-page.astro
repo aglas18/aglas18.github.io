@@ -1,22 +1,13 @@
 ---
-<<<<<<< HEAD
-import Navbar from "~/components/Navbar.astro";
-import CTA from "~/components/CTA.astro";
-=======
 import Navbar from "../components/Navbar.astro";
 import CTA from "../components/CTA.astro";
 import arrow from "../assets/arrow.svg";
->>>>>>> parent of 9f7957e (change svg locations)
 import type { WorkFile } from "./work/types";
 import "~/styles/global.css";
 
 // Load all work items
 const allWork = Object.values(
-<<<<<<< HEAD
-  import.meta.glob("~/content/work/*.md", { eager: true }),
-=======
-  import.meta.glob("../content/work/*.md", { eager: true })
->>>>>>> parent of 9f7957e (change svg locations)
+  import.meta.glob("../content/work/*.md", { eager: true }),
 ) as WorkFile[];
 ---
 
@@ -51,11 +42,7 @@ const allWork = Object.values(
                 <span class="icon-circle">
                   <img
                     class="arrow"
-<<<<<<< HEAD
-                    src="/arrow.svg"
-=======
                     src={arrow.src}
->>>>>>> parent of 9f7957e (change svg locations)
                     width="18"
                     height="18"
                     alt=""
