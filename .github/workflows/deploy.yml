@@ -36,6 +36,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      working-directory: ./  # make sure this points to the repo root
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
