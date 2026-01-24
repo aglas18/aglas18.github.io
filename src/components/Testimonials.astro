@@ -285,7 +285,7 @@ import { testimonialList } from "../content/testimonials/TestimonialList.ts";
     list.addEventListener("mouseup", (e) => handleDragEnd(e.pageX));
     list.addEventListener("mouseleave", (e) => handleDragEnd(e.pageX));
     list.addEventListener("touchend", (e) =>
-      handleDragEnd(e.changedTouches[0].clientX)
+      handleDragEnd(e.changedTouches[0].clientX),
     );
 
     window.addEventListener("resize", () => {
