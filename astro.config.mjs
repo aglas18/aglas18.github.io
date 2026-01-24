@@ -4,7 +4,6 @@ import path from "path";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://aglas18.github.io",
   base: "/",
   output: "static",
 
