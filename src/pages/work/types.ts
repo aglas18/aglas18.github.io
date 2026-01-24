@@ -1,4 +1,5 @@
 export type WorkFrontmatter = {
+  [x: string]: unknown;
   title: string;
   slug: string;
 

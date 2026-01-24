@@ -13,7 +13,7 @@ import type { WorkFile } from "../../pages/work/types";
 // -------------------------------
 export async function getStaticPaths() {
   const allWork = Object.values(
-    import.meta.glob("../../content/work/*.md", { eager: true })
+    import.meta.glob("../../content/work/*.md", { eager: true }),
   ) as WorkFile[];
 
   return allWork.map((work) => ({
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 const allWork = Object.values(
-  import.meta.glob("../../content/work/*.md", { eager: true })
+  import.meta.glob("../../content/work/*.md", { eager: true }),
 ) as WorkFile[];
 
 const project = allWork.find((w) => w.frontmatter.slug === slug);
@@ -42,7 +42,7 @@ const { frontmatter } = project;
   <!-- Hero Image -->
   <section class="hero">
     <div>
-      <h5>{frontmatter.projectType}</h5>
+      <h5>{frontmatter.projectType || "Project Type"}</h5>
       <h1>{frontmatter.title}</h1>
     </div>
     <img src={frontmatter.heroImage.src} alt={frontmatter.heroImage.alt} />
