@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import flower from "../assets/flower.svg";
 ---
 
@@ -13,18 +14,18 @@ import flower from "../assets/flower.svg";
       collaborative with a strong understanding of how design translates across
       platforms to create seamless, user-centered experiences.
     </p>
-    <img
+    <Image
       class="decorative-flower mobile"
-      src={flower.src}
+      src={flower}
       width="100"
       height="100"
       alt="decorative flower"
     />
   </div>
   <div class="header-desktop">
-    <img
+    <Image
       class="decorative-flower desktop"
-      src={flower.src}
+      src={flower}
       width="100"
       height="100"
       alt="decorative flower"
