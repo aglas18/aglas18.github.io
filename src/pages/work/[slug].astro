@@ -2,6 +2,9 @@
 import Navbar from "../../components/Navbar.astro";
 import CTA from "../../components/CTA.astro";
 import "../../../src/styles/global.css";
+import arrow from "../../assets/arrow.svg";
+import close from "../../assets/close.svg";
+import add from "../../assets/add.svg";
 
 import type { WorkFile } from "../../pages/work/types";
 
@@ -178,7 +181,11 @@ const { frontmatter } = project;
     <button class="lightbox-close" aria-label="Close">
       <img
         class="close-icon"
+<<<<<<< HEAD
         src="/close.svg"
+=======
+        src={close.src}
+>>>>>>> parent of 9f7957e (change svg locations)
         width="24"
         height="24"
         alt=""
@@ -190,7 +197,11 @@ const { frontmatter } = project;
       <span class="icon-circle">
         <img
           class="arrow arrow-prev"
+<<<<<<< HEAD
           src="/arrow.svg"
+=======
+          src={arrow.src}
+>>>>>>> parent of 9f7957e (change svg locations)
           width="24"
           height="24"
           alt=""
@@ -208,7 +219,11 @@ const { frontmatter } = project;
       <span class="icon-circle">
         <img
           class="arrow arrow-next"
+<<<<<<< HEAD
           src="/arrow.svg"
+=======
+          src={arrow.src}
+>>>>>>> parent of 9f7957e (change svg locations)
           width="24"
           height="24"
           alt=""

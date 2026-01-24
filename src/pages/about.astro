@@ -1,7 +1,14 @@
 ---
+<<<<<<< HEAD
 import Navbar from "~/components/Navbar.astro";
 import CTA from "~/components/CTA.astro";
 import "~/styles/global.css";
+=======
+import Navbar from "../components/Navbar.astro";
+import CTA from "../components/CTA.astro";
+import "../styles/global.css";
+import ProfilePic from "../assets/profile-pic.png";
+>>>>>>> parent of 9f7957e (change svg locations)
 ---
 
 <div class="main-wrapper">
@@ -18,7 +25,11 @@ import "~/styles/global.css";
     <div class="right-content">
       <img
         class="profile-pic"
+<<<<<<< HEAD
         src="/profile-pic.png"
+=======
+        src={ProfilePic.src}
+>>>>>>> parent of 9f7957e (change svg locations)
         width="100%"
         height="100%"
         alt="profile picture"
