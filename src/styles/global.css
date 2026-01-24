@@ -20,7 +20,7 @@
   --font-body: "Stack Sans Text", system-ui, -apple-system, sans-serif;
   --gradient-accent: linear-gradient(45deg, #89043d, #aa4465);
   --dark-gradient: linear-gradient(0deg, #0e171b, #223843);
-  --flower-stroke: url("../../public/assets/flower-stroke.svg");
+  --flower-stroke: url("/flower-stroke.svg");
 }
 
 body {
