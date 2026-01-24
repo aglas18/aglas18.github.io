@@ -1,12 +1,12 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import CTA from "../components/CTA.astro";
+import Navbar from "~/components/Navbar.astro";
+import CTA from "~/components/CTA.astro";
 import type { WorkFile } from "./work/types";
-import "../styles/global.css";
+import "~/styles/global.css";
 
 // Load all work items
 const allWork = Object.values(
-  import.meta.glob("../content/work/*.md", { eager: true }),
+  import.meta.glob("~/content/work/*.md", { eager: true }),
 ) as WorkFile[];
 ---
 
