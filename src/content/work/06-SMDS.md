@@ -46,8 +46,8 @@ gallery:
     alt: Brand guidelines
   - src: /assets/images/smds/thriftqueen-01.png
     alt: Final logo lockup
-    - src: /assets/images/smds/thriftqueen-01.png
+  - src: /assets/images/smds/thriftqueen-01.png
     alt: Final logo lockup
-    - src: /assets/images/smds/thriftqueen-01.png
+  - src: /assets/images/smds/thriftqueen-01.png
     alt: Final logo lockup
 ---
