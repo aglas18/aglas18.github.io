@@ -7,22 +7,33 @@ import close from "../assets/close.svg";
 <script>
   const hamburgerMenu = document.getElementById("hamburgerToggle");
   const mobileNavWrapper = document.getElementById("mobile-nav-wrapper");
+
   hamburgerMenu?.addEventListener("click", () => {
-    // Toggle the 'active' class on both elements
-    hamburgerMenu?.classList.toggle("active");
-    mobileNavWrapper?.classList.toggle("active");
+    hamburgerMenu.classList.toggle("active");
+    mobileNavWrapper.classList.toggle("active");
+
+    // 🔒 Lock body scroll when menu is open
+    document.body.classList.toggle(
+      "no-scroll",
+      mobileNavWrapper.classList.contains("active"),
+    );
+  });
+
+  // Close menu when clicking a mobile nav link
+  document.querySelectorAll("#mobile-nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburgerMenu?.classList.remove("active");
+      mobileNavWrapper?.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    });
   });
 </script>
 
 <div class="navbar">
-  <a class="logo" href="/"
-    ><img
-      src={logo.src}
-      width="100"
-      height="45"
-      alt="Adrian Glasmyre Logo"
-    /></a
-  >
+  <a class="logo" href="/">
+    <img src={logo.src} width="100" height="45" alt="Adrian Glasmyre Logo" />
+  </a>
+
   <div class="right-nav">
     <div class="nav-links">
       <ul class="desktop-links">
@@ -31,8 +42,15 @@ import close from "../assets/close.svg";
         <li><a class="link" href="#">Resume</a></li>
       </ul>
     </div>
+
     <a class="btn" href="/contact">Contact</a>
-    <a class="hamburger-menu" href="#" id="hamburgerToggle">
+
+    <a
+      class="hamburger-menu"
+      href="#"
+      id="hamburgerToggle"
+      aria-label="Toggle menu"
+    >
       <img
         class="icon hamburger"
         src={hamburger.src}
@@ -48,10 +66,11 @@ import close from "../assets/close.svg";
         alt="Close menu"
       />
     </a>
+
     <div class="mobile-nav-wrapper" id="mobile-nav-wrapper">
       <ul class="mobile-nav-links" id="mobile-nav-links">
-        <li><a class="link" href="#">About</a></li>
-        <li><a class="link" href="#">Work</a></li>
+        <li><a class="link" href="/about">About</a></li>
+        <li><a class="link" href="/work-page">Work</a></li>
         <li><a class="link" href="#">Resume</a></li>
       </ul>
     </div>
@@ -59,32 +78,39 @@ import close from "../assets/close.svg";
 </div>
 
 <style>
+  /* 🔒 Prevent background scroll */
+  body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+
   .nav-links {
     display: none;
   }
+
+  .navbar:has(.active) {
+    margin-top: 0px;
+  }
+
   .nav-links ul {
     list-style: none;
     gap: 50px;
-    text-decoration: none;
     display: flex;
     flex-direction: row;
   }
+
   .nav-links li a {
     text-decoration: none;
   }
 
+  /* ✅ FIXED mobile menu */
   .mobile-nav-wrapper {
-    position: absolute;
+    position: fixed;
+    inset: 0;
     display: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-color: var(--dust-gray);
     z-index: 998;
-  }
-  .mobile-nav-wrapper.active {
-    display: flex;
+    overscroll-behavior: contain;
   }
 
   .mobile-nav-wrapper.active {
@@ -112,6 +138,8 @@ import close from "../assets/close.svg";
   .navbar {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .right-nav {
@@ -146,15 +174,6 @@ import close from "../assets/close.svg";
     margin-top: 0px;
   }
 
-  .aboutme h2 {
-    margin-bottom: 10px;
-  }
-
-  .navbar {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
   .link {
     font-family: var(--font-primary);
     text-decoration: none;
@@ -177,9 +196,6 @@ import close from "../assets/close.svg";
     .link:hover {
       color: var(--amaranth);
     }
-  }
-
-  @media (min-width: 1024px) {
   }
 
   @media (min-width: 1280px) {
