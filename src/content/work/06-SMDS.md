@@ -32,18 +32,18 @@ tools:
   - PhotoShop
 
 gallery:
-  - src: ../images/smds/changemaker-01.png
+  - src: /assets/images/smds/changemaker-01.png
     alt: Logo exploration
-  - src: ../images/smds/blm_sticker-01.png
+  - src: /assets/images/smds/blm_sticker-01.png
     alt: Packaging mockup
-  - src: ../images/smds/growth_mindset-01.png
+  - src: /assets/images/smds/growth_mindset-01.png
     alt: Social media assets
-  - src: ../images/smds/butterfly-01.png
+  - src: /assets/images/smds/butterfly-01.png
     alt: Color palette
-  - src: ../images/smds/abolitionist-01.jpg
+  - src: /assets/images/smds/abolitionist-01.jpg
     alt: Typography system
-  - src: ../images/smds/trauma.jpg
+  - src: /assets/images/smds/trauma.jpg
     alt: Brand guidelines
-  - src: ../images/smds/thriftqueen-01.png
+  - src: /assets/images/smds/thriftqueen-01.png
     alt: Final logo lockup
 ---
