@@ -3,71 +3,75 @@ import Navbar from "../components/Navbar.astro";
 import CTA from "../components/CTA.astro";
 import "../styles/global.css";
 import ProfilePic from "../assets/profile-pic.png";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<div class="main-wrapper">
-  <Navbar />
+<Layout>
+  <div class="main-wrapper">
+    <Navbar />
 
-  <section class="about-hero">
-    <div class="left-content">
-      <h1>Hi, I'm Adrian!</h1>
-      <p>
-        A creative designer and problem-solver focused on developing thoughtful
-        and visually compelling digital experiences and brands.
-      </p>
-    </div>
-    <div class="right-content">
-      <img
-        class="profile-pic"
-        src={ProfilePic.src}
-        width="100%"
-        height="100%"
-        alt="profile picture"
-      />
-    </div>
-  </section>
-
-  <section class="about-content">
-    <div class="about-text">
-      <h2>My Background</h2>
-      <p>
-        I fell in love with graphic design through my art classes in high
-        school. I loved drawing and creating, but I ultimately found my passion
-        in visual storytelling and using design to solve problems. I enjoy
-        digging into the why behind a challenge just as much as crafting the
-        final solution, whether that means refining a design system, shaping a
-        brand's visual language, or polishing the small details that make an
-        experience feel intentional.
-      </p>
-
-      <p>
-        As a fan of TV shows, books, and video games, storytelling and
-        problem-solving sit at the core of my work. I am fascinated by how
-        thoughtful design can guide someone, clarify an idea, and make an
-        experience feel effortless.
-      </p>
-    </div>
-    <div class="education">
-      <h2>Education</h2>
-      <div class="education-stuff">
-        <p class="item major">
-          B.S. in Digital Communications and Creative Arts
+    <section class="about-hero">
+      <div class="left-content">
+        <h1>Hi, I'm Adrian!</h1>
+        <p>
+          A creative designer and problem-solver focused on developing
+          thoughtful and visually compelling digital experiences and brands.
         </p>
-        <p class="item school">Lebanon Valley College | Graduated 2022</p>
       </div>
+      <div class="right-content">
+        <img
+          class="profile-pic"
+          src={ProfilePic.src}
+          width="100%"
+          height="100%"
+          alt="profile picture"
+        />
+      </div>
+    </section>
 
-      <p>
-        My education gave me a strong foundation in visual design, typography,
-        color theory, and concept development, while also encouraging
-        experimentation and critical thinking. Through studio courses and
-        collaborative projects, I learned how to translate ideas into visual
-        systems and communicate effectively through design.
-      </p>
-    </div>
-  </section>
+    <section class="about-content">
+      <div class="about-text">
+        <h2>My Background</h2>
+        <p>
+          I fell in love with graphic design through my art classes in high
+          school. I loved drawing and creating, but I ultimately found my
+          passion in visual storytelling and using design to solve problems. I
+          enjoy digging into the why behind a challenge just as much as crafting
+          the final solution, whether that means refining a design system,
+          shaping a brand's visual language, or polishing the small details that
+          make an experience feel intentional.
+        </p>
 
-  <CTA />
-</div>
+        <p>
+          As a fan of TV shows, books, and video games, storytelling and
+          problem-solving sit at the core of my work. I am fascinated by how
+          thoughtful design can guide someone, clarify an idea, and make an
+          experience feel effortless.
+        </p>
+      </div>
+      <div class="education">
+        <h2>Education</h2>
+        <div class="education-stuff">
+          <p class="item major">
+            B.S. in Digital Communications and Creative Arts
+          </p>
+          <p class="item school">Lebanon Valley College | Graduated 2022</p>
+        </div>
+
+        <p>
+          My education gave me a strong foundation in visual design, typography,
+          color theory, and concept development, while also encouraging
+          experimentation and critical thinking. Through studio courses and
+          collaborative projects, I learned how to translate ideas into visual
+          systems and communicate effectively through design.
+        </p>
+      </div>
+    </section>
+
+    <CTA />
+  </div>
+</Layout>
+
 <style>
   .about-hero {
     padding: 60px 25px 40px;

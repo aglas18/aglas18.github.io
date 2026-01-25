@@ -2,47 +2,60 @@
 import Navbar from "~/components/Navbar.astro";
 import Footer from "~/components/Footer.astro";
 import "~/styles/global.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<div class="main-wrapper">
-  <Navbar />
+<Layout>
+  <div class="main-wrapper">
+    <Navbar />
 
-  <section class="contact">
-    <div class="contact-intro">
-      <h1>Let's Work Together</h1>
-      <p>
-        Have a project in mind, a question, or just want to say hi? Fill out the
-        form below and I'll get back to you.
-      </p>
-    </div>
-
-    <form
-      class="contact-form"
-      action="https://getform.io/f/bolqqmja"
-      method="post"
-    >
-      <div class="form-group">
-        <input id="name" name="name" type="text" placeholder=" " required />
-        <label for="name">Name</label>
+    <section class="contact">
+      <div class="contact-intro">
+        <h1>Let's Work Together</h1>
+        <p>
+          Have a project in mind, a question, or just want to say hi? Fill out
+          the form below and I'll get back to you.
+        </p>
       </div>
 
-      <div class="form-group">
-        <input id="email" name="email" type="email" placeholder=" " required />
-        <label for="email">Email</label>
-      </div>
+      <form
+        class="contact-form"
+        action="https://getform.io/f/bolqqmja"
+        method="post"
+      >
+        <div class="form-group">
+          <input id="name" name="name" type="text" placeholder=" " required />
+          <label for="name">Name</label>
+        </div>
 
-      <div class="form-group">
-        <textarea id="message" name="message" rows="5" placeholder=" " required
-        ></textarea>
-        <label for="message">Message</label>
-      </div>
+        <div class="form-group">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder=" "
+            required
+          />
+          <label for="email">Email</label>
+        </div>
 
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-  </section>
+        <div class="form-group">
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder=" "
+            required></textarea>
+          <label for="message">Message</label>
+        </div>
 
-  <Footer />
-</div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>
 
 <style>
   .contact {

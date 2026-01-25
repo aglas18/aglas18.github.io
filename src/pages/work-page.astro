@@ -4,6 +4,7 @@ import CTA from "../components/CTA.astro";
 import arrow from "../assets/arrow.svg";
 import type { WorkFile } from "./work/types";
 import "~/styles/global.css";
+import Layout from "../layouts/Layout.astro";
 
 // Load all work items
 const allWork = Object.values(
@@ -11,54 +12,56 @@ const allWork = Object.values(
 ) as WorkFile[];
 ---
 
-<div class="main-wrapper">
-  <Navbar />
+<Layout>
+  <div class="main-wrapper">
+    <Navbar />
 
-  <section class="work-page">
-    <h1 class="flower-heading">My Work</h1>
-    <div class="project-items">
-      {
-        allWork.map((work) => (
-          <a
-            href={`/work/${work.frontmatter.slug}`}
-            class="project-item"
-            aria-label={`View project: ${work.frontmatter.title}`}
-          >
-            <img
-              class="project-image"
-              src={work.frontmatter.cardImage.src}
-              alt={work.frontmatter.cardImage.alt}
-              width="100%"
-              height="100%"
-            />
+    <section class="work-page">
+      <h1 class="flower-heading">My Work</h1>
+      <div class="project-items">
+        {
+          allWork.map((work) => (
+            <a
+              href={`/work/${work.frontmatter.slug}`}
+              class="project-item"
+              aria-label={`View project: ${work.frontmatter.title}`}
+            >
+              <img
+                class="project-image"
+                src={work.frontmatter.cardImage.src}
+                alt={work.frontmatter.cardImage.alt}
+                width="100%"
+                height="100%"
+              />
 
-            <div class="project-info">
-              <h3>{work.frontmatter.title}</h3>
-              <p>{work.frontmatter.shortDescription}</p>
+              <div class="project-info">
+                <h3>{work.frontmatter.title}</h3>
+                <p>{work.frontmatter.shortDescription}</p>
 
-              <div class="link-btn">
-                <span class="view-project">View Project</span>
+                <div class="link-btn">
+                  <span class="view-project">View Project</span>
 
-                <span class="icon-circle">
-                  <img
-                    class="arrow"
-                    src={arrow.src}
-                    width="18"
-                    height="18"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </span>
+                  <span class="icon-circle">
+                    <img
+                      class="arrow"
+                      src={arrow.src}
+                      width="18"
+                      height="18"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
               </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-  </section>
+            </a>
+          ))
+        }
+      </div>
+    </section>
 
-  <CTA />
-</div>
+    <CTA />
+  </div>
+</Layout>
 
 <style>
   .work-page {
