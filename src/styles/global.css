@@ -173,6 +173,12 @@ a:hover {
   background: var(--flower-stroke) no-repeat center / contain;
 }
 
+.flower-heading {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 .main-wrapper {
   position: relative;
 }
