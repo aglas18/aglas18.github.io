@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import "~/styles/global.css";
 
 import arrow from "~/assets/arrow.svg";
-import { awardsList } from ".../content/awards/Awards.ts";
+import { awardsList } from "~/content/awards/Awards";
 
 const agencyAwards = awardsList.filter(
   (award) => award.category === "Agency Awards",
