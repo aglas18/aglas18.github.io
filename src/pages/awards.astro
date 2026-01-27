@@ -1,16 +1,114 @@
 ---
 import Navbar from "~/components/Navbar.astro";
 import Footer from "~/components/Footer.astro";
-import "~/styles/global.css";
 import Layout from "../layouts/Layout.astro";
+import "~/styles/global.css";
+
+import arrow from "~/assets/arrow.svg";
+import { awardsList } from ".../content/awards/Awards.ts";
+
+const agencyAwards = awardsList.filter(
+  (award) => award.category === "Agency Awards",
+);
+const teamProjects = awardsList.filter(
+  (award) => award.category === "Team Projects",
+);
+const internalRecognition = awardsList.filter(
+  (award) => award.category === "Internal Recognition",
+);
 ---
 
 <Layout>
   <div class="main-wrapper">
     <Navbar />
 
+    <!-- Agency Awards -->
+    <h2 class="flower-heading">Agency Awards</h2>
+    <div class="awards-block">
+      {
+        agencyAwards.map((award) => (
+          <a href="#" class="award-item">
+            <div class="award-info">
+              <h5>{award.date}</h5>
+              <h3>{award.title}</h3>
+              <p>{award.description}</p>
+
+              <div class="link-btn">
+                <span class="view-project">Read More</span>
+                <span class="icon-circle">
+                  <img
+                    src={arrow.src}
+                    width="18"
+                    height="18"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- Team Projects -->
+    <h2 class="flower-heading">Team Projects & Performance</h2>
+    <div class="awards-block">
+      {
+        teamProjects.map((award) => (
+          <a href="#" class="award-item">
+            <div class="award-info">
+              <h5>{award.date}</h5>
+              <h3>{award.title}</h3>
+              <p>{award.description}</p>
+
+              <div class="link-btn">
+                <span class="view-project">Read More</span>
+                <span class="icon-circle">
+                  <img
+                    src={arrow.src}
+                    width="18"
+                    height="18"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- Internal Recognition -->
+    <h2 class="flower-heading">Internal Recognition & Peer Awards</h2>
+    <div class="awards-block">
+      {
+        internalRecognition.map((award) => (
+          <a href="#" class="award-item">
+            <div class="award-info">
+              <h5>{award.date}</h5>
+              <h3>{award.title}</h3>
+              <p>{award.description}</p>
+
+              <div class="link-btn">
+                <span class="view-project">Read More</span>
+                <span class="icon-circle">
+                  <img
+                    src={arrow.src}
+                    width="18"
+                    height="18"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
     <Footer />
   </div>
 </Layout>
-
-<style></style>
