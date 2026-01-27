@@ -112,3 +112,88 @@ const internalRecognition = awardsList.filter(
     <Footer />
   </div>
 </Layout>
+
+<style>
+  .icon-circle {
+    background-color: var(--berry-crush);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+  }
+
+  .link-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .award-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 30px;
+  }
+
+  .link-btn span {
+    font-family: "Stack Sans Text";
+    text-transform: uppercase;
+    color: var(--berry-crush);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .award-item:hover .link-btn span {
+    color: var(--navy-blue);
+  }
+
+  .awards-block {
+    display: grid;
+    gap: 30px;
+  }
+
+  @media (min-width: 768px) {
+    .awards-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .award-item:hover {
+      box-shadow: 0px 0px 20px #0e171b29;
+      transform: translateY(-2px);
+    }
+
+    .award-item:hover .link-btn a {
+      color: var(--navy-blue);
+    }
+
+    .award-item:hover .link-btn .icon-circle {
+      background-color: var(--navy-blue);
+    }
+
+    .award-item {
+      transition:
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .awards-block {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .award-item p {
+      margin: 10px 0;
+    }
+
+    .award-item {
+      padding: 25px;
+    }
+  }
+</style>
