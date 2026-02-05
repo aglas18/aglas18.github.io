@@ -20,7 +20,7 @@ longDescription: |
   The redesign includes logo refinement, website design, social media visuals, and updated brand guidelines. A major focus of the web experience was improving clarity and flow to boost conversions - making it easier for users to understand the cafe's mission, book visits, and engage with the brand.
 
 heroImage:
-  src: src\content\images\fat-pineapple\fat-pineapple-branding.png
+  src: /assets/images/lancatster-cat-cafe/cat-cafe-hero-img.png
   alt: Fat Pineapple brand hero image
 
 about:
