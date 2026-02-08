@@ -36,22 +36,22 @@ tools:
   - Figma
 
 gallery:
-  - src: ../images/lancatster-cat-cafe/horizontal-logo.png
+  - src: /assets/images/lancatster-cat-cafe/horizontal-logo.png
     alt: Horizontal Logo for Lancatster Cat Cafe
-  - src: ../images/lancatster-cat-cafe/cat-cafe-card.png
+  - src: /assets/images/lancatster-cat-cafe/cat-cafe-card.png
     alt: Full Color Logo
-  - src: ../images/lancatster-cat-cafe/lanc-cat-cafe-logo-light.png
+  - src: /assets/images/lancatster-cat-cafe/lanc-cat-cafe-logo-light.png
     alt: Black & White logo
-  - src: ../images/lancatster-cat-cafe/final-social.png
+  - src: /assets/images/lancatster-cat-cafe/final-social.png
     alt: Social Media Mockup
-  - src: ../images/lancatster-cat-cafe/laptop.png
+  - src: /assets/images/lancatster-cat-cafe/laptop.png
     alt: Preview of Desktop Homepage
-  - src: ../images/lancatster-cat-cafe/tablet-mobile-protos.png
+  - src: /assets/images/lancatster-cat-cafe/tablet-mobile-protos.png
     alt: Tablet & Mobile Prototypes
-  - src: ../images/lancatster-cat-cafe/coffee-cup-mockup.png
+  - src: /assets/images/lancatster-cat-cafe/coffee-cup-mockup.png
     alt: Coffee Cup Mockup
-  - src: ../images/lancatster-cat-cafe/tote-bag.png
+  - src: /assets/images/lancatster-cat-cafe/tote-bag.png
     alt: Tote Bag Mockup
-  - src: ../images/lancatster-cat-cafe/hat-mockup.png
+  - src: /assets/images/lancatster-cat-cafe/hat-mockup.png
     alt: Merch Mockup
 ---
