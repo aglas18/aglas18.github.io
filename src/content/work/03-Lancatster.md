@@ -37,21 +37,21 @@ tools:
 
 gallery:
   - src: ../images/lancatster-cat-cafe/horizontal-logo.png
-    alt: Logo exploration
+    alt: Horizontal Logo for Lancatster Cat Cafe
   - src: ../images/lancatster-cat-cafe/cat-cafe-card.png
-    alt: Packaging mockup
+    alt: Full Color Logo
   - src: ../images/lancatster-cat-cafe/lanc-cat-cafe-logo-light.png
-    alt: Social media assets
+    alt: Black & White logo
   - src: ../images/lancatster-cat-cafe/final-social.png
-    alt: Color palette
+    alt: Social Media Mockup
   - src: ../images/lancatster-cat-cafe/laptop.png
-    alt: Typography system
+    alt: Preview of Desktop Homepage
   - src: ../images/lancatster-cat-cafe/tablet-mobile-protos.png
-    alt: Brand guidelines
+    alt: Tablet & Mobile Prototypes
   - src: ../images/lancatster-cat-cafe/coffee-cup-mockup.png
-    alt: Final logo lockup
+    alt: Coffee Cup Mockup
   - src: ../images/lancatster-cat-cafe/tote-bag.png
-    alt: Final logo lockup
+    alt: Tote Bag Mockup
   - src: ../images/lancatster-cat-cafe/hat-mockup.png
-    alt: Final logo lockup
+    alt: Merch Mockup
 ---
