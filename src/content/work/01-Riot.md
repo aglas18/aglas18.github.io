@@ -38,18 +38,22 @@ tools:
   - Figma
 
 gallery:
-  - src: ../images/fat-pineapple/gallery-1.jpg
-    alt: Logo exploration
-  - src: ../images/fat-pineapple/gallery-2.jpg
-    alt: Packaging mockup
-  - src: ../images/fat-pineapple/gallery-3.jpg
-    alt: Social media assets
-  - src: ../images/fat-pineapple/gallery-4.jpg
-    alt: Color palette
-  - src: ../images/fat-pineapple/gallery-5.jpg
-    alt: Typography system
-  - src: ../images/fat-pineapple/gallery-6.jpg
-    alt: Brand guidelines
-  - src: ../images/fat-pineapple/gallery-7.jpg
-    alt: Final logo lockup
+  - src: /assets/images/riot-beauty/horizontal-riot-logo.png
+    alt: Main Horizontal Logo
+  - src: /assets/images/riot-beauty/logo-vertical.png
+    alt: Secondary Vertical Logo
+  - src: /assets/images/riot-beauty/riot-foundation-packaging.png
+    alt: Foundation Packaging
+  - src: /assets/images/riot-beauty/branding-mockup-long.png
+    alt: Overall Branding & Moodboard
+  - src: /assets/images/riot-beauty/riot-social-feed.png
+    alt: Social Feed Mockup
+  - src: /assets/images/riot-beauty/riot-social-stories.png
+    alt: Sample Social Stories
+  - src: /assets/images/riot-beauty/riot-ads.png
+    alt: PPC Ads
+  - src: /assets/images/riot-beauty/mockups.png
+    alt: Product Mockups
+  - src: /assets/images/riot-beauty/riot-laptop.png
+    alt: Laptop Homepage Mockup
 ---
