@@ -21,7 +21,7 @@ longDescription: |
 
 heroImage:
   src: /assets/images/riot-beauty/riot-beauty-card.png
-  alt: Fat Pineapple brand hero image
+  alt: Riot Beauty brand hero image
 
 about:
   - Brand Identity & Visual System
@@ -44,7 +44,7 @@ gallery:
     alt: Secondary Vertical Logo
   - src: /assets/images/riot-beauty/riot-foundation-packaging.png
     alt: Foundation Packaging
-  - src: /assets/images/riot-beauty/branding-mockup-long.png
+  - src: /assets/images/riot-beauty/branding-mockup.png
     alt: Overall Branding & Moodboard
   - src: /assets/images/riot-beauty/riot-social-feed.png
     alt: Social Feed Mockup
