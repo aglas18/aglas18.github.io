@@ -36,18 +36,22 @@ tools:
   - Figma
 
 gallery:
-  - src: ../images/fat-pineapple/gallery-1.jpg
+  - src: ../images/lancatster-cat-cafe/horizontal-logo.png
     alt: Logo exploration
-  - src: ../images/fat-pineapple/gallery-2.jpg
+  - src: ../images/lancatster-cat-cafe/cat-cafe-card.png
     alt: Packaging mockup
-  - src: ../images/fat-pineapple/gallery-3.jpg
+  - src: ../images/lancatster-cat-cafe/lanc-cat-cafe-logo-light.png
     alt: Social media assets
-  - src: ../images/fat-pineapple/gallery-4.jpg
+  - src: ../images/lancatster-cat-cafe/final-social.png
     alt: Color palette
-  - src: ../images/fat-pineapple/gallery-5.jpg
+  - src: ../images/lancatster-cat-cafe/laptop.png
     alt: Typography system
-  - src: ../images/fat-pineapple/gallery-6.jpg
+  - src: ../images/lancatster-cat-cafe/tablet-mobile-protos.png
     alt: Brand guidelines
-  - src: ../images/fat-pineapple/gallery-7.jpg
+  - src: ../images/lancatster-cat-cafe/coffee-cup-mockup.png
+    alt: Final logo lockup
+  - src: ../images/lancatster-cat-cafe/tote-bag.png
+    alt: Final logo lockup
+  - src: ../images/lancatster-cat-cafe/hat-mockup.png
     alt: Final logo lockup
 ---
