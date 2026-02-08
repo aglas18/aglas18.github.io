@@ -20,7 +20,7 @@ longDescription: |
   The project spans e-commerce website design, visual identity and logo design, social media content, PPC ads, Amazon A+ layouts, and conceptual product design. The web experience intentionally colors outside the lines, using modern layouts, confident typography, and unexpected details to create a shopping experience that feels energetic, editorial, and unmistakably Riot.
 
 heroImage:
-  src: src\content\images\fat-pineapple\fat-pineapple-branding.png
+  src: /assets/images/riot-beauty/riot-beauty-card.png
   alt: Fat Pineapple brand hero image
 
 about:
