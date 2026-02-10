@@ -39,21 +39,21 @@ tools:
 
 gallery:
   - src: /assets/images/rosewood/horizontal-logo.png
-    alt: Gradient Logo
+    alt: Horizontal Black & White Logo
   - src: /assets/images/rosewood/maroon-logo.png
-    alt: Color logo
+    alt: Color Stamp Logo
   - src: /assets/images/rosewood/dark-stamp-logo.png
-    alt: Black & White Logo
+    alt: Black & White Stamp Logo
   - src: /assets/images/rosewood/rosewood_stationary.png
-    alt: Branding Guidelines
+    alt: Stationary & Business Cards
   - src: /assets/images/rosewood/rosewood_bottle.jpg
-    alt: Fat Pineapple Shirt
+    alt: Bottle Mockup
   - src: /assets/images/rosewood/rosewood_bottle.jpg
     alt: Social Media
   - src: /assets/images/rosewood/merch.png
-    alt: FP Color Logo
+    alt: Merch Mockups
   - src: /assets/images/rosewood/rosewood_sign.jpg
-    alt: FP Meal Mockup
+    alt: Sign Mockup
   - src: /assets/images/rosewood/rosewood_window.jpg
-    alt: Business Cards
+    alt: Window Mockup
 ---
