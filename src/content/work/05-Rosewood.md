@@ -54,6 +54,6 @@ gallery:
     alt: Merch Mockups
   - src: /assets/images/rosewood/rosewood_sign.jpg
     alt: Sign Mockup
-  - src: /assets/images/rosewood/rosewood_window.jpg
+  - src: /assets/images/rosewood/rosewood_window.png
     alt: Window Mockup
 ---
