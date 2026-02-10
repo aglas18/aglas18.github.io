@@ -40,17 +40,17 @@ tools:
 gallery:
   - src: /assets/images/rosewood/horizontal-logo.png
     alt: Gradient Logo
-  - src: /assets/images/rosewood/red-logo.png
+  - src: /assets/images/rosewood/maroon-logo.png
     alt: Color logo
-  - src: /assets/images/rosewood/white-logo.png
+  - src: /assets/images/rosewood/dark-stamp-logo.png
     alt: Black & White Logo
-  - src: /assets/images/rosewood/rosewood_stationary.jpg
+  - src: /assets/images/rosewood/rosewood_stationary.png
     alt: Branding Guidelines
   - src: /assets/images/rosewood/rosewood_bottle.jpg
     alt: Fat Pineapple Shirt
   - src: /assets/images/rosewood/rosewood_bottle.jpg
     alt: Social Media
-  - src: /assets/images/rosewood/rosewood_bottle.jpg
+  - src: /assets/images/rosewood/merch.png
     alt: FP Color Logo
   - src: /assets/images/rosewood/rosewood_sign.jpg
     alt: FP Meal Mockup
