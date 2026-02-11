@@ -8,48 +8,166 @@ import arrow from "~/assets/arrow.svg";
 import close from "~/assets/close.svg";
 import { awardsList } from "~/content/awards/Awards";
 
-const agencyAwards = awardsList.filter(
-  (award) => award.category === "Agency Awards",
-);
-const teamProjects = awardsList.filter(
-  (award) => award.category === "Team Projects",
-);
-const internalRecognition = awardsList.filter(
-  (award) => award.category === "Internal Recognition",
-);
+// Helper function to parse dates for sorting
+function parseDate(dateStr: string): number {
+  // Handle year-only dates (e.g., "2024")
+  if (/^\d{4}$/.test(dateStr)) {
+    return parseInt(dateStr);
+  }
+  // Handle date ranges (e.g., "2022–2025") - use the end year
+  if (dateStr.includes("–")) {
+    const endYear = dateStr.split("–")[1];
+    return parseInt(endYear) || 0;
+  }
+  // Handle month + year (e.g., "Jan 2024", "Apr 2024")
+  const monthNames: { [key: string]: number } = {
+    Jan: 1,
+    Feb: 2,
+    Mar: 3,
+    Apr: 4,
+    May: 5,
+    Jun: 6,
+    Jul: 7,
+    Aug: 8,
+    Sep: 9,
+    Oct: 10,
+    Nov: 11,
+    Dec: 12,
+  };
+  const parts = dateStr.split(" ");
+  if (parts.length === 2 && monthNames[parts[0]]) {
+    return parseInt(parts[1]) * 100 + monthNames[parts[0]];
+  }
+  return 0;
+}
+
+// Sort awards from newest to oldest
+const agencyAwards = awardsList
+  .filter((award) => award.category === "Agency Awards")
+  .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+const teamProjects = awardsList
+  .filter((award) => award.category === "Team Projects")
+  .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+const internalRecognition = awardsList
+  .filter((award) => award.category === "Internal Recognition")
+  .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+// Emoji mapping for awards
+function getAwardEmoji(title: string): string {
+  if (title.includes("Platinum Phone")) return "💎";
+  if (title.includes("Shiny Semi")) return "🚚";
+  if (title.includes("Needle Driver")) return "🎯";
+  if (title.includes("Designasaur")) return "🦖";
+  if (title.includes("Horizon Award")) return "🥇";
+  if (title.includes("Highest Conversion Rate")) return "📈";
+  if (title.includes("Fastest")) return "⚡";
+  if (title.includes("Most Profitable")) return "💰";
+  return "🏆";
+}
 ---
 
 <Layout>
-  <div class="main-wrapper">
-    <Navbar />
-
-    <div class="innerpage-masthead">
-      <h1>Awards</h1>
+  <div class="awards-page-wrapper">
+    <div class="gradient-header">
+      <Navbar />
+      <div class="innerpage-masthead">
+        <h1>Awards</h1>
+      </div>
     </div>
+    <div class="main-wrapper">
+      <!-- Internal Recognition -->
+      <h2 class="flower-heading">Internal Recognition & Peer Awards</h2>
+      <p class="section-description">
+        Awards and recognition received for individual contributions,
+        communication excellence, and outstanding design work.
+      </p>
+      <div class="awards-block">
+        {
+          internalRecognition.map((award, index) =>
+            award.popupContent ? (
+              <button
+                class="award-item"
+                data-award-index={index}
+                data-category="internal"
+                type="button"
+              >
+                <div class="award-info">
+                  <div class="award-header">
+                    <span class="award-emoji">
+                      {getAwardEmoji(award.title)}
+                    </span>
+                    <div>
+                      <h5>{award.date}</h5>
+                      <h3>{award.title}</h3>
+                    </div>
+                  </div>
+                  <p>{award.description}</p>
 
-    <!-- Internal Recognition -->
-    <h2 class="flower-heading">Internal Recognition & Peer Awards</h2>
-    <p class="section-description">
-      Awards and recognition received for individual contributions,
-      communication excellence, and outstanding design work.
-    </p>
-    <div class="awards-block">
-      {
-        internalRecognition.map((award, index) =>
-          award.popupContent ? (
+                  <div class="link-btn">
+                    <span class="view-project">Read More</span>
+                    <span class="icon-circle">
+                      <img
+                        src={arrow.src}
+                        width="18"
+                        height="18"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </button>
+            ) : (
+              <div class="award-item award-item-static">
+                <div class="award-info">
+                  <div class="award-header">
+                    <span class="award-emoji">
+                      {getAwardEmoji(award.title)}
+                    </span>
+                    <div>
+                      <h5>{award.date}</h5>
+                      <h3>{award.title}</h3>
+                    </div>
+                  </div>
+                  <p>{award.description}</p>
+                </div>
+              </div>
+            ),
+          )
+        }
+      </div>
+
+      <!-- Agency Awards -->
+      <h2 class="flower-heading">Agency Awards</h2>
+      <p class="section-description">
+        These awards were presented to the agency for outstanding work. I
+        contributed to the design and execution of these award-winning projects.
+      </p>
+      <div class="awards-block">
+        {
+          agencyAwards.map((award, index) => (
             <button
               class="award-item"
               data-award-index={index}
-              data-category="internal"
+              data-category="agency"
               type="button"
             >
               <div class="award-info">
-                <h5>{award.date}</h5>
-                <h3>{award.title}</h3>
+                <div class="award-header">
+                  <span class="award-emoji">{getAwardEmoji(award.title)}</span>
+                  <div>
+                    <h5>{award.date}</h5>
+                    <h3>{award.title}</h3>
+                  </div>
+                </div>
                 <p>{award.description}</p>
 
                 <div class="link-btn">
-                  <span class="view-project">Read More</span>
+                  <span class="view-project">
+                    {award.linkUrl ? "View Awards" : "Read More"}
+                  </span>
                   <span class="icon-circle">
                     <img
                       src={arrow.src}
@@ -62,105 +180,153 @@ const internalRecognition = awardsList.filter(
                 </div>
               </div>
             </button>
-          ) : (
+          ))
+        }
+      </div>
+
+      <!-- Team Projects -->
+      <h2 class="flower-heading">Team Projects & Performance</h2>
+      <p class="section-description">
+        Recognition for collaborative achievements and team performance on
+        high-impact projects.
+      </p>
+      <div class="awards-block">
+        {
+          teamProjects.map((award, index) => (
             <div class="award-item award-item-static">
               <div class="award-info">
-                <h5>{award.date}</h5>
-                <h3>{award.title}</h3>
+                <div class="award-header">
+                  <span class="award-emoji">{getAwardEmoji(award.title)}</span>
+                  <div>
+                    <h5>{award.date}</h5>
+                    <h3>{award.title}</h3>
+                  </div>
+                </div>
                 <p>{award.description}</p>
               </div>
             </div>
-          ),
-        )
-      }
-    </div>
+          ))
+        }
+      </div>
 
-    <!-- Agency Awards -->
-    <h2 class="flower-heading">Agency Awards</h2>
-    <p class="section-description">
-      These awards were presented to the agency for outstanding work. I
-      contributed to the design and execution of these award-winning projects.
-    </p>
-    <div class="awards-block">
-      {
-        agencyAwards.map((award, index) => (
-          <button
-            class="award-item"
-            data-award-index={index}
-            data-category="agency"
-            type="button"
-          >
-            <div class="award-info">
-              <h5>{award.date}</h5>
-              <h3>{award.title}</h3>
-              <p>{award.description}</p>
-
-              <div class="link-btn">
-                <span class="view-project">
-                  {award.linkUrl ? "View Awards" : "Read More"}
-                </span>
-                <span class="icon-circle">
-                  <img
-                    src={arrow.src}
-                    width="18"
-                    height="18"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </span>
-              </div>
-            </div>
+      <!-- Award Popup Modal -->
+      <div class="award-popup" id="award-popup" aria-hidden="true">
+        <div class="popup-overlay"></div>
+        <div class="popup-content">
+          <button class="popup-close" aria-label="Close popup">
+            <img
+              src={close.src}
+              width="24"
+              height="24"
+              alt=""
+              aria-hidden="true"
+            />
           </button>
-        ))
-      }
-    </div>
-
-    <!-- Team Projects -->
-    <h2 class="flower-heading">Team Projects & Performance</h2>
-    <p class="section-description">
-      Recognition for collaborative achievements and team performance on
-      high-impact projects.
-    </p>
-    <div class="awards-block">
-      {
-        teamProjects.map((award, index) => (
-          <div class="award-item award-item-static">
-            <div class="award-info">
-              <h5>{award.date}</h5>
-              <h3>{award.title}</h3>
-              <p>{award.description}</p>
-            </div>
+          <div class="popup-body">
+            <h5 id="popup-date"></h5>
+            <h3 id="popup-title"></h3>
+            <p id="popup-content"></p>
           </div>
-        ))
-      }
-    </div>
-
-    <!-- Award Popup Modal -->
-    <div class="award-popup" id="award-popup" aria-hidden="true">
-      <div class="popup-overlay"></div>
-      <div class="popup-content">
-        <button class="popup-close" aria-label="Close popup">
-          <img
-            src={close.src}
-            width="24"
-            height="24"
-            alt=""
-            aria-hidden="true"
-          />
-        </button>
-        <div class="popup-body">
-          <h5 id="popup-date"></h5>
-          <h3 id="popup-title"></h3>
-          <p id="popup-content"></p>
         </div>
       </div>
-    </div>
 
-    <CTA />
+      <CTA />
+    </div>
   </div>
 </Layout>
 
 <style>
+  /* ===== GRADIENT HEADER ===== */
+  .awards-page-wrapper {
+    position: relative;
+  }
+
+  .gradient-header {
+    background: linear-gradient(
+      180deg,
+      var(--amaranth) 0%,
+      var(--amaranth) 60%,
+      rgba(137, 4, 61, 0.8) 80%,
+      rgba(137, 4, 61, 0) 100%
+    );
+    padding: 0 18px 60px 18px;
+    margin: 0 -18px 60px -18px;
+  }
+
+  /* White nav links and logo on awards page */
+  .gradient-header .navbar .link {
+    color: white !important;
+  }
+
+  .gradient-header .navbar .link:hover {
+    color: var(--platinum) !important;
+  }
+
+  .gradient-header .navbar .logo img {
+    filter: brightness(0) invert(1);
+  }
+
+  .gradient-header .navbar .hamburger-menu {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .gradient-header .navbar .hamburger-menu .icon {
+    filter: brightness(0) invert(1);
+  }
+
+  /* Mobile nav links */
+  .gradient-header .navbar #mobile-nav-links .link {
+    color: var(--ink-black) !important;
+  }
+
+  .gradient-header .innerpage-masthead {
+    background: transparent;
+    padding: 30px 0;
+    margin-bottom: 0;
+  }
+
+  .gradient-header .innerpage-masthead h1 {
+    color: white;
+  }
+
+  @media (min-width: 768px) {
+    .gradient-header {
+      padding: 0 18px 100px 18px;
+      margin: 0 -18px 100px -18px;
+    }
+
+    .gradient-header .innerpage-masthead {
+      padding: 50px 0;
+    }
+  }
+
+  /* ===== AWARD EMOJI & HEADER ===== */
+  .award-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 12px;
+  }
+
+  .award-emoji {
+    font-size: 32px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .award-header > div {
+    flex: 1;
+  }
+
+  .award-header h5,
+  .award-header h3 {
+    margin: 0;
+  }
+
+  .award-header h5 {
+    margin-bottom: 8px;
+  }
+
   .icon-circle {
     background-color: var(--berry-crush);
     width: 35px;
