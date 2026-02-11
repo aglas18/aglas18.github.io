@@ -56,4 +56,6 @@ gallery:
     alt: Product Mockups
   - src: /assets/images/riot-beauty/riot-laptop.png
     alt: Laptop Homepage Mockup
+
+figmaEmbed: https://embed.figma.com/design/4krOJdM6x3gpT5LmnbgrNy/riot-beauty?node-id=2-894&embed-host=share
 ---

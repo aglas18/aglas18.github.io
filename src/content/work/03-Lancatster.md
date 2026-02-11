@@ -54,4 +54,6 @@ gallery:
     alt: Tote Bag Mockup
   - src: /assets/images/lancatster-cat-cafe/hat-mockup.png
     alt: Merch Mockup
+
+figmaEmbed: https://embed.figma.com/design/joeOGqgiiE3qMKWckErpUM/cat-cafe?node-id=0-1&embed-host=share
 ---

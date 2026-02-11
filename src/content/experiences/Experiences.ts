@@ -19,28 +19,28 @@ export const jobList = [
     date: "Jun 2024 - Present",
     title: "Associate Lead Web Designer",
     content:
-      "Lead website redesigns, landing pages, and digital marketing projects, collaborating with developers and project managers to ensure designs are implemented accurately.",
+      "Led complex website and landing page projects across multiple CMS platforms, balancing design quality, usability, and scalable implementation. Took on increased ownership through on-call design support, cross-team collaboration, and improving internal processes to elevate team efficiency.",
   },
   {
     company: "WebFX",
     date: "May 2023 - Jun 2024",
     title: "Web Designer",
     content:
-      "Designed landing pages, responsive web and marketing assets, social media graphics, micrographics, conversion-focused assets, and longform blog layouts.",
+      "Designed responsive websites and marketing assets while collaborating closely with developers and project managers to deliver polished, on-brand experiences. Contributed to UX initiatives and mentored junior designers, helping maintain visual consistency and design quality across projects.",
   },
   {
     company: "WebFX",
     date: "May 2022 - May 2023",
     title: "Jr. Web designer",
     content:
-      "Built and implemented designs across multiple CMSs and page builders, including WordPress (with Advanced Custom Fields), Shopify, BigCommerce, HubSpot, Elementor, Divi, and Avada, ensuring responsive, high-quality digital experiences.",
+      "Created landing pages, website redesigns, and conversion-focused marketing assets across a wide range of industries. Partnered with front-end developers to bring designs to life and build a strong foundation in responsive, user-centered design.",
   },
   {
     company: "WebFX",
     date: "sept 2021 - may 2022",
     title: "Online graphics & web design intern",
     content:
-      "Lead website redesigns, landing pages, and digital marketing projects, collaborating with developers and project managers to ensure designs are implemented accurately.",
+      "Supported digital marketing and web projects through longform blog layouts and PPC ad design. Gained hands-on experience in agency workflows while developing a strong eye for visual consistency and detail.",
   },
   {
     company: "Lebanon Valley College",

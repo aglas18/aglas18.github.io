@@ -56,4 +56,6 @@ gallery:
     alt: Sign Mockup
   - src: /assets/images/rosewood/rosewood_window.png
     alt: Window Mockup
+
+figmaEmbed: https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/YOUR_FILE_ID/Rosewood
 ---

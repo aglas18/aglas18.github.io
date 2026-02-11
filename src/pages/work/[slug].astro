@@ -177,6 +177,23 @@ const { frontmatter } = project;
       </div>
     </section>
 
+    <!-- Figma Embed -->
+    {
+      frontmatter.figmaEmbed && (
+        <section class="figma-embed">
+          <h2>Interactive Prototype</h2>
+          <div class="figma-container">
+            <iframe
+              src={frontmatter.figmaEmbed}
+              allowfullscreen
+              class="figma-iframe"
+              title={`${frontmatter.title} - Figma Prototype`}
+            />
+          </div>
+        </section>
+      )
+    }
+
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox" aria-hidden="true">
       <button class="lightbox-close" aria-label="Close">
@@ -315,6 +332,50 @@ const { frontmatter } = project;
 
     .card-two h3 {
       color: var(--platinum);
+    }
+
+    /* ===== FIGMA EMBED ===== */
+    .figma-embed {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .figma-embed h2 {
+      margin-bottom: 2rem;
+      color: var(--ink-black);
+    }
+
+    .figma-container {
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      background-color: var(--platinum);
+      padding: 1rem;
+    }
+
+    .figma-iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .figma-embed {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+      }
+
+      .figma-iframe {
+        height: 800px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .figma-iframe {
+        height: 900px;
+      }
     }
 
     /* ===== GALLERY (mobile stacked) ===== */

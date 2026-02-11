@@ -7,12 +7,12 @@ export const testimonialList = [
   {
     testimonial: `"Huge thanks to Adrian for tackling tasks so quickly and always coming through with fresh ideas. Her recommendations make it easy to deliver exactly what the client wanted. Really appreciate all that you do, Adrian!"`,
     name: "Jazlyn Robinson",
-    title: "Digital Marketing Analyst, WebFX",
+    title: "Internet Marketer, WebFX",
   },
   {
     testimonial: `"Adrian is and has been such a joy to work with and grow alongside at WebFX, back in 2020 when we started as interns until now! She just does it all and does it like no one else... being on-call, bringing STELLAR designs to social media tasks and redesigns, presenting a LNL with so much good information + personality, encouraging others in all they do... I can't express how much being on the same team as her means to me and so many others. Cheers to Adrian as she reaches 3 years this month!"`,
     name: "Elise Forry",
-    title: "Associate Lead Web Designer, WebFX",
+    title: "Web Designer, WebFX",
   },
   {
     testimonial: `"Adrian has been helping me with a few Rainmaker projects lately, and working with her has been so fun! Her eye for design has been amazing, and she has offered plenty of creative solutions with the limited block options! I also really appreciate how quickly she has completed her work under the already tight deadlines that a Rainmaker redesign entails."`,
@@ -27,6 +27,6 @@ export const testimonialList = [
   {
     testimonial: `"I've worked with Adrian on a few HP projects to help WOW clients and she has become a go-to for client-wow projects because of her excellent attention to detail and communication within projects. Most recently Adrian helped with a project for [client] to implement some quick design wins and UX suggestions to improve their site. This was a client who has been evaluating their partnership with WebFX and Adrian's work here goes a long way to strengthening that relationship! I appreciate you Adrian and all you do to help our clients :) "`,
     name: "Alex White",
-    title: "Interactive Customer Success Manager, WebFX",
+    title: "Interactive Manager, WebFX",
   },
 ];

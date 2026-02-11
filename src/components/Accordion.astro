@@ -42,6 +42,7 @@ import { experienceList, jobList } from "../content/experiences/Experiences.ts";
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex-wrap: wrap;
   }
 
   .accordion-item {
@@ -49,6 +50,8 @@ import { experienceList, jobList } from "../content/experiences/Experiences.ts";
     padding: 20px 26px;
     margin-bottom: 20px;
     border-radius: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .accordion-title {
@@ -90,6 +93,10 @@ import { experienceList, jobList } from "../content/experiences/Experiences.ts";
     background-color: var(--platinum);
     padding: 20px;
     border-radius: 30px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   .job-item :last-of-type {
@@ -124,11 +131,14 @@ import { experienceList, jobList } from "../content/experiences/Experiences.ts";
       font-size: 22px;
     }
 
-    .job-item p {
-      font-size: 16px;
-      line-height: 27px;
-      margin-top: 10px;
-    }
+  .job-item p {
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
 
     .job-item h5 {
       font-size: 18px;

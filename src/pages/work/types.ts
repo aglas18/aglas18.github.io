@@ -22,6 +22,7 @@ export type WorkFrontmatter = {
     src: string;
     alt: string;
   }[];
+  figmaEmbed?: string; // Optional Figma embed URL
 };
 
 // The shape of the imported markdown file
