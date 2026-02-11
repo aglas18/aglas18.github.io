@@ -27,60 +27,12 @@ const internalRecognition = awardsList.filter(
       <h1>Awards</h1>
     </div>
 
-    <!-- Agency Awards -->
-    <h2 class="flower-heading">Agency Awards</h2>
-    <div class="awards-block">
-      {
-        agencyAwards.map((award, index) => (
-          <button
-            class="award-item"
-            data-award-index={index}
-            data-category="agency"
-            type="button"
-          >
-            <div class="award-info">
-              <h5>{award.date}</h5>
-              <h3>{award.title}</h3>
-              <p>{award.description}</p>
-
-              <div class="link-btn">
-                <span class="view-project">
-                  {award.linkUrl ? "View Awards" : "Read More"}
-                </span>
-                <span class="icon-circle">
-                  <img
-                    src={arrow.src}
-                    width="18"
-                    height="18"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </span>
-              </div>
-            </div>
-          </button>
-        ))
-      }
-    </div>
-
-    <!-- Team Projects -->
-    <h2 class="flower-heading">Team Projects & Performance</h2>
-    <div class="awards-block">
-      {
-        teamProjects.map((award, index) => (
-          <div class="award-item award-item-static">
-            <div class="award-info">
-              <h5>{award.date}</h5>
-              <h3>{award.title}</h3>
-              <p>{award.description}</p>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-
     <!-- Internal Recognition -->
     <h2 class="flower-heading">Internal Recognition & Peer Awards</h2>
+    <p class="section-description">
+      Awards and recognition received for individual contributions,
+      communication excellence, and outstanding design work.
+    </p>
     <div class="awards-block">
       {
         internalRecognition.map((award, index) =>
@@ -120,6 +72,66 @@ const internalRecognition = awardsList.filter(
             </div>
           ),
         )
+      }
+    </div>
+
+    <!-- Agency Awards -->
+    <h2 class="flower-heading">Agency Awards</h2>
+    <p class="section-description">
+      These awards were presented to the agency for outstanding work. I
+      contributed to the design and execution of these award-winning projects.
+    </p>
+    <div class="awards-block">
+      {
+        agencyAwards.map((award, index) => (
+          <button
+            class="award-item"
+            data-award-index={index}
+            data-category="agency"
+            type="button"
+          >
+            <div class="award-info">
+              <h5>{award.date}</h5>
+              <h3>{award.title}</h3>
+              <p>{award.description}</p>
+
+              <div class="link-btn">
+                <span class="view-project">
+                  {award.linkUrl ? "View Awards" : "Read More"}
+                </span>
+                <span class="icon-circle">
+                  <img
+                    src={arrow.src}
+                    width="18"
+                    height="18"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </span>
+              </div>
+            </div>
+          </button>
+        ))
+      }
+    </div>
+
+    <!-- Team Projects -->
+    <h2 class="flower-heading">Team Projects & Performance</h2>
+    <p class="section-description">
+      Recognition for collaborative achievements and team performance on
+      high-impact projects.
+    </p>
+    <div class="awards-block">
+      {
+        teamProjects.map((award, index) => (
+          <div class="award-item award-item-static">
+            <div class="award-info">
+              <h5>{award.date}</h5>
+              <h3>{award.title}</h3>
+              <p>{award.description}</p>
+            </div>
+          </div>
+        ))
       }
     </div>
 
@@ -188,11 +200,40 @@ const internalRecognition = awardsList.filter(
 
   .award-item-static {
     cursor: default;
+    padding: 18px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    height: 100%;
   }
 
   .award-item-static:hover {
     box-shadow: none;
     transform: none;
+  }
+
+  @media (min-width: 768px) {
+    .award-item-static {
+      padding: 25px;
+    }
+  }
+
+  .section-description {
+    color: var(--ink-black);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  @media (min-width: 768px) {
+    .section-description {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
   }
 
   .award-info {
