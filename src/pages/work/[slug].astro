@@ -181,7 +181,7 @@ const { frontmatter } = project;
     {
       frontmatter.figmaEmbed && (
         <section class="figma-embed">
-          <h2>Interactive Prototype</h2>
+          <h2>Web Prototypes</h2>
           <div class="figma-container">
             <iframe
               src={frontmatter.figmaEmbed}
@@ -383,6 +383,11 @@ const { frontmatter } = project;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+    }
+
+    .close-icon {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(0%)
+        hue-rotate(352deg) brightness(106%) contrast(100%);
     }
 
     .row-1,
