@@ -249,21 +249,23 @@ function getAwardEmoji(title: string): string {
       rgba(137, 4, 61, 0.8) 80%,
       rgba(137, 4, 61, 0) 100%
     );
-    padding: 0 18px 60px 18px;
+    padding: 20px 18px 60px 18px;
     margin: 0 -18px 60px -18px;
   }
 
   /* White nav links and logo on awards page */
-  .gradient-header .navbar .link {
+  .gradient-header .navbar .desktop-links .link,
+  .gradient-header .navbar a.link {
     color: white !important;
   }
 
-  .gradient-header .navbar .link:hover {
+  .gradient-header .navbar .desktop-links .link:hover,
+  .gradient-header .navbar a.link:hover {
     color: var(--platinum) !important;
   }
 
   .gradient-header .navbar .logo img {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1) !important;
   }
 
   .gradient-header .navbar .hamburger-menu {
@@ -274,7 +276,7 @@ function getAwardEmoji(title: string): string {
     filter: brightness(0) invert(1);
   }
 
-  /* Mobile nav links */
+  /* Mobile nav links - keep dark since mobile menu has its own background */
   .gradient-header .navbar #mobile-nav-links .link {
     color: var(--ink-black) !important;
   }
@@ -291,8 +293,7 @@ function getAwardEmoji(title: string): string {
 
   @media (min-width: 768px) {
     .gradient-header {
-      padding: 0 18px 100px 18px;
-      margin: 0 -18px 100px -18px;
+      padding: 30px 18px 100px 18px;
     }
 
     .gradient-header .innerpage-masthead {
@@ -303,19 +304,19 @@ function getAwardEmoji(title: string): string {
   /* ===== AWARD EMOJI & HEADER ===== */
   .award-header {
     display: flex;
-    align-items: flex-start;
-    gap: 15px;
+    flex-direction: column;
+    gap: 12px;
     margin-bottom: 12px;
   }
 
   .award-emoji {
     font-size: 32px;
     line-height: 1;
-    flex-shrink: 0;
+    align-self: flex-start;
   }
 
   .award-header > div {
-    flex: 1;
+    width: 100%;
   }
 
   .award-header h5,
