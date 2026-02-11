@@ -44,7 +44,9 @@ const internalRecognition = awardsList.filter(
               <p>{award.description}</p>
 
               <div class="link-btn">
-                <span class="view-project">Read More</span>
+                <span class="view-project">
+                  {award.linkUrl ? "View Awards" : "Read More"}
+                </span>
                 <span class="icon-circle">
                   <img
                     src={arrow.src}
@@ -81,33 +83,43 @@ const internalRecognition = awardsList.filter(
     <h2 class="flower-heading">Internal Recognition & Peer Awards</h2>
     <div class="awards-block">
       {
-        internalRecognition.map((award, index) => (
-          <button
-            class="award-item"
-            data-award-index={index}
-            data-category="internal"
-            type="button"
-          >
-            <div class="award-info">
-              <h5>{award.date}</h5>
-              <h3>{award.title}</h3>
-              <p>{award.description}</p>
+        internalRecognition.map((award, index) =>
+          award.popupContent ? (
+            <button
+              class="award-item"
+              data-award-index={index}
+              data-category="internal"
+              type="button"
+            >
+              <div class="award-info">
+                <h5>{award.date}</h5>
+                <h3>{award.title}</h3>
+                <p>{award.description}</p>
 
-              <div class="link-btn">
-                <span class="view-project">Read More</span>
-                <span class="icon-circle">
-                  <img
-                    src={arrow.src}
-                    width="18"
-                    height="18"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                </span>
+                <div class="link-btn">
+                  <span class="view-project">Read More</span>
+                  <span class="icon-circle">
+                    <img
+                      src={arrow.src}
+                      width="18"
+                      height="18"
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+              </div>
+            </button>
+          ) : (
+            <div class="award-item award-item-static">
+              <div class="award-info">
+                <h5>{award.date}</h5>
+                <h3>{award.title}</h3>
+                <p>{award.description}</p>
               </div>
             </div>
-          </button>
-        ))
+          ),
+        )
       }
     </div>
 
