@@ -6,6 +6,7 @@ export const awardsList = [
         "Gold Horizon Award awarded to the agency for the Grip Rite campaign, with my contribution focused on design execution and visual refinement.",
       category: "Agency Awards",
       popupContent: "Grip Rite - Horizon Award 2024 Gold",
+      linkUrl: "https://www.horizoninteractiveawards.com/2024/winners/winners_list_w",
     },
     {
       date: "2023",
@@ -14,6 +15,7 @@ export const awardsList = [
         "Gold Horizon Award awarded to the agency for the Muni-Link project, with contributions supporting the overall creative and design direction.",
       category: "Agency Awards",
       popupContent: "Muni-Link - Horizon Award 2023 Gold",
+      linkUrl: "https://www.horizoninteractiveawards.com/web-site-awards/2023/software",
     },
     {
       date: "2022",
@@ -22,6 +24,7 @@ export const awardsList = [
         "Agency-awarded Gold Horizon Award for Holiday Online Ads, with design contributions supporting campaign visuals and consistency across placements.",
       category: "Agency Awards",
       popupContent: "Holiday Online Ads - ePromos - Horizon Awards 2022 - Gold",
+      linkUrl: "https://www.horizoninteractiveawards.com/2022/winners/winners_list_w",
     },
   
     // ───────── Team Projects ─────────
