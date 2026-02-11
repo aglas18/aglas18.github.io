@@ -208,6 +208,7 @@ const internalRecognition = awardsList.filter(
     text-align: left;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
   }
 
   .award-item-static:hover {
@@ -280,8 +281,20 @@ const internalRecognition = awardsList.filter(
 
   .awards-block {
     display: grid;
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 30px !important;
     align-items: stretch;
+  }
+
+  .award-item,
+  .award-item-static {
+    margin-bottom: 0;
+    min-width: 0;
+  }
+
+  /* Ensure spacing between grid items */
+  .awards-block > * {
+    margin: 0;
   }
 
   .innerpage-masthead h1 {
