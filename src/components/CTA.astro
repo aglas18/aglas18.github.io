@@ -22,6 +22,7 @@ import logo from "../assets/logo.svg";
     >
     <div class="right-footer">
       <p>© 2026 Adrian Glasmyre</p>
+      <a href="#top" class="back-to-top">↑ Back to top</a>
       <div class="icons">
         <a
           class="icon-btn"
@@ -37,6 +38,22 @@ import logo from "../assets/logo.svg";
 </section>
 
 <style>
+  /* ===== BACK TO TOP ===== */
+  .back-to-top {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+
+  .back-to-top:hover {
+    opacity: 1;
+  }
+
   .right-footer {
     display: flex;
     flex-direction: row;
