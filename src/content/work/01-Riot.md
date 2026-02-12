@@ -55,7 +55,7 @@ gallery:
   - src: /assets/images/riot-beauty/mockups.png
     alt: Product Mockups
   - src: /assets/images/riot-beauty/riot-amazon.png
-    alt: Laptop Homepage Mockup
+    alt: Foundation Amazon A+ Content 
 
 figmaEmbed: https://embed.figma.com/design/4krOJdM6x3gpT5LmnbgrNy/riot-beauty?node-id=0-1&embed-host=share
 ---
