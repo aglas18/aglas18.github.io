@@ -55,7 +55,11 @@ gallery:
   - src: /assets/images/riot-beauty/mockups.png
     alt: Product Mockups
   - src: /assets/images/riot-beauty/riot-amazon.png
-    alt: Foundation Amazon A+ Content 
+    alt: Foundation Amazon A+ Content
 
-figmaEmbed: https://embed.figma.com/design/4krOJdM6x3gpT5LmnbgrNy/riot-beauty?node-id=0-1&embed-host=share
+prototypes:
+  - label: "Homepage"
+    url: https://www.figma.com/proto/4krOJdM6x3gpT5LmnbgrNy/riot-beauty?page-id=0%3A1&node-id=2-894&viewport=590%2C291%2C0.08&t=H1sdMwH4uiGfNT8w-1&scaling=scale-down-width&content-scaling=fixed
+  - label: "Product Page"
+    url: https://www.figma.com/proto/4krOJdM6x3gpT5LmnbgrNy/riot-beauty?page-id=0%3A1&node-id=39-2&viewport=590%2C291%2C0.08&t=SZ9B9PvJybIvizou-1&scaling=scale-down-width&content-scaling=fixed
 ---
