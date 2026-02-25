@@ -55,5 +55,7 @@ gallery:
   - src: /assets/images/lancatster-cat-cafe/hat-mockup.png
     alt: Merch Mockup
 
-figmaEmbed: https://embed.figma.com/design/joeOGqgiiE3qMKWckErpUM/cat-cafe?node-id=0-1&embed-host=share
+figmaEmbed: https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/joeOGqgiiE3qMKWckErpUM/cat-cafe?page-id=0%3A1&node-id=1-2&viewport=427%2C455%2C0.06&t=m3ctKtQMtY4JIMKG-1&scaling=scale-down-width&content-scaling=fixed
+---
+
 ---
