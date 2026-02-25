@@ -57,5 +57,5 @@ gallery:
   - src: /assets/images/rosewood/rosewood_window.png
     alt: Window Mockup
 
-figmaEmbed: https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/TOjA6jj0Kvh1OhQvs71568/rosewood?page-id=0%3A1&node-id=1-6&viewport=475%2C437%2C0.11&t=iIZDi52fn8Rl8mgq-1&scaling=min-zoom&content-scaling=fixed
+figmaEmbed: https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/TOjA6jj0Kvh1OhQvs71568/rosewood?page-id=0%3A1&node-id=1-6&p=f&viewport=3107%2C-5941%2C2.17&t=Bg2y0acWLktwLcKs-1&scaling=scale-down-width&content-scaling=fixed
 ---
