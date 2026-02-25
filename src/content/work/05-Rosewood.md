@@ -48,8 +48,8 @@ gallery:
     alt: Stationary & Business Cards
   - src: /assets/images/rosewood/rosewood_bottle.jpg
     alt: Bottle Mockup
-  - src: /assets/images/rosewood/rosewood_bottle.jpg
-    alt: Social Media
+  - src: /assets/images/rosewood/rosewood-laptop.png
+    alt: Laptop Mockup (view the full proto below)
   - src: /assets/images/rosewood/merch.png
     alt: Merch Mockups
   - src: /assets/images/rosewood/rosewood_sign.jpg

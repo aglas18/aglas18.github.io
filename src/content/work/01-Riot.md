@@ -5,19 +5,19 @@ slug: riot-beauty
 # Homepage / shared content
 cardImage:
   src: /assets/images/riot-beauty/riot-beauty-card.png
-  alt: Fat Pineapple Branding
+  alt: Riot Beauty
 
 shortDescription: >
-  A multi-channel beauty brand project spanning e-commerce website design, visual identity and logo design, product concepts, Amazon A+ content, PPC ads, and social media assets.
+  A conceptual beauty brand project spanning e-commerce website design, visual identity and logo design, product concepts, Amazon A+ content, PPC ads, and social media assets.
 
 projectType: >
   Concept Brand & E-Commerce Design
 
 # Individual project page content
 longDescription: |
-  Riot Beauty is a conceptual cosmetics brand inspired by punk and rock music, designed for the everyday girl who wants her makeup to feel expressive, effortless, and a little rebellious. Built from a love of makeup and fashion, the brand balances bold visuals with approachability - pairing edgy, attitude-driven design with products meant to fit seamlessly into daily routines.
+  Riot Beauty is a conceptual cosmetics brand inspired by punk and rock music, designed for everyday. Built from a love of makeup and fashion, the brand balances bold visuals with approachability - pairing clean layouts with bold typography & colors.
 
-  The project spans e-commerce website design, visual identity and logo design, social media content, PPC ads, Amazon A+ layouts, and conceptual product design. The web experience intentionally colors outside the lines, using modern layouts, confident typography, and unexpected details to create a shopping experience that feels energetic, editorial, and unmistakably Riot.
+  The project spans e-commerce website design, visual identity and logo design, social media content, PPC ads, Amazon A+ layouts, and conceptual product design. The web experience intentionally colors outside the lines, using modern layouts, and confident typography to create a shopping experience that feels simulatenously energetic & editorial.
 
 heroImage:
   src: /assets/images/riot-beauty/riot-laptop.png
