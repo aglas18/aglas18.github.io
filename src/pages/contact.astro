@@ -61,7 +61,25 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   /* Full-page gradient for contact only; footer stays on solid background */
+  .contact-page {
+    overflow-x: hidden;
+  }
+
   .contact-page-bg {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .contact-page-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
+    pointer-events: none;
     background:
       radial-gradient(
         circle at top left,
@@ -74,7 +92,6 @@ import Layout from "../layouts/Layout.astro";
         rgba(34, 56, 67, 0) 50%
       ),
       var(--platinum);
-    min-height: 100vh;
   }
 
   .contact {
