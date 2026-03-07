@@ -73,25 +73,18 @@ import Layout from "../layouts/Layout.astro";
   .contact-page-bg::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -21px;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
     min-height: 100vh;
     z-index: -1;
     pointer-events: none;
-    background:
-      radial-gradient(
-        circle at top left,
-        rgba(137, 4, 61, 0.14),
-        rgba(137, 4, 61, 0) 55%
-      ),
-      radial-gradient(
-        circle at bottom right,
-        rgba(34, 56, 67, 0.14),
-        rgba(34, 56, 67, 0) 50%
-      ),
-      var(--platinum);
+    background: linear-gradient(
+      180deg,
+      rgb(137 4 61 / 14%) 0%,
+      rgb(255 255 255 / 0%) 100%
+    );
   }
 
   .contact {

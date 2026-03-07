@@ -62,10 +62,13 @@ const allWork = Object.values(
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
   }
 
   .project-item {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
     text-decoration: none;
     color: inherit;
     background-color: #fff;
@@ -93,6 +96,18 @@ const allWork = Object.values(
   .project-items {
     display: grid;
     gap: 30px;
+    align-items: stretch;
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .project-info p {
+    flex: 1 1 auto;
   }
 
   @media (min-width: 768px) {
