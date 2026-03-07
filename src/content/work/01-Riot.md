@@ -26,7 +26,7 @@ heroImage:
 about:
   - Brand Identity & Visual System
   - Logo Design
-  - E-Commerce Website Design
+  - E-Comm Web Design
   - Social Media & Content Design
   - PPC & Digital Ad Design
   - Amazon A+ Layouts

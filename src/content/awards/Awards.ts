@@ -124,8 +124,8 @@ export const awardsList = [
     category: "Internal Recognition",
   },
   {
-    date: "2022–2025",
-    title: "Designasaur Award (5×)",
+    date: "2022–2026",
+    title: "Designasaur Award (6×)",
     description:
       "Team-nominated award recognizing standout design work, received five times since 2022.",
     category: "Internal Recognition",

@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 
     <section class="contact">
       <div class="contact-intro">
-        <h1>Let's Work Together</h1>
+        <h1 class="flower-heading">Let's Work Together</h1>
         <p>
           Have a project in mind, a question, or just want to say hi? Fill out
           the form below and I'll get back to you.
@@ -59,12 +59,32 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   .contact {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px 24px;
+    max-width: 900px;
+    margin: 40px auto 80px;
+    padding: 40px 24px 48px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 18px 45px rgba(14, 23, 27, 0.16);
+    background-image:
+      radial-gradient(circle at top left, rgba(137, 4, 61, 0.14), rgba(137, 4, 61, 0) 60%),
+      radial-gradient(circle at bottom right, rgba(34, 56, 67, 0.14), rgba(34, 56, 67, 0) 55%);
+    overflow: hidden;
+  }
+
+  .contact::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 18px;
+    width: 90px;
+    height: 90px;
+    background: var(--flower-stroke) no-repeat center / contain;
+    opacity: 0.18;
+    pointer-events: none;
   }
 
   .contact-intro h1 {
@@ -76,6 +96,7 @@ import Layout from "../layouts/Layout.astro";
   .contact-intro p {
     text-align: center;
     max-width: 600px;
+    margin-bottom: 0;
   }
 
   .contact-intro {
@@ -87,8 +108,8 @@ import Layout from "../layouts/Layout.astro";
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    align-items: center;
+    gap: 24px;
+    align-items: stretch;
   }
 
   .form-group {
@@ -111,7 +132,8 @@ import Layout from "../layouts/Layout.astro";
   input:focus,
   textarea:focus {
     outline: none;
-    border-color: var(--navy-blue);
+    border-color: var(--berry-crush);
+    box-shadow: 0 0 0 2px rgba(170, 68, 101, 0.25);
   }
 
   /* Floating labels */
@@ -140,17 +162,70 @@ import Layout from "../layouts/Layout.astro";
 
   .submit-btn {
     margin-top: 10px;
-    padding: 14px 20px;
-    border-radius: 100px;
+    padding: 14px 26px;
+    border-radius: 999px;
     border: none;
-    background-color: var(--navy-blue);
+    background: var(--gradient-accent);
     color: var(--platinum);
     font-size: 16px;
     cursor: pointer;
     width: fit-content;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    box-shadow: 0 14px 30px rgba(137, 4, 61, 0.35);
+    transition:
+      background 0.25s ease,
+      transform 0.15s ease,
+      box-shadow 0.25s ease;
   }
 
   .submit-btn:hover {
-    background-color: var(--ink-black);
+    background: var(--ink-black);
+    box-shadow: 0 10px 24px rgba(14, 23, 27, 0.45);
+    transform: translateY(-1px);
+  }
+
+  .submit-btn:focus-visible {
+    outline: 2px solid var(--berry-crush);
+    outline-offset: 2px;
+  }
+
+  @media (min-width: 768px) {
+    .contact {
+      padding: 48px 40px 56px;
+      display: grid;
+      grid-template-columns: 1.1fr 1.4fr;
+      column-gap: 48px;
+      align-items: flex-start;
+    }
+
+    .contact-intro {
+      align-items: flex-start;
+    }
+
+    .contact-intro h1,
+    .contact-intro p {
+      text-align: left;
+    }
+
+    .contact-intro p {
+      max-width: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .contact {
+      max-width: 960px;
+      padding: 56px 56px 64px;
+    }
+
+    .contact::before {
+      top: -30px;
+      right: 40px;
+      width: 120px;
+      height: 120px;
+      opacity: 0.22;
+    }
   }
 </style>
