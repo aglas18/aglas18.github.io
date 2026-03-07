@@ -6,58 +6,77 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="main-wrapper">
-    <Navbar />
+  <div class="main-wrapper contact-page">
+    <div class="contact-page-bg">
+      <Navbar />
 
-    <section class="contact">
-      <div class="contact-intro">
-        <h1>Let's Work Together</h1>
-        <p>
-          Have a project in mind, a question, or just want to say hi? Fill out
-          the form below and I'll get back to you.
-        </p>
-      </div>
-
-      <form
-        class="contact-form"
-        action="https://getform.io/f/bolqqmja"
-        method="post"
-      >
-        <div class="form-group">
-          <input id="name" name="name" type="text" placeholder=" " required />
-          <label for="name">Name</label>
+      <section class="contact">
+        <div class="contact-intro">
+          <h1>Let's Work Together</h1>
+          <p>
+            Have a project in mind, a question, or just want to say hi? Fill out
+            the form below and I'll get back to you.
+          </p>
         </div>
 
-        <div class="form-group">
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder=" "
-            required
-          />
-          <label for="email">Email</label>
-        </div>
+        <form
+          class="contact-form"
+          action="https://getform.io/f/bolqqmja"
+          method="post"
+        >
+          <div class="form-group">
+            <input id="name" name="name" type="text" placeholder=" " required />
+            <label for="name">Name</label>
+          </div>
 
-        <div class="form-group">
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder=" "
-            required></textarea>
-          <label for="message">Message</label>
-        </div>
+          <div class="form-group">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder=" "
+              required
+            />
+            <label for="email">Email</label>
+          </div>
 
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
-    </section>
+          <div class="form-group">
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder=" "
+              required></textarea>
+            <label for="message">Message</label>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+    </div>
 
     <Footer />
   </div>
 </Layout>
 
 <style>
+  /* Full-page gradient for contact only; footer stays on solid background */
+  .contact-page-bg {
+    background:
+      radial-gradient(
+        circle at top left,
+        rgba(137, 4, 61, 0.14),
+        rgba(137, 4, 61, 0) 55%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        rgba(34, 56, 67, 0.14),
+        rgba(34, 56, 67, 0) 50%
+      ),
+      var(--platinum);
+    min-height: 100vh;
+  }
+
   .contact {
     max-width: 800px;
     margin: 0 auto;
