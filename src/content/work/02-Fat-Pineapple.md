@@ -34,7 +34,7 @@ tools:
 gallery:
   - src: /assets/images/fat-pineapple/fp-gradient-logo.png
     alt: Gradient Logo
-  - src: /assets/images/fat-pineapple/fp-color-logo.png
+  - src: /assets/images/fat-pineapple/updated-fat-pineapple.png
     alt: Color logo
   - src: /assets/images/fat-pineapple/fp-bw-logo.png
     alt: Black & White Logo
