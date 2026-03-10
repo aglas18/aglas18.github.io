@@ -6,7 +6,7 @@ cardSubtitle: Brand & Website Redesign
 
 # Homepage / shared content
 cardImage:
-  src: /assets/images/lancatster-cat-cafe/cat-cafe-card.png
+  src: /assets/images/lancatster-cat-cafe/new-cat-cafe-card.png
   alt: LanCATster Cat Cafe
 
 shortDescription: >
