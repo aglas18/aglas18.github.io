@@ -35,7 +35,10 @@ const allWork = Object.values(
               />
 
               <div class="project-info">
-                <h3>{work.frontmatter.title}</h3>
+                <h3>{work.frontmatter.brand ?? work.frontmatter.title}</h3>
+                {work.frontmatter.cardSubtitle && (
+                  <h4>{work.frontmatter.cardSubtitle}</h4>
+                )}
                 <p>{work.frontmatter.shortDescription}</p>
 
                 <div class="link-btn">
@@ -131,6 +134,14 @@ const allWork = Object.values(
 
   .project-info h3 {
     margin-bottom: 10px;
+  }
+
+  .project-info h4 {
+    margin: 0;
+  }
+
+  .project-info h4 + p {
+    margin-top: 10px;
   }
 
   .project-info p {

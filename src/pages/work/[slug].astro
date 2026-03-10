@@ -44,7 +44,8 @@ const { frontmatter } = project;
     <section class="hero">
       <div>
         <h5>{frontmatter.projectType || "Project Type"}</h5>
-        <h1>{frontmatter.title}</h1>
+        <h1>{frontmatter.brand ?? frontmatter.title}</h1>
+        {frontmatter.cardSubtitle && <h2>{frontmatter.cardSubtitle}</h2>}
       </div>
       <img src={frontmatter.heroImage.src} alt={frontmatter.heroImage.alt} />
     </section>
@@ -721,18 +722,25 @@ const { frontmatter } = project;
   </style>
 
   <script>
-    const images = Array.from(document.querySelectorAll(".gallery-image"));
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-image");
-    const lightboxCaption = document.getElementById("lightbox-caption");
+    const images = Array.from(
+      document.querySelectorAll<HTMLImageElement>(".gallery-image"),
+    );
+    const lightbox = document.getElementById("lightbox") as HTMLElement | null;
+    const lightboxImg = document.getElementById(
+      "lightbox-image",
+    ) as HTMLImageElement | null;
+    const lightboxCaption = document.getElementById(
+      "lightbox-caption",
+    ) as HTMLElement | null;
 
-    const closeBtn = document.querySelector(".lightbox-close");
-    const prevBtn = document.querySelector(".lightbox-nav.prev");
-    const nextBtn = document.querySelector(".lightbox-nav.next");
+    const closeBtn = document.querySelector<HTMLElement>(".lightbox-close");
+    const prevBtn = document.querySelector<HTMLElement>(".lightbox-nav.prev");
+    const nextBtn = document.querySelector<HTMLElement>(".lightbox-nav.next");
 
     let currentIndex = 0;
 
-    function openLightbox(index) {
+    function openLightbox(index: number) {
+      if (!lightbox || !lightboxImg || !lightboxCaption) return;
       const img = images[index];
       currentIndex = index;
 
@@ -745,6 +753,7 @@ const { frontmatter } = project;
     }
 
     function closeLightbox() {
+      if (!lightbox) return;
       lightbox.classList.remove("active");
       lightbox.setAttribute("aria-hidden", "true");
     }
@@ -759,24 +768,26 @@ const { frontmatter } = project;
       openLightbox(currentIndex);
     }
 
-    images.forEach((img, index) => {
-      img.addEventListener("click", () => openLightbox(index));
-    });
+    if (lightbox && lightboxImg && lightboxCaption) {
+      images.forEach((img, index) => {
+        img.addEventListener("click", () => openLightbox(index));
+      });
 
-    closeBtn.addEventListener("click", closeLightbox);
-    nextBtn.addEventListener("click", showNext);
-    prevBtn.addEventListener("click", showPrev);
+      closeBtn?.addEventListener("click", closeLightbox);
+      nextBtn?.addEventListener("click", showNext);
+      prevBtn?.addEventListener("click", showPrev);
 
-    lightbox.addEventListener("click", (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
 
-    document.addEventListener("keydown", (e) => {
-      if (!lightbox.classList.contains("active")) return;
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
 
-      if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowRight") showNext();
-      if (e.key === "ArrowLeft") showPrev();
-    });
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") showNext();
+        if (e.key === "ArrowLeft") showPrev();
+      });
+    }
   </script>
 </Layout>

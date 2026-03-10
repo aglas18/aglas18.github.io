@@ -1,6 +1,8 @@
 ---
 title: Stop Modern Day Slavery Stickers & Illustrations
 slug: smds
+brand: Stop Modern Day Slavery
+cardSubtitle: Stickers & Illustrations
 
 # Homepage / shared content
 cardImage:

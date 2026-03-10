@@ -1,6 +1,8 @@
 ---
 title: Fat Pineapple Logo & Branding Refresh
 slug: fat-pineapple
+brand: Fat Pineapple
+cardSubtitle: Logo & Branding Refresh
 
 # Homepage / shared content
 cardImage:

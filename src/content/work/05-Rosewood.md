@@ -1,6 +1,8 @@
 ---
 title: Rosewood Bourbon Distillery Logo & Branding Concept
 slug: rosewood
+brand: Rosewood Bourbon Distillery
+cardSubtitle: Logo & Branding Concept
 
 # Homepage / shared content
 cardImage:

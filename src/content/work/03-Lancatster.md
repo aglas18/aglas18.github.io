@@ -1,6 +1,8 @@
 ---
 title: Lancatster Cat Cafe Logo & Site Redesign
 slug: lancatster
+brand: LanCATster Cat Cafe
+cardSubtitle: Logo & Site Redesign
 
 # Homepage / shared content
 cardImage:

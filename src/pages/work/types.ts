@@ -4,11 +4,14 @@ export type WorkFrontmatter = {
   slug: string;
 
   // Homepage / shared content
+  brand?: string;
+  cardSubtitle?: string;
   cardImage: {
     src: string;
     alt: string;
   };
   shortDescription: string;
+  projectType?: string;
 
   // Individual project page content
   longDescription: string;
