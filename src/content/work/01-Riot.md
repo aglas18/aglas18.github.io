@@ -2,7 +2,7 @@
 title: Riot Beauty Brand Creation
 slug: riot-beauty
 brand: Riot Beauty
-cardSubtitle: E-commerce Brand & Website Concept
+cardSubtitle: E-commerce Brand & Website
 
 # Homepage / shared content
 cardImage:

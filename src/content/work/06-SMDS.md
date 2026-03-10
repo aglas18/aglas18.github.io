@@ -1,13 +1,13 @@
 ---
-title: Stop Modern Day Slavery Stickers & Illustrations
+title: Stop Modern Day Slavery Illustration & Advocacy Design
 slug: smds
 brand: Stop Modern Day Slavery
-cardSubtitle: Stickers & Illustrations
+cardSubtitle: Illustration & Advocacy Design
 
 # Homepage / shared content
 cardImage:
   src: /assets/images/smds/smds-card.png
-  alt: Fat Pineapple Branding
+  alt: Illustration & Advocacy Design
 
 shortDescription: >
   Illustration and graphic design work focused on advocacy, including custom sticker designs and graphic illustrations.

@@ -2,7 +2,7 @@
 title: Lancatster Cat Cafe Logo & Site Redesign
 slug: lancatster
 brand: LanCATster Cat Cafe
-cardSubtitle: Logo & Site Redesign
+cardSubtitle: Brand & Website Redesign
 
 # Homepage / shared content
 cardImage:
@@ -13,7 +13,7 @@ shortDescription: >
   A reimagined brand identity for a cafe, including logo design, web design, social media visuals, and refreshed branding guidelines.
 
 projectType: >
-  Brand Refresh & Website Redesign
+  Brand & Website Redesign
 
 # Individual project page content
 longDescription: |
