@@ -45,7 +45,6 @@ const { frontmatter } = project;
       <div>
         <h5>{frontmatter.projectType || "Project Type"}</h5>
         <h1>{frontmatter.brand ?? frontmatter.title}</h1>
-        {frontmatter.cardSubtitle && <h2>{frontmatter.cardSubtitle}</h2>}
       </div>
       <img src={frontmatter.heroImage.src} alt={frontmatter.heroImage.alt} />
     </section>
@@ -255,6 +254,9 @@ const { frontmatter } = project;
       width: 100%;
       border-radius: 20px;
       margin-bottom: 2rem;
+      max-height: 340px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .hero h1 {
@@ -450,6 +452,7 @@ const { frontmatter } = project;
       .hero img {
         flex: 1 !important;
         width: 40% !important;
+        max-height: 420px;
       }
 
       .project-info {
