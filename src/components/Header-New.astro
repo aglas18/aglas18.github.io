@@ -3,48 +3,49 @@ import Flower from "../assets/flower.svg";
 ---
 
 <section class="masthead">
-  <div class="header">
-    <div class="subheading">adrian glasmyre</div>
-    <h1>Creative and Self-Motivated Designer</h1>
-    <p>
-      Passionate about transforming ideas into engaging digital experiences.
-      Specialized in delivering website redesigns and digital assets that
-      balance design, UX, and brand storytelling. Detail-oriented and
-      collaborative with a strong understanding of how design translates across
-      platforms to create seamless, user-centered experiences.
-    </p>
-    <img
-      class="decorative-flower mobile"
-      src={Flower.src}
-      width="100"
-      height="100"
-      alt="decorative flower"
-    />
+  <div class="masthead-inner">
+    <div class="header">
+      <div class="subheading">adrian glasmyre</div>
+      <h1>Creative and Self-Motivated Designer</h1>
+      <p>
+        Passionate about transforming ideas into engaging digital experiences.
+        Specialized in delivering website redesigns and digital assets that
+        balance design, UX, and brand storytelling. Detail-oriented and
+        collaborative with a strong understanding of how design translates
+        across platforms to create seamless, user-centered experiences.
+      </p>
+      <img
+        class="decorative-flower mobile"
+        src={Flower.src}
+        width="100"
+        height="100"
+        alt="decorative flower"
+      />
+    </div>
   </div>
-  <div class="header-desktop">
+  <div class="header-desktop" aria-hidden="true">
     <img
       class="decorative-flower desktop"
       src={Flower.src}
       width="100"
       height="100"
-      alt="decorative flower"
+      alt=""
     />
   </div>
 </section>
 
 <style>
-  .header {
+  .masthead {
     position: relative;
-    border-radius: 20px;
-    padding: 130px 20px 40px;
-    margin-top: 20px;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    padding-inline: 18px;
   }
 
-  .header::before {
+  .masthead::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -52,7 +53,7 @@ import Flower from "../assets/flower.svg";
     z-index: 0;
   }
 
-  .header::after {
+  .masthead::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -60,11 +61,21 @@ import Flower from "../assets/flower.svg";
       no-repeat;
     opacity: 0.3;
     z-index: 1;
+    pointer-events: none;
   }
 
-  .header > * {
+  .masthead-inner {
     position: relative;
     z-index: 2;
+  }
+
+  .header {
+    position: relative;
+    padding: 130px 0 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .header h1 {
@@ -97,54 +108,33 @@ import Flower from "../assets/flower.svg";
     display: none;
   }
 
-  @media (min-width: 1024px) {
-    .header::before {
-      display: none;
-    }
-
-    .header::after {
-      display: none;
-    }
-
+  @media (min-width: 768px) {
     .masthead {
-      display: flex;
-      flex-direction: row;
+      padding-inline: 40px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .masthead {
+      padding-inline: 70px;
+    }
+
+    .masthead::after {
+      background-image: url("../assets/desktop-header-background.png");
+      opacity: 0.5;
     }
 
     .header {
-      width: 50%;
-    }
-
-    .header .subheading {
-      color: var(--amaranth);
-    }
-
-    .header h1,
-    .header p {
-      color: var(--ink-black);
-    }
-
-    .header {
-      padding-bottom: 0px;
+      width: 100%;
+      padding-bottom: 48px;
     }
 
     .header-desktop {
       display: block;
-      background: var(--gradient-accent);
-      width: 50%;
-      border-radius: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .header-desktop::after {
-      content: "";
       position: absolute;
       inset: 0;
-      background: url("../assets/desktop-header-background.png") center / cover
-        no-repeat;
-      opacity: 0.5;
-      z-index: 1;
+      pointer-events: none;
+      z-index: 2;
     }
 
     .decorative-flower.mobile {
@@ -159,7 +149,7 @@ import Flower from "../assets/flower.svg";
       top: auto;
     }
 
-    .subheading {
+    .header .subheading {
       font-weight: bold;
       font-size: 28px;
     }
