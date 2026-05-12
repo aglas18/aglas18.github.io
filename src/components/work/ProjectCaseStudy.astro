@@ -1,5 +1,9 @@
 ---
-import type { CaseStudySection, WorkFrontmatter } from "../../pages/work/types";
+import type {
+  CaseStudySection,
+  WorkFrontmatter,
+  WorkImage,
+} from "../../pages/work/types";
 import WorkGallery from "./WorkGallery.astro";
 import FigmaEmbed from "./FigmaEmbed.astro";
 
@@ -22,8 +26,10 @@ function collectNarrativeImageSrcs(): Set<string> {
   };
   add(goal?.image?.src);
   for (const s of sections) {
-    if (s.type === "mediaText") add(s.image?.src);
-    else if (s.type === "imageGrid") {
+    if (s.type === "mediaText") {
+      add(s.image?.src);
+      for (const im of s.stackBottom ?? []) add(im?.src);
+    } else if (s.type === "imageGrid") {
       for (const im of s.images) add(im?.src);
     }
   }
@@ -44,6 +50,8 @@ type Prepared =
       kind: "mediaText";
       section: Extract<CaseStudySection, { type: "mediaText" }>;
       imageIndex: number | null;
+      stackBottomImages: WorkImage[];
+      stackBottomIndices: (number | null)[];
     }
   | {
       kind: "imageGrid";
@@ -59,7 +67,19 @@ for (const s of sections) {
   if (s.type === "mediaText") {
     const imageIndex =
       s.image?.src != null && s.image.src !== "" ? nextIndex++ : null;
-    prepared.push({ kind: "mediaText", section: s, imageIndex });
+    const stackBottom = (s.stackBottom ?? [])
+      .filter((im) => im?.src != null && im.src !== "")
+      .slice(0, 2);
+    const stackBottomIndices = stackBottom.map((im) =>
+      im?.src != null && im.src !== "" ? nextIndex++ : null,
+    );
+    prepared.push({
+      kind: "mediaText",
+      section: s,
+      imageIndex,
+      stackBottomImages: stackBottom,
+      stackBottomIndices,
+    });
   } else if (s.type === "imageGrid") {
     const colsRaw = s.columns as unknown;
     const cols =
@@ -101,50 +121,52 @@ const galleryStart = nextIndex;
     />
   </section>
 
-  <section class="cs-dark-band">
-    <div class="cs-cards">
-      <div class="card card-one">
-        <h3>About the Project</h3>
-        <ul>
-          {frontmatter.about.map((item) => <li>{item}</li>)}
-        </ul>
-      </div>
+  <section class="cs-dark-stack">
+    <div class="cs-dark-band">
+      <div class="cs-cards">
+        <div class="card card-one">
+          <h3>About the Project</h3>
+          <ul>
+            {frontmatter.about.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
 
-      <div class="card card-two">
-        <h3>Tools used</h3>
-        <ul>
-          {frontmatter.tools.map((tool) => <li>{tool}</li>)}
-        </ul>
+        <div class="card card-two">
+          <h3>Tools used</h3>
+          <ul>
+            {frontmatter.tools.map((tool) => <li>{tool}</li>)}
+          </ul>
+        </div>
       </div>
     </div>
-  </section>
 
-  {
-    goal && (
-      <section class="cs-goal">
-        <div class="cs-goal-inner">
-          <div class="cs-goal-media">
-            <div class="cs-goal-frame">
-              {goalImageIndex !== null ? (
-                <img
-                  src={goal.image.src}
-                  alt={goal.image.alt}
-                  class="gallery-image cs-zoomable"
-                  data-index={goalImageIndex}
-                />
-              ) : (
-                <img src={goal.image.src} alt={goal.image.alt} />
-              )}
+    {
+      goal && (
+        <div class="cs-goal">
+          <div class="cs-goal-inner">
+            <div class="cs-goal-media">
+              <div class="cs-goal-frame">
+                {goalImageIndex !== null ? (
+                  <img
+                    src={goal.image.src}
+                    alt={goal.image.alt}
+                    class="gallery-image cs-zoomable"
+                    data-index={goalImageIndex}
+                  />
+                ) : (
+                  <img src={goal.image.src} alt={goal.image.alt} />
+                )}
+              </div>
+            </div>
+            <div class="cs-goal-copy">
+              <h2>{goal.title}</h2>
+              <div class="cs-goal-body" set:html={goal.body} />
             </div>
           </div>
-          <div class="cs-goal-copy">
-            <h2>{goal.title}</h2>
-            <div class="cs-goal-body" set:html={goal.body} />
-          </div>
         </div>
-      </section>
-    )
-  }
+      )
+    }
+  </section>
 
   <section class="cs-body">
     {
@@ -159,21 +181,60 @@ const galleryStart = nextIndex;
             ]}
           >
             <div class="cs-row-media">
-              <div class="cs-row-frame">
-                {item.imageIndex !== null ? (
-                  <img
-                    src={item.section.image.src}
-                    alt={item.section.image.alt}
-                    class="gallery-image cs-zoomable"
-                    data-index={item.imageIndex}
-                  />
-                ) : (
-                  <img
-                    src={item.section.image.src}
-                    alt={item.section.image.alt}
-                  />
-                )}
-              </div>
+              {item.stackBottomImages.length > 0 ? (
+                <div class="cs-row-media-stack">
+                  <div class="cs-row-frame">
+                    {item.imageIndex !== null ? (
+                      <img
+                        src={item.section.image.src}
+                        alt={item.section.image.alt}
+                        class="gallery-image cs-zoomable"
+                        data-index={item.imageIndex}
+                      />
+                    ) : (
+                      <img
+                        src={item.section.image.src}
+                        alt={item.section.image.alt}
+                      />
+                    )}
+                  </div>
+                  <div class="cs-row-stack-bottom">
+                    {item.stackBottomImages.map((img, k) => {
+                      const idx = item.stackBottomIndices[k];
+                      return (
+                        <div class="cs-row-stack-cell">
+                          {typeof idx === "number" ? (
+                            <img
+                              src={img.src}
+                              alt={img.alt}
+                              class="gallery-image cs-zoomable"
+                              data-index={idx}
+                            />
+                          ) : (
+                            <img src={img.src} alt={img.alt} />
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ) : (
+                <div class="cs-row-frame">
+                  {item.imageIndex !== null ? (
+                    <img
+                      src={item.section.image.src}
+                      alt={item.section.image.alt}
+                      class="gallery-image cs-zoomable"
+                      data-index={item.imageIndex}
+                    />
+                  ) : (
+                    <img
+                      src={item.section.image.src}
+                      alt={item.section.image.alt}
+                    />
+                  )}
+                </div>
+              )}
             </div>
             <div class="cs-row-text">
               {item.section.eyebrow && (
@@ -240,26 +301,26 @@ const galleryStart = nextIndex;
 
 <style>
   .case-study {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
     width: 100%;
   }
 
-  .case-study > .cs-hero,
-  .case-study > .cs-dark-band,
-  .case-study > .cs-goal,
-  .case-study > .cs-body {
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+  .cs-dark-stack {
+    background-color: var(--ink-black);
+    border-radius: 30px;
+    padding: 50px 24px;
   }
 
-  .case-study > :global(section.gallery),
-  .case-study > :global(section.figma-embed) {
+  .cs-dark-band {
+    padding: 0;
     margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    background: transparent;
+  }
+
+  .cs-goal {
+    padding: 48px 0 0;
+    margin: 0;
+    background: transparent;
+    border-radius: 0;
   }
 
   .cs-hero {
@@ -289,13 +350,7 @@ const galleryStart = nextIndex;
     object-position: center;
   }
 
-  .cs-dark-band {
-    background-color: var(--ink-black);
-    padding: 50px 24px;
-    border-radius: 30px 30px 0 0;
-  }
-
-  .cs-cards {
+  .cs-dark-band .cs-cards {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -345,13 +400,6 @@ const galleryStart = nextIndex;
     color: var(--platinum);
   }
 
-  .cs-goal {
-    background-color: var(--ink-black);
-    padding: 50px 24px;
-    border-radius: 0 0 30px 30px;
-    margin-top: 0;
-  }
-
   .cs-goal-inner {
     display: flex;
     flex-direction: column;
@@ -394,10 +442,17 @@ const galleryStart = nextIndex;
   }
 
   .cs-body {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
     padding: 0;
+  }
+
+  .cs-body > .cs-row,
+  .cs-body > .cs-grid,
+  .cs-body > .cs-text-block {
+    margin-bottom: 50px;
+  }
+
+  .cs-body > :last-child {
+    margin-bottom: 0;
   }
 
   .cs-row {
@@ -409,6 +464,36 @@ const galleryStart = nextIndex;
 
   .cs-row--media-right {
     flex-direction: column-reverse;
+  }
+
+  .cs-row-media-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cs-row-stack-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .cs-row-stack-cell {
+    flex: 1;
+    min-width: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .cs-row-stack-cell img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    display: block;
   }
 
   .cs-row-frame {
@@ -510,22 +595,18 @@ const galleryStart = nextIndex;
       margin-bottom: 0;
     }
 
-    .cs-dark-band {
+    .cs-dark-stack {
       padding: 50px 48px;
     }
 
-    .cs-cards {
+    .cs-dark-band .cs-cards {
       flex-direction: row;
       align-items: stretch;
       gap: 24px;
     }
 
-    .cs-cards .card {
+    .cs-dark-band .cs-cards .card {
       flex: 1;
-    }
-
-    .cs-goal {
-      padding: 50px 48px;
     }
 
     .cs-goal-inner {
@@ -574,6 +655,10 @@ const galleryStart = nextIndex;
 
     .cs-grid--3 {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cs-row-stack-cell img {
+      max-height: 280px;
     }
 
     .cs-goal-frame img {

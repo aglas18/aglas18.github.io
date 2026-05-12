@@ -13,6 +13,8 @@ export type CaseStudySection =
   | {
       type: "mediaText";
       image: WorkImage;
+      /** Optional second row (e.g. two logos) under the main image in the media column. */
+      stackBottom?: WorkImage[];
       eyebrow?: string;
       title?: string;
       body: string;

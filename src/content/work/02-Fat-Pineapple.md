@@ -55,6 +55,11 @@ caseSections:
     image:
       src: /assets/images/fat-pineapple/fp-gradient-logo.png
       alt: Fat Pineapple gradient logo and lockups
+    stackBottom:
+      - src: /assets/images/fat-pineapple/updated-fat-pineapple.png
+        alt: Color logo
+      - src: /assets/images/fat-pineapple/fp-bw-logo.png
+        alt: Black & White Logo
 
   - type: mediaText
     mediaPosition: right
@@ -85,12 +90,6 @@ caseSections:
         alt: Fat Pineapple business cards
 
 gallery:
-  - src: /assets/images/fat-pineapple/fp-gradient-logo.png
-    alt: Gradient Logo
-  - src: /assets/images/fat-pineapple/updated-fat-pineapple.png
-    alt: Color logo
-  - src: /assets/images/fat-pineapple/fp-bw-logo.png
-    alt: Black & White Logo
   - src: /assets/images/fat-pineapple/fat-pineapple-branding-guidelines.png
     alt: Branding Guidelines
   - src: /assets/images/fat-pineapple/fp-shirt.png
