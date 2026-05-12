@@ -105,6 +105,7 @@ li {
   font-family: var(--font-body);
   font-size: 16px;
   color: var(--navy-blue);
+  line-height: 26px;
 }
 
 /* General link styles (excludes buttons and nav links via more specific selectors) */
