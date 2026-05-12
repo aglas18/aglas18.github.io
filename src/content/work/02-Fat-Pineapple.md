@@ -23,13 +23,9 @@ longDescription: >
   The goal was to create a brand system that better reflected their approach to food — vibrant, fresh, approachable, and full of personality — while modernizing the identity across both digital and physical touchpoints.
 
 heroIntro: >
-  Fat Pineapple is a catering and event services company focused on creating vibrant, fresh food experiences with a strong sense of personality and hospitality.
-
-  Founders Ryan Haas and Matt Lykens wanted the brand to better reflect their approach to food — colorful, approachable, energetic, and modern — while creating a system flexible enough to work across event materials, packaging, apparel, and digital platforms.
-
-  The existing identity had recognition, but lacked consistency and versatility across different applications.
-
-  This project focused on evolving the brand without losing the personality that made it recognizable.
+  <p>
+    Fat Pineapple is a catering and event services company focused on creating vibrant, fresh food experiences with a strong sense of personality and hospitality. Founders Ryan Haas and Matt Lykens wanted the brand to better reflect their approach to food — colorful, approachable, energetic, and modern — while creating a system flexible enough to work across event materials, packaging, apparel, and digital platforms. The existing identity had recognition, but lacked consistency and versatility across different applications. This project focused on evolving the brand without losing the personality that made it recognizable.
+  </p>
 
 heroImage:
   src: /assets/images/fat-pineapple/fat-pineapple-branding.png
@@ -59,11 +55,9 @@ caseSections:
     eyebrow: Logo & Brand Refresh
     title: Refining the Core Identity
     body: >
-      The refreshed logo leans into bold color, simplified shapes, and stronger typography to create a mark that feels more modern while still retaining the brand’s personality.
-
-      The system was designed to scale seamlessly across apparel, catering materials, packaging, and digital use cases without losing clarity or impact.
-
-      Supporting lockups and alternate variations create flexibility while maintaining consistency across the brand.
+      <p>
+        The refreshed logo leans into bold color, simplified shapes, and stronger typography to create a mark that feels more modern while still retaining the brand’s personality. The system was designed to scale seamlessly across apparel, catering materials, packaging, and digital use cases without losing clarity or impact. Supporting lockups and alternate variations create flexibility while maintaining consistency across the brand.
+      </p>
     image:
       src: /assets/images/fat-pineapple/fp-gradient-logo.png
       alt: Fat Pineapple gradient logo and lockups
@@ -78,11 +72,9 @@ caseSections:
     eyebrow: Visual Identity
     title: Building a Flexible Visual System
     body: >
-      Beyond the logo, the identity system focused on creating structure and consistency across the brand’s growing number of touchpoints.
-
-      Color, typography, spacing, and graphic elements were carefully defined to make future applications feel unified without becoming overly rigid.
-
-      The resulting system gives the brand room to feel expressive and playful while still maintaining a polished and recognizable presence.
+      <p>
+        Beyond the logo, the identity system focused on creating structure and consistency across the brand’s growing number of touchpoints. Color, typography, spacing, and graphic elements were carefully defined to make future applications feel unified without becoming overly rigid. The resulting system gives the brand room to feel expressive and playful while still maintaining a polished and recognizable presence.
+      </p>
     image:
       src: /assets/images/fat-pineapple/fat-pineapple-branding-guidelines.png
       alt: Fat Pineapple branding guidelines
@@ -116,6 +108,6 @@ gallery:
     alt: FP Color Logo
   - src: /assets/images/fat-pineapple/fp-mockup.png
     alt: FP Meal Mockup
-  - src: /assets/images/fat-pineapple/fp-business-cards.png
+  - src: /assets/images/fat-pineapple/fp-business-carsd.png
     alt: Business Cards
 ---
