@@ -48,8 +48,8 @@ goalSection:
 
     My goal was to build a modern, fresh visual identity that reflects their vibrant food and confident hospitality. Starting with the logo, the system would then extend across merchandise, social, and print — ensuring every touchpoint feels cohesive and intentional.
   image:
-    src: /assets/images/fat-pineapple/fat-pineapple-branding.png
-    alt: Collage of Fat Pineapple brand applications
+    src: /assets/images/fat-pineapple/fat-pineapple-before.png
+    alt: Previous Fat Pineapple Logo
 
 caseSections:
   - type: mediaText
