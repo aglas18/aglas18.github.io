@@ -42,9 +42,11 @@ tools:
   - Photoshop
 
 goalSection:
-  title: Project Goal
+  title: Before the refresh
   body: >
-    Deliver a modern, fresh visual identity that reflects vibrant food and confident hospitality — starting with the logo, then extending across merchandise, social, and print so every touchpoint feels cohesive.
+    At the start of the project, Fat Pineapple’s identity relied almost entirely on a single logo. While recognizable, it didn’t have a broader system to support it. There were limited brand assets, no clear visual language, and the overall identity felt dated in places — making it difficult to apply consistently across different formats and touchpoints.
+
+    My goal was to build a modern, fresh visual identity that reflects their vibrant food and confident hospitality. Starting with the logo, the system would then extend across merchandise, social, and print — ensuring every touchpoint feels cohesive and intentional.
   image:
     src: /assets/images/fat-pineapple/fat-pineapple-branding.png
     alt: Collage of Fat Pineapple brand applications
