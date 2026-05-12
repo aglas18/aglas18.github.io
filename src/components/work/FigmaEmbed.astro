@@ -1,0 +1,64 @@
+---
+interface Props {
+  url: string;
+  title: string;
+}
+
+const { url, title } = Astro.props;
+---
+
+<section class="figma-embed">
+  <h2>Web Prototypes</h2>
+  <div class="figma-container">
+    <iframe
+      src={url}
+      allowfullscreen
+      class="figma-iframe"
+      title={`${title} - Figma Prototype`}></iframe>
+  </div>
+</section>
+
+<style>
+  .figma-embed {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .figma-embed h2 {
+    margin-bottom: 2rem;
+    color: var(--ink-black);
+  }
+
+  .figma-container {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--platinum);
+    padding: 1rem;
+  }
+
+  .figma-iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .figma-embed {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+
+    .figma-iframe {
+      height: 800px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .figma-iframe {
+      height: 900px;
+    }
+  }
+</style>

@@ -1,0 +1,169 @@
+---
+import type { WorkFrontmatter } from "../../pages/work/types";
+import WorkGallery from "./WorkGallery.astro";
+import FigmaEmbed from "./FigmaEmbed.astro";
+
+interface Props {
+  frontmatter: WorkFrontmatter;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<section class="hero">
+  <div>
+    <h5>{frontmatter.projectType || "Project Type"}</h5>
+    <h1>{frontmatter.brand ?? frontmatter.title}</h1>
+  </div>
+  <img src={frontmatter.heroImage.src} alt={frontmatter.heroImage.alt} />
+</section>
+
+<section class="project-info">
+  <div class="project-cards">
+    <div class="card card-one">
+      <h3>About the Project</h3>
+      <ul>
+        {frontmatter.about.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+
+    <div class="card card-two">
+      <h3>Tools used</h3>
+      <ul>
+        {frontmatter.tools.map((tool) => <li>{tool}</li>)}
+      </ul>
+    </div>
+  </div>
+
+  <div class="project-description">
+    <h2>The Brief</h2>
+    <p set:html={frontmatter.longDescription} />
+  </div>
+</section>
+
+<WorkGallery images={frontmatter.gallery} startIndex={0} />
+
+{
+  frontmatter.figmaEmbed && (
+    <FigmaEmbed url={frontmatter.figmaEmbed} title={frontmatter.title} />
+  )
+}
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  .hero img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    max-height: 340px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero h1 {
+    margin-top: 0;
+  }
+
+  .project-info {
+    background-color: var(--ink-black);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 40px 24px;
+    border-radius: 30px;
+  }
+
+  .project-description {
+    width: 100%;
+  }
+
+  .project-description h2,
+  .project-description p {
+    color: var(--platinum);
+  }
+
+  .project-description h2 {
+    margin-bottom: 20px;
+  }
+
+  .project-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    border-radius: 30px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .card li {
+    list-style: none;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 100px;
+  }
+
+  .card-one {
+    background-color: var(--platinum);
+  }
+
+  .card-one li {
+    border: solid 1px var(--navy-blue);
+  }
+
+  .card-two {
+    border: solid 1px var(--platinum);
+  }
+
+  .card-two li {
+    background-color: var(--platinum);
+  }
+
+  .card-two h3 {
+    color: var(--platinum);
+  }
+
+  @media (min-width: 769px) {
+    .hero {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 50px;
+      justify-content: space-between;
+    }
+
+    .hero img {
+      flex: 0.55 !important;
+      width: 55% !important;
+      max-height: 420px;
+    }
+
+    .project-info {
+      flex-direction: row;
+      align-items: center;
+      padding: 80px 60px;
+      gap: 50px;
+    }
+
+    .project-cards {
+      width: 60%;
+    }
+  }
+</style>

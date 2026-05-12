@@ -1,0 +1,520 @@
+---
+import type { CaseStudySection, WorkFrontmatter } from "../../pages/work/types";
+import WorkGallery from "./WorkGallery.astro";
+import FigmaEmbed from "./FigmaEmbed.astro";
+
+interface Props {
+  frontmatter: WorkFrontmatter;
+}
+
+const { frontmatter } = Astro.props;
+const goal = frontmatter.goalSection;
+const sections = frontmatter.caseSections ?? [];
+
+let nextIndex = 0;
+const goalImageIndex =
+  goal?.image?.src != null && goal.image.src !== "" ? nextIndex++ : null;
+
+type Prepared =
+  | {
+      kind: "mediaText";
+      section: Extract<CaseStudySection, { type: "mediaText" }>;
+      imageIndex: number | null;
+    }
+  | {
+      kind: "imageGrid";
+      section: Extract<CaseStudySection, { type: "imageGrid" }>;
+      imageIndices: (number | null)[];
+    }
+  | { kind: "text"; section: Extract<CaseStudySection, { type: "text" }> }
+  | { kind: "figma"; section: Extract<CaseStudySection, { type: "figma" }> };
+
+const prepared: Prepared[] = [];
+
+for (const s of sections) {
+  if (s.type === "mediaText") {
+    const imageIndex =
+      s.image?.src != null && s.image.src !== "" ? nextIndex++ : null;
+    prepared.push({ kind: "mediaText", section: s, imageIndex });
+  } else if (s.type === "imageGrid") {
+    const colsRaw = s.columns as unknown;
+    const cols =
+      colsRaw === 3 || colsRaw === "3" || Number(colsRaw) === 3 ? 3 : 2;
+    const section: Extract<CaseStudySection, { type: "imageGrid" }> = {
+      type: "imageGrid",
+      columns: cols,
+      images: s.images,
+    };
+    const imageIndices = section.images.map((im) =>
+      im?.src != null && im.src !== "" ? nextIndex++ : null,
+    );
+    prepared.push({ kind: "imageGrid", section, imageIndices });
+  } else if (s.type === "text") {
+    prepared.push({ kind: "text", section: s });
+  } else if (s.type === "figma") {
+    prepared.push({ kind: "figma", section: s });
+  }
+}
+
+const galleryStart = nextIndex;
+---
+
+<section class="cs-hero">
+  <div class="cs-hero-text">
+    <h5>{frontmatter.projectType || "Project Type"}</h5>
+    <h1>{frontmatter.brand ?? frontmatter.title}</h1>
+    {
+      frontmatter.heroIntro && (
+        <div class="cs-hero-intro" set:html={frontmatter.heroIntro} />
+      )
+    }
+  </div>
+  <img
+    src={frontmatter.heroImage.src}
+    alt={frontmatter.heroImage.alt}
+    class="cs-hero-image"
+  />
+</section>
+
+<section class="cs-dark-band">
+  <div class="cs-cards">
+    <div class="card card-one">
+      <h3>About the Project</h3>
+      <ul>
+        {frontmatter.about.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+
+    <div class="card card-two">
+      <h3>Tools used</h3>
+      <ul>
+        {frontmatter.tools.map((tool) => <li>{tool}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{
+  goal && (
+    <section class="cs-goal">
+      <div class="cs-goal-inner">
+        <div class="cs-goal-media">
+          <div class="cs-goal-frame">
+            {goalImageIndex !== null ? (
+              <img
+                src={goal.image.src}
+                alt={goal.image.alt}
+                class="gallery-image cs-zoomable"
+                data-index={goalImageIndex}
+              />
+            ) : (
+              <img src={goal.image.src} alt={goal.image.alt} />
+            )}
+          </div>
+        </div>
+        <div class="cs-goal-copy">
+          <h2>{goal.title}</h2>
+          <div class="cs-goal-body" set:html={goal.body} />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<section class="cs-body">
+  {
+    prepared.map((item) =>
+      item.kind === "mediaText" ? (
+        <div
+          class:list={[
+            "cs-row",
+            item.section.mediaPosition === "right"
+              ? "cs-row--media-right"
+              : "cs-row--media-left",
+          ]}
+        >
+          <div class="cs-row-media">
+            <div class="cs-row-frame">
+              {item.imageIndex !== null ? (
+                <img
+                  src={item.section.image.src}
+                  alt={item.section.image.alt}
+                  class="gallery-image cs-zoomable"
+                  data-index={item.imageIndex}
+                />
+              ) : (
+                <img
+                  src={item.section.image.src}
+                  alt={item.section.image.alt}
+                />
+              )}
+            </div>
+          </div>
+          <div class="cs-row-text">
+            {item.section.eyebrow && (
+              <p class="cs-eyebrow">{item.section.eyebrow}</p>
+            )}
+            {item.section.title && <h2>{item.section.title}</h2>}
+            <div class="cs-row-body" set:html={item.section.body} />
+          </div>
+        </div>
+      ) : item.kind === "imageGrid" ? (
+        <div
+          class:list={[
+            "cs-grid",
+            item.section.columns === 3 ? "cs-grid--3" : "cs-grid--2",
+          ]}
+        >
+          {item.section.images.map((img, j) => {
+            const li = item.imageIndices[j];
+            return (
+              <div class="cs-grid-cell">
+                {typeof li === "number" ? (
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    class="gallery-image cs-zoomable"
+                    data-index={li}
+                  />
+                ) : (
+                  <img src={img.src} alt={img.alt} />
+                )}
+              </div>
+            );
+          })}
+        </div>
+      ) : item.kind === "text" ? (
+        <div class="cs-text-block">
+          {item.section.eyebrow && (
+            <p class="cs-eyebrow">{item.section.eyebrow}</p>
+          )}
+          {item.section.title && <h2>{item.section.title}</h2>}
+          <div class="cs-text-body" set:html={item.section.body} />
+        </div>
+      ) : (
+        <FigmaEmbed url={item.section.url} title={frontmatter.title} />
+      ),
+    )
+  }
+</section>
+
+<WorkGallery images={frontmatter.gallery} startIndex={galleryStart} />
+
+{
+  frontmatter.figmaEmbed && !sections.some((s) => s.type === "figma") && (
+    <FigmaEmbed url={frontmatter.figmaEmbed} title={frontmatter.title} />
+  )
+}
+
+<style>
+  .cs-hero {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .cs-hero-text h1 {
+    margin-top: 0;
+  }
+
+  .cs-hero-intro :global(p) {
+    margin: 0.75rem 0 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--navy-blue);
+  }
+
+  .cs-hero-image {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    max-height: 340px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .cs-dark-band {
+    background-color: var(--ink-black);
+    padding: 40px 24px;
+    border-radius: 30px;
+  }
+
+  .cs-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    border-radius: 30px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .card li {
+    list-style: none;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 100px;
+  }
+
+  .card-one {
+    background-color: var(--platinum);
+  }
+
+  .card-one li {
+    border: solid 1px var(--navy-blue);
+  }
+
+  .card-two {
+    border: solid 1px var(--platinum);
+  }
+
+  .card-two li {
+    background-color: var(--platinum);
+  }
+
+  .card-two h3 {
+    color: var(--platinum);
+  }
+
+  .cs-goal {
+    background-color: var(--ink-black);
+    padding: 40px 24px 50px;
+    border-radius: 0 0 30px 30px;
+    margin-top: -10px;
+  }
+
+  .cs-goal-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .cs-goal-frame {
+    border: 3px solid var(--platinum);
+    border-radius: 20px;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .cs-goal-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 320px;
+  }
+
+  .cs-goal-copy h2 {
+    color: var(--platinum);
+    margin-top: 0;
+  }
+
+  .cs-goal-body :global(p),
+  .cs-goal-body {
+    color: var(--platinum);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .cs-goal-body :global(p) {
+    margin: 0 0 0.75rem;
+  }
+
+  .cs-body {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .cs-row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .cs-row--media-right {
+    flex-direction: column-reverse;
+  }
+
+  .cs-row-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .cs-row-frame img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .cs-eyebrow {
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--amaranth);
+    margin: 0 0 8px;
+  }
+
+  .cs-row-text h2 {
+    margin-top: 0;
+  }
+
+  .cs-row-body :global(p),
+  .cs-text-body :global(p) {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--navy-blue);
+  }
+
+  .cs-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .cs-grid--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-grid-cell {
+    border-radius: 16px;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .cs-grid-cell img {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .cs-text-block {
+    margin-bottom: 40px;
+    max-width: 720px;
+  }
+
+  .cs-text-block h2 {
+    margin-top: 0;
+  }
+
+  .cs-zoomable {
+    cursor: zoom-in;
+  }
+
+  @media (min-width: 769px) {
+    .cs-hero {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 50px;
+      justify-content: space-between;
+    }
+
+    .cs-hero-image {
+      flex: 0.55;
+      width: 55%;
+      max-height: 420px;
+      margin-bottom: 0;
+    }
+
+    .cs-dark-band {
+      padding: 60px 48px;
+    }
+
+    .cs-cards {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 24px;
+    }
+
+    .cs-cards .card {
+      flex: 1;
+    }
+
+    .cs-goal {
+      padding: 60px 48px 70px;
+    }
+
+    .cs-goal-inner {
+      flex-direction: row;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .cs-goal-media {
+      flex: 0.42;
+      min-width: 0;
+    }
+
+    .cs-goal-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cs-row {
+      flex-direction: row;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .cs-row--media-right {
+      flex-direction: row;
+    }
+
+    .cs-row--media-right .cs-row-media {
+      order: 2;
+    }
+
+    .cs-row--media-right .cs-row-text {
+      order: 1;
+    }
+
+    .cs-row-media,
+    .cs-row-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cs-grid--2 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .cs-grid--3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cs-grid-cell img {
+      height: 100%;
+      max-height: 440px;
+    }
+  }
+</style>
