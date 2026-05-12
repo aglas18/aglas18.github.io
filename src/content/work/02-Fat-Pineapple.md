@@ -94,7 +94,7 @@ caseSections:
         alt: Fat Pineapple logo color explorations
       - src: /assets/images/fat-pineapple/fp-mockup.png
         alt: Fat Pineapple meal packaging mockup
-      - src: /assets/images/fat-pineapple/fp-business-cards.png
+      - src: /assets/images/fat-pineapple/fp-business-carsd.png
         alt: Fat Pineapple business cards
 
 gallery:
