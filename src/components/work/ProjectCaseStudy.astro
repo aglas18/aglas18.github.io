@@ -11,6 +11,30 @@ const { frontmatter } = Astro.props;
 const goal = frontmatter.goalSection;
 const sections = frontmatter.caseSections ?? [];
 
+function normalizeGallerySrc(src: string): string {
+  return src.split("?")[0].replace(/\/+$/, "").trim().toLowerCase();
+}
+
+function collectNarrativeImageSrcs(): Set<string> {
+  const used = new Set<string>();
+  const add = (src: string | undefined) => {
+    if (src) used.add(normalizeGallerySrc(src));
+  };
+  add(goal?.image?.src);
+  for (const s of sections) {
+    if (s.type === "mediaText") add(s.image?.src);
+    else if (s.type === "imageGrid") {
+      for (const im of s.images) add(im?.src);
+    }
+  }
+  return used;
+}
+
+const narrativeSrcs = collectNarrativeImageSrcs();
+const footerGalleryImages = frontmatter.gallery.filter(
+  (img) => img?.src && !narrativeSrcs.has(normalizeGallerySrc(img.src)),
+);
+
 let nextIndex = 0;
 const goalImageIndex =
   goal?.image?.src != null && goal.image.src !== "" ? nextIndex++ : null;
@@ -198,7 +222,11 @@ const galleryStart = nextIndex;
   }
 </section>
 
-<WorkGallery images={frontmatter.gallery} startIndex={galleryStart} />
+{
+  footerGalleryImages.length > 0 && (
+    <WorkGallery images={footerGalleryImages} startIndex={galleryStart} />
+  )
+}
 
 {
   frontmatter.figmaEmbed && !sections.some((s) => s.type === "figma") && (
@@ -236,8 +264,8 @@ const galleryStart = nextIndex;
 
   .cs-dark-band {
     background-color: var(--ink-black);
-    padding: 40px 24px;
-    border-radius: 30px;
+    padding: 50px 24px;
+    border-radius: 30px 30px 0 0;
   }
 
   .cs-cards {
@@ -292,16 +320,17 @@ const galleryStart = nextIndex;
 
   .cs-goal {
     background-color: var(--ink-black);
-    padding: 40px 24px 50px;
+    padding: 50px 24px;
     border-radius: 0 0 30px 30px;
-    margin-top: -10px;
+    margin-top: 0;
   }
 
   .cs-goal-inner {
     display: flex;
     flex-direction: column;
     gap: 28px;
-    max-width: 1100px;
+    max-width: min(100%, 1320px);
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -317,7 +346,7 @@ const galleryStart = nextIndex;
     height: auto;
     display: block;
     object-fit: cover;
-    max-height: 320px;
+    max-height: 400px;
   }
 
   .cs-goal-copy h2 {
@@ -338,15 +367,15 @@ const galleryStart = nextIndex;
   }
 
   .cs-body {
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .cs-row {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   }
 
   .cs-row--media-right {
@@ -392,7 +421,7 @@ const galleryStart = nextIndex;
   .cs-grid {
     display: grid;
     gap: 16px;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   }
 
   .cs-grid--2 {
@@ -447,7 +476,7 @@ const galleryStart = nextIndex;
     }
 
     .cs-dark-band {
-      padding: 60px 48px;
+      padding: 50px 48px;
     }
 
     .cs-cards {
@@ -461,17 +490,17 @@ const galleryStart = nextIndex;
     }
 
     .cs-goal {
-      padding: 60px 48px 70px;
+      padding: 50px 48px;
     }
 
     .cs-goal-inner {
       flex-direction: row;
       align-items: center;
-      gap: 48px;
+      gap: 56px;
     }
 
     .cs-goal-media {
-      flex: 0.42;
+      flex: 0.55;
       min-width: 0;
     }
 
@@ -510,6 +539,10 @@ const galleryStart = nextIndex;
 
     .cs-grid--3 {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cs-goal-frame img {
+      max-height: 460px;
     }
 
     .cs-grid-cell img {
