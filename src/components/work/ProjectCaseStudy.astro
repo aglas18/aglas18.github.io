@@ -83,158 +83,185 @@ for (const s of sections) {
 const galleryStart = nextIndex;
 ---
 
-<section class="cs-hero">
-  <div class="cs-hero-text">
-    <h5>{frontmatter.projectType || "Project Type"}</h5>
-    <h1>{frontmatter.brand ?? frontmatter.title}</h1>
-    {
-      frontmatter.heroIntro && (
-        <div class="cs-hero-intro" set:html={frontmatter.heroIntro} />
-      )
-    }
-  </div>
-  <img
-    src={frontmatter.heroImage.src}
-    alt={frontmatter.heroImage.alt}
-    class="cs-hero-image"
-  />
-</section>
-
-<section class="cs-dark-band">
-  <div class="cs-cards">
-    <div class="card card-one">
-      <h3>About the Project</h3>
-      <ul>
-        {frontmatter.about.map((item) => <li>{item}</li>)}
-      </ul>
+<div class="case-study">
+  <section class="cs-hero">
+    <div class="cs-hero-text">
+      <h5>{frontmatter.projectType || "Project Type"}</h5>
+      <h1>{frontmatter.brand ?? frontmatter.title}</h1>
+      {
+        frontmatter.heroIntro && (
+          <div class="cs-hero-intro" set:html={frontmatter.heroIntro} />
+        )
+      }
     </div>
+    <img
+      src={frontmatter.heroImage.src}
+      alt={frontmatter.heroImage.alt}
+      class="cs-hero-image"
+    />
+  </section>
 
-    <div class="card card-two">
-      <h3>Tools used</h3>
-      <ul>
-        {frontmatter.tools.map((tool) => <li>{tool}</li>)}
-      </ul>
-    </div>
-  </div>
-</section>
-
-{
-  goal && (
-    <section class="cs-goal">
-      <div class="cs-goal-inner">
-        <div class="cs-goal-media">
-          <div class="cs-goal-frame">
-            {goalImageIndex !== null ? (
-              <img
-                src={goal.image.src}
-                alt={goal.image.alt}
-                class="gallery-image cs-zoomable"
-                data-index={goalImageIndex}
-              />
-            ) : (
-              <img src={goal.image.src} alt={goal.image.alt} />
-            )}
-          </div>
-        </div>
-        <div class="cs-goal-copy">
-          <h2>{goal.title}</h2>
-          <div class="cs-goal-body" set:html={goal.body} />
-        </div>
+  <section class="cs-dark-band">
+    <div class="cs-cards">
+      <div class="card card-one">
+        <h3>About the Project</h3>
+        <ul>
+          {frontmatter.about.map((item) => <li>{item}</li>)}
+        </ul>
       </div>
-    </section>
-  )
-}
 
-<section class="cs-body">
+      <div class="card card-two">
+        <h3>Tools used</h3>
+        <ul>
+          {frontmatter.tools.map((tool) => <li>{tool}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
   {
-    prepared.map((item) =>
-      item.kind === "mediaText" ? (
-        <div
-          class:list={[
-            "cs-row",
-            item.section.mediaPosition === "right"
-              ? "cs-row--media-right"
-              : "cs-row--media-left",
-          ]}
-        >
-          <div class="cs-row-media">
-            <div class="cs-row-frame">
-              {item.imageIndex !== null ? (
+    goal && (
+      <section class="cs-goal">
+        <div class="cs-goal-inner">
+          <div class="cs-goal-media">
+            <div class="cs-goal-frame">
+              {goalImageIndex !== null ? (
                 <img
-                  src={item.section.image.src}
-                  alt={item.section.image.alt}
+                  src={goal.image.src}
+                  alt={goal.image.alt}
                   class="gallery-image cs-zoomable"
-                  data-index={item.imageIndex}
+                  data-index={goalImageIndex}
                 />
               ) : (
-                <img
-                  src={item.section.image.src}
-                  alt={item.section.image.alt}
-                />
+                <img src={goal.image.src} alt={goal.image.alt} />
               )}
             </div>
           </div>
-          <div class="cs-row-text">
+          <div class="cs-goal-copy">
+            <h2>{goal.title}</h2>
+            <div class="cs-goal-body" set:html={goal.body} />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="cs-body">
+    {
+      prepared.map((item) =>
+        item.kind === "mediaText" ? (
+          <div
+            class:list={[
+              "cs-row",
+              item.section.mediaPosition === "right"
+                ? "cs-row--media-right"
+                : "cs-row--media-left",
+            ]}
+          >
+            <div class="cs-row-media">
+              <div class="cs-row-frame">
+                {item.imageIndex !== null ? (
+                  <img
+                    src={item.section.image.src}
+                    alt={item.section.image.alt}
+                    class="gallery-image cs-zoomable"
+                    data-index={item.imageIndex}
+                  />
+                ) : (
+                  <img
+                    src={item.section.image.src}
+                    alt={item.section.image.alt}
+                  />
+                )}
+              </div>
+            </div>
+            <div class="cs-row-text">
+              {item.section.eyebrow && (
+                <p class="cs-eyebrow cs-eyebrow--media-row">
+                  {item.section.eyebrow}
+                </p>
+              )}
+              {item.section.title && <h2>{item.section.title}</h2>}
+              <div class="cs-row-body" set:html={item.section.body} />
+            </div>
+          </div>
+        ) : item.kind === "imageGrid" ? (
+          <div
+            class:list={[
+              "cs-grid",
+              item.section.columns === 3 ? "cs-grid--3" : "cs-grid--2",
+            ]}
+          >
+            {item.section.images.map((img, j) => {
+              const li = item.imageIndices[j];
+              return (
+                <div class="cs-grid-cell">
+                  {typeof li === "number" ? (
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      class="gallery-image cs-zoomable"
+                      data-index={li}
+                    />
+                  ) : (
+                    <img src={img.src} alt={img.alt} />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        ) : item.kind === "text" ? (
+          <div class="cs-text-block">
             {item.section.eyebrow && (
               <p class="cs-eyebrow">{item.section.eyebrow}</p>
             )}
             {item.section.title && <h2>{item.section.title}</h2>}
-            <div class="cs-row-body" set:html={item.section.body} />
+            <div class="cs-text-body" set:html={item.section.body} />
           </div>
-        </div>
-      ) : item.kind === "imageGrid" ? (
-        <div
-          class:list={[
-            "cs-grid",
-            item.section.columns === 3 ? "cs-grid--3" : "cs-grid--2",
-          ]}
-        >
-          {item.section.images.map((img, j) => {
-            const li = item.imageIndices[j];
-            return (
-              <div class="cs-grid-cell">
-                {typeof li === "number" ? (
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    class="gallery-image cs-zoomable"
-                    data-index={li}
-                  />
-                ) : (
-                  <img src={img.src} alt={img.alt} />
-                )}
-              </div>
-            );
-          })}
-        </div>
-      ) : item.kind === "text" ? (
-        <div class="cs-text-block">
-          {item.section.eyebrow && (
-            <p class="cs-eyebrow">{item.section.eyebrow}</p>
-          )}
-          {item.section.title && <h2>{item.section.title}</h2>}
-          <div class="cs-text-body" set:html={item.section.body} />
-        </div>
-      ) : (
-        <FigmaEmbed url={item.section.url} title={frontmatter.title} />
-      ),
+        ) : (
+          <FigmaEmbed url={item.section.url} title={frontmatter.title} />
+        ),
+      )
+    }
+  </section>
+
+  {
+    footerGalleryImages.length > 0 && (
+      <WorkGallery images={footerGalleryImages} startIndex={galleryStart} />
     )
   }
-</section>
 
-{
-  footerGalleryImages.length > 0 && (
-    <WorkGallery images={footerGalleryImages} startIndex={galleryStart} />
-  )
-}
-
-{
-  frontmatter.figmaEmbed && !sections.some((s) => s.type === "figma") && (
-    <FigmaEmbed url={frontmatter.figmaEmbed} title={frontmatter.title} />
-  )
-}
+  {
+    frontmatter.figmaEmbed && !sections.some((s) => s.type === "figma") && (
+      <FigmaEmbed url={frontmatter.figmaEmbed} title={frontmatter.title} />
+    )
+  }
+</div>
 
 <style>
+  .case-study {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 100%;
+  }
+
+  .case-study > .cs-hero,
+  .case-study > .cs-dark-band,
+  .case-study > .cs-goal,
+  .case-study > .cs-body {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .case-study > :global(section.gallery),
+  .case-study > :global(section.figma-embed) {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .cs-hero {
     display: flex;
     flex-direction: column-reverse;
@@ -329,9 +356,9 @@ const galleryStart = nextIndex;
     display: flex;
     flex-direction: column;
     gap: 28px;
-    max-width: min(100%, 1320px);
     width: 100%;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
   }
 
   .cs-goal-frame {
@@ -346,7 +373,7 @@ const galleryStart = nextIndex;
     height: auto;
     display: block;
     object-fit: cover;
-    max-height: 400px;
+    max-height: 480px;
   }
 
   .cs-goal-copy h2 {
@@ -367,15 +394,17 @@ const galleryStart = nextIndex;
   }
 
   .cs-body {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 0;
   }
 
   .cs-row {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
 
   .cs-row--media-right {
@@ -405,6 +434,12 @@ const galleryStart = nextIndex;
     margin: 0 0 8px;
   }
 
+  .cs-eyebrow--media-row {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+
   .cs-row-text h2 {
     margin-top: 0;
   }
@@ -421,7 +456,7 @@ const galleryStart = nextIndex;
   .cs-grid {
     display: grid;
     gap: 16px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
 
   .cs-grid--2 {
@@ -448,7 +483,7 @@ const galleryStart = nextIndex;
   }
 
   .cs-text-block {
-    margin-bottom: 40px;
+    margin-bottom: 0;
     max-width: 720px;
   }
 
@@ -500,7 +535,7 @@ const galleryStart = nextIndex;
     }
 
     .cs-goal-media {
-      flex: 0.55;
+      flex: 0.62;
       min-width: 0;
     }
 
@@ -542,7 +577,12 @@ const galleryStart = nextIndex;
     }
 
     .cs-goal-frame img {
-      max-height: 460px;
+      max-height: 560px;
+    }
+
+    .cs-eyebrow--media-row {
+      font-size: 22px;
+      line-height: 30px;
     }
 
     .cs-grid-cell img {
