@@ -14,14 +14,22 @@ shortDescription: >
   Brand identity, logo, and merchandise design for a catering company, including social media visuals and cohesive branding guidelines.
 
 projectType: >
-  Logo & branding Refresh
+  Logo & Brand Refresh
 
 # Individual project page content
 longDescription: >
-  Ryan Haas & Matt Lykens came to me for an updated logo and overall branding refresh for their catering & event services company, Fat Pineapple. They wanted a refresh that represented their outlook on food preparation in leaning towards vibrant and fresh foods. With this information, I set out to update their logo and branding with a modern, fresh perspective.
+  Ryan Haas and Matt Lykens approached me to refresh the visual identity for their catering and event services company, Fat Pineapple.
+
+  The goal was to create a brand system that better reflected their approach to food — vibrant, fresh, approachable, and full of personality — while modernizing the identity across both digital and physical touchpoints.
 
 heroIntro: >
-  <p>Ryan Haas & Matt Lykens came to me for an updated logo and overall branding refresh for their catering &amp; event services company, Fat Pineapple. They wanted a refresh that represented their outlook on food preparation in leaning towards vibrant and fresh foods.</p>
+  Fat Pineapple is a catering and event services company focused on creating vibrant, fresh food experiences with a strong sense of personality and hospitality.
+
+  Founders Ryan Haas and Matt Lykens wanted the brand to better reflect their approach to food — colorful, approachable, energetic, and modern — while creating a system flexible enough to work across event materials, packaging, apparel, and digital platforms.
+
+  The existing identity had recognition, but lacked consistency and versatility across different applications.
+
+  This project focused on evolving the brand without losing the personality that made it recognizable.
 
 heroImage:
   src: /assets/images/fat-pineapple/fat-pineapple-branding.png
@@ -38,9 +46,9 @@ tools:
   - Photoshop
 
 goalSection:
-  title: My Goal
+  title: Project Goal
   body: >
-    <p>Deliver a modern, fresh visual identity that reflects vibrant food and confident hospitality—starting with the logo, then extending across merchandise, social, and print so every touchpoint feels cohesive.</p>
+    Deliver a modern, fresh visual identity that reflects vibrant food and confident hospitality — starting with the logo, then extending across merchandise, social, and print so every touchpoint feels cohesive.
   image:
     src: /assets/images/fat-pineapple/fat-pineapple-branding.png
     alt: Collage of Fat Pineapple brand applications
@@ -48,10 +56,14 @@ goalSection:
 caseSections:
   - type: mediaText
     mediaPosition: left
-    eyebrow: Logo & branding Refresh
-    title: Primary mark & lockups
+    eyebrow: Logo & Brand Refresh
+    title: Refining the Core Identity
     body: >
-      <p>The refreshed mark leans into bold color and simple geometry so it reads clearly on packaging, apparel, and digital. Supporting lockups keep typography consistent while leaving room for playful campaign art.</p>
+      The refreshed logo leans into bold color, simplified shapes, and stronger typography to create a mark that feels more modern while still retaining the brand’s personality.
+
+      The system was designed to scale seamlessly across apparel, catering materials, packaging, and digital use cases without losing clarity or impact.
+
+      Supporting lockups and alternate variations create flexibility while maintaining consistency across the brand.
     image:
       src: /assets/images/fat-pineapple/fp-gradient-logo.png
       alt: Fat Pineapple gradient logo and lockups
@@ -63,10 +75,14 @@ caseSections:
 
   - type: mediaText
     mediaPosition: right
-    eyebrow: Visual identity
-    title: Guidelines & system
+    eyebrow: Visual Identity
+    title: Building a Flexible Visual System
     body: >
-      <p>Color, type, and spacing rules help the team apply the brand without guesswork. The guideline spread anchors how photography, patterns, and the logo work together in real layouts.</p>
+      Beyond the logo, the identity system focused on creating structure and consistency across the brand’s growing number of touchpoints.
+
+      Color, typography, spacing, and graphic elements were carefully defined to make future applications feel unified without becoming overly rigid.
+
+      The resulting system gives the brand room to feel expressive and playful while still maintaining a polished and recognizable presence.
     image:
       src: /assets/images/fat-pineapple/fat-pineapple-branding-guidelines.png
       alt: Fat Pineapple branding guidelines
@@ -86,7 +102,7 @@ caseSections:
         alt: Fat Pineapple logo color explorations
       - src: /assets/images/fat-pineapple/fp-mockup.png
         alt: Fat Pineapple meal packaging mockup
-      - src: /assets/images/fat-pineapple/fp-business-carsd.png
+      - src: /assets/images/fat-pineapple/fp-business-cards.png
         alt: Fat Pineapple business cards
 
 gallery:
@@ -100,6 +116,6 @@ gallery:
     alt: FP Color Logo
   - src: /assets/images/fat-pineapple/fp-mockup.png
     alt: FP Meal Mockup
-  - src: /assets/images/fat-pineapple/fp-business-carsd.png
+  - src: /assets/images/fat-pineapple/fp-business-cards.png
     alt: Business Cards
 ---
