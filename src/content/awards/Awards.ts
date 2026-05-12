@@ -3,7 +3,7 @@ export const awardsList = [
     date: "2024",
     title: "Horizon Award — Gold",
     description:
-      "Gold Horizon Award awarded to WebFX, with my contribution focused on design execution and visual refinement.",
+      "Gold Horizon Award awarded to WebFX for Consumer Information Website, with my contribution focused on design execution and visual refinement.",
     category: "Agency Awards",
     popupContent: "Horizon Award 2024 Gold",
     linkUrl:
