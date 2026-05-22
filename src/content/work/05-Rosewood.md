@@ -105,7 +105,7 @@ caseSections:
       src: /assets/images/rosewood/rosewood_stationary.png
       alt: Rosewood stationery and business card design
     stackBottom:
-      - src: /assets/images/rosewood/merch.png
+      - src: /assets/images/rosewood/t-shirt-rosewood.png
         alt: Rosewood merchandise mockups
       - src: /assets/images/rosewood/rosewood-laptop.png
         alt: Rosewood website preview on laptop
