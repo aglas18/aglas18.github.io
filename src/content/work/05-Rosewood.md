@@ -75,11 +75,11 @@ caseSections:
 
   - type: mediaText
     mediaPosition: right
-    eyebrow: Packaging Design
-    title: Building a Premium Product Experience
+    eyebrow: Web Design
+    title: Building a Premium Digital Experience
     body: >
       <p>
-        The packaging system was designed to reflect the premium nature of the brand while maintaining clarity and restraint. Labels, bottle design, and supporting packaging materials were developed to emphasize craftsmanship and heritage without overwhelming the visual presentation. The goal was to create a product presence that feels both collectible and functional, reinforcing the brand’s positioning in the luxury spirits category.
+        The website was designed to translate the brand’s sense of craftsmanship and heritage into a digital space. The focus was on creating a refined, structured interface that balances storytelling with usability, allowing users to explore the brand and its products in a clear and intentional way. Typography, spacing, and layout were carefully considered to reflect a premium feel, while still maintaining simplicity and ease of navigation. The result is a promotional experience that positions Rosewood as a modern luxury spirits brand within a digital context.
       </p>
     image:
       src: /assets/images/rosewood/rosewood-laptop.png
