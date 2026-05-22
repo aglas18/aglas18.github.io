@@ -277,3 +277,7 @@ a:hover {
     font-size: 20px;
   }
 }
+
+.cs-row:not(:has(.cs-row-stack-bottom)) .cs-row-frame img {
+  min-height: 550px;
+}
