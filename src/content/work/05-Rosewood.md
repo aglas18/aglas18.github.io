@@ -82,7 +82,7 @@ caseSections:
         The packaging system was designed to reflect the premium nature of the brand while maintaining clarity and restraint. Labels, bottle design, and supporting packaging materials were developed to emphasize craftsmanship and heritage without overwhelming the visual presentation. The goal was to create a product presence that feels both collectible and functional, reinforcing the brand’s positioning in the luxury spirits category.
       </p>
     image:
-      src: /assets/images/rosewood/rosewood_bottle.jpg
+      src: /assets/images/rosewood/rosewood-laptop.png
       alt: Rosewood bourbon bottle packaging mockup
 
   - type: imageGrid
