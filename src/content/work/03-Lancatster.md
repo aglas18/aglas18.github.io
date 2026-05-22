@@ -1,55 +1,136 @@
 ---
-title: Lancatster Cat Cafe Logo & Site Redesign
+title: Lancaster Cat Cafe Brand & Website Redesign
 slug: lancatster
 brand: LanCATster Cat Cafe
 cardSubtitle: Brand & Website Redesign
+pageTemplate: "caseStudy"
 
 # Homepage / shared content
 cardImage:
   src: /assets/images/lancatster-cat-cafe/new-cat-cafe-card.png
-  alt: LanCATster Cat Cafe
+  alt: LanCATster Cat Cafe branding preview
 
 shortDescription: >
-  A reimagined brand identity for a cafe, including logo design, web design, social media visuals, and refreshed branding guidelines.
+  A personal redesign project for Lancaster Cat Cafe, featuring an updated brand identity, website redesign, social media visuals, and a more modern digital experience.
 
 projectType: >
   Brand & Website Redesign
 
 # Individual project page content
-longDescription: |
-  This project is a personal redesign of Lancaster Cat Cafe, created out of a love for both the city of Lancaster and cats. The goal was to reimagine the brand with a more modern, elevated, and locally inspired feel while still maintaining its warmth and charm.
+longDescription: >
+  This project is a personal redesign of Lancaster Cat Cafe, created from a love of both the city of Lancaster and cats. The goal was to reimagine the brand with a more modern, elevated, and locally inspired identity while still maintaining the warmth and charm that makes the cafe approachable and community-focused.
 
-  The redesign includes logo refinement, website design, social media visuals, and updated brand guidelines. A major focus of the web experience was improving clarity and flow to boost conversions - making it easier for users to understand the cafe's mission, book visits, and engage with the brand.
+  The redesign spans logo refinement, website design, social media visuals, merchandise concepts, and refreshed branding guidelines. A major focus of the web experience was improving clarity and user flow to better communicate the cafe’s mission, encourage bookings, and create a more polished and engaging digital presence.
+
+heroIntro: >
+  <p>
+    LanCATster Cat Cafe is a community-focused cafe and cat adoption space based in Lancaster, Pennsylvania. This conceptual redesign explores how the brand could evolve visually while preserving the welcoming personality that makes the cafe feel approachable and memorable. Inspired by Lancaster’s local charm and the playful nature of the cafe itself, the project focused on creating a cleaner visual identity and a more intuitive website experience that better supports discovery, reservations, and community engagement.
+  </p>
 
 heroImage:
   src: /assets/images/lancatster-cat-cafe/cat-cafe-hero-img.png
-  alt: Fat Pineapple brand hero image
+  alt: LanCATster Cat Cafe website redesign displayed on desktop
 
 about:
   - Brand Refresh
-  - Logo refinement
+  - Logo Refinement
   - Website Redesign
-  - Social Media Design
-  - Visual Identity Guidelines
   - UI/UX Design
+  - Social Media Design
+  - Merchandise Concepts
+  - Visual Identity Guidelines
 
 tools:
-  - Affinity
   - Figma
+  - Affinity Designer
+  - Affinity Photo
+
+goalSection:
+  title: Modernizing the Experience
+  body: >
+    The original brand had a strong sense of personality and community recognition, but the visual identity and website experience felt dated and lacked consistency across touchpoints. The redesign focused on modernizing the overall presentation while maintaining the warmth and friendliness central to the cafe’s identity.
+
+    A major priority of the website redesign was improving usability and conversion flow — making it easier for users to understand the cafe’s mission, browse information, book visits, and engage with adoptable cats. The updated visual system was designed to feel cleaner, more cohesive, and flexible across digital, social, and merchandise applications.
+  image:
+    src: /assets/images/lancatster-cat-cafe/cat-cafe-card.png
+    alt: Original LanCATster Cat Cafe branding reference
+
+caseSections:
+  - type: mediaText
+    mediaPosition: left
+    eyebrow: Brand Refresh
+    title: Refining the Identity
+    body: >
+      <p>
+        The refreshed identity focused on simplifying the visual language while keeping the playful personality that makes the brand recognizable. Typography, color, and supporting logo variations were refined to create a system that feels more polished and versatile across both digital and physical applications. The resulting identity balances warmth and professionalism while still feeling approachable and community-driven.
+      </p>
+    image:
+      src: /assets/images/lancatster-cat-cafe/horizontal-logo.png
+      alt: LanCATster Cat Cafe horizontal logo redesign
+    stackBottom:
+      - src: /assets/images/lancatster-cat-cafe/cat-cafe-card.png
+        alt: Full color logo variation
+      - src: /assets/images/lancatster-cat-cafe/lanc-cat-cafe-logo-light.png
+        alt: Monochrome logo variation
+
+  - type: mediaText
+    mediaPosition: right
+    eyebrow: Website Design
+    title: Improving the Digital Experience
+    body: >
+      <p>
+        The website redesign focused heavily on usability, hierarchy, and clearer user flow. The updated layouts help visitors quickly understand the cafe’s mission, explore adoptable cats, and book reservations with less friction. Soft visual styling, modern layouts, and improved spacing help the experience feel more welcoming and polished while maintaining the playful energy of the brand.
+      </p>
+    image:
+      src: /assets/images/lancatster-cat-cafe/laptop.png
+      alt: LanCATster Cat Cafe desktop website redesign
+
+  - type: imageGrid
+    columns: 2
+    images:
+      - src: /assets/images/lancatster-cat-cafe/tablet-mobile-protos.png
+        alt: Tablet and mobile website prototypes
+      - src: /assets/images/lancatster-cat-cafe/final-social.png
+        alt: LanCATster Cat Cafe social media concepts
+
+  - type: mediaText
+    mediaPosition: left
+    eyebrow: Merchandise & Applications
+    title: Extending the Brand Beyond the Website
+    body: >
+      <p>
+        To further explore how the refreshed identity could live beyond digital platforms, the project included merchandise and packaging concepts that help reinforce the cafe’s personality and community-focused branding. These applications were designed to feel cohesive with the larger visual system while introducing playful, lifestyle-oriented touchpoints that could support both marketing and retail opportunities.
+      </p>
+    image:
+      src: /assets/images/lancatster-cat-cafe/coffee-cup-mockup.png
+      alt: LanCATster Cat Cafe coffee cup branding mockup
+    stackBottom:
+      - src: /assets/images/lancatster-cat-cafe/tote-bag.png
+        alt: LanCATster Cat Cafe tote bag mockup
+      - src: /assets/images/lancatster-cat-cafe/hat-mockup.png
+        alt: LanCATster Cat Cafe hat mockup
+
+  - type: imageGrid
+    columns: 2
+    images:
+      - src: /assets/images/lancatster-cat-cafe/new-cat-cafe-card.png
+        alt: LanCATster Cat Cafe branding overview
+      - src: /assets/images/lancatster-cat-cafe/cat-cafe-hero-img.png
+        alt: LanCATster Cat Cafe website hero preview
 
 gallery:
   - src: /assets/images/lancatster-cat-cafe/horizontal-logo.png
-    alt: Horizontal Logo for Lancatster Cat Cafe
+    alt: LanCATster Cat Cafe Horizontal Logo
   - src: /assets/images/lancatster-cat-cafe/cat-cafe-card.png
     alt: Full Color Logo
   - src: /assets/images/lancatster-cat-cafe/lanc-cat-cafe-logo-light.png
-    alt: Black & White logo
+    alt: Black and White Logo
   - src: /assets/images/lancatster-cat-cafe/final-social.png
     alt: Social Media Mockup
   - src: /assets/images/lancatster-cat-cafe/laptop.png
-    alt: Preview of Desktop Homepage
+    alt: Desktop Homepage Preview
   - src: /assets/images/lancatster-cat-cafe/tablet-mobile-protos.png
-    alt: Tablet & Mobile Prototypes
+    alt: Tablet and Mobile Prototypes
   - src: /assets/images/lancatster-cat-cafe/coffee-cup-mockup.png
     alt: Coffee Cup Mockup
   - src: /assets/images/lancatster-cat-cafe/tote-bag.png
@@ -58,6 +139,4 @@ gallery:
     alt: Merch Mockup
 
 figmaEmbed: https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/joeOGqgiiE3qMKWckErpUM/cat-cafe?page-id=0%3A1&node-id=1-2&viewport=427%2C455%2C0.06&t=m3ctKtQMtY4JIMKG-1&scaling=scale-down-width&content-scaling=fixed
----
-
 ---
