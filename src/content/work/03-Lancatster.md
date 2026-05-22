@@ -42,8 +42,7 @@ about:
 
 tools:
   - Figma
-  - Affinity Designer
-  - Affinity Photo
+  - Affinity
 
 goalSection:
   title: Modernizing the Experience
