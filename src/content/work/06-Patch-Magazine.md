@@ -56,7 +56,7 @@ goalSection:
 caseSections:
   - type: mediaText
     mediaPosition: left
-    eyebrow: Subscription
+    eyebrow: CONVERSION
     title: Enhancing the Subscription Experience
     body: >
       <p>
