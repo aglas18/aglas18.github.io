@@ -14,7 +14,7 @@ shortDescription: >
   A homepage redesign for Patch Magazine, an independent publication focused on indie games — improving conversion paths, content discovery, community engagement, and the overall user journey across desktop, tablet, and mobile.
 
 projectType: >
-  Website Redesign & UX
+  Homepage Redesign & UX
 
 # Individual project page content
 longDescription: >
@@ -24,7 +24,7 @@ longDescription: >
 
 heroIntro: >
   <p>
-    Patch Magazine is an independent publication focused on indie games, serving as both a magazine and a community hub for enthusiasts and developers. This homepage redesign aimed to strengthen the digital experience by improving how visitors shop, discover content, and connect with the Patch ecosystem — creating clearer paths from first impression to conversion while supporting long-term engagement across devices.
+    Patch Magazine is an independent publication focused on indie games, serving as both a magazine and a community hub for gamers and developers. This homepage redesign aimed to strengthen the digital experience by improving how visitors shop, discover content, and connect with the Patch ecosystem — creating clearer paths from first impression to conversion while supporting long-term engagement across devices.
   </p>
 
 heroImage:
@@ -32,7 +32,7 @@ heroImage:
   alt: Patch Magazine website redesign displayed on desktop
 
 about:
-  - Website Redesign
+  - Web Redesign
   - UX/UI Design
   - Responsive Design
   - Content Strategy
@@ -104,5 +104,5 @@ caseSections:
 
 gallery: []
 
-figmaEmbed: https://www.figma.com/proto/sbCDmdR8qS9pCtykHGQclB/patch?node-id=1-6&viewport=536%2C382%2C0.04&t=rzb8sTndXFZN9pDk-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1
+figmaEmbed: https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/sbCDmdR8qS9pCtykHGQclB/patch?page-id=0%3A1&node-id=1-6&viewport=536%2C382%2C0.04&t=rzb8sTndXFZN9pDk-1&scaling=scale-down-width&content-scaling=fixed
 ---
