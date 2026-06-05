@@ -6,7 +6,7 @@ cardSubtitle: Concept Brand & Packaging
 pageTemplate: "caseStudy"
 
 cardImage:
-  src: /assets/images/rosewood/rosewood-card.png
+  src: /assets/images/rosewood/rosewood_bottle.jpg
   alt: Rosewood Bourbon branding and identity concept
 
 shortDescription: >
