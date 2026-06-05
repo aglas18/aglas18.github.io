@@ -120,22 +120,12 @@ caseSections:
         alt: Riot Beauty brand overview placeholder
 
 gallery:
-  - src: /assets/images/riot-beauty/horizontal-riot-logo.png
-    alt: Riot Beauty Horizontal Logo
-  - src: /assets/images/riot-beauty/logo-vertical.png
-    alt: Riot Beauty Vertical Logo
-  - src: /assets/images/riot-beauty/riot-foundation-packaging.png
-    alt: Riot Beauty Packaging
   - src: /assets/images/riot-beauty/branding-mockup.png
     alt: Riot Beauty Branding Mockup
+  - src: /assets/images/riot-beauty/riot-foundation-packaging.png
+    alt: Riot Beauty Packaging
   - src: /assets/images/riot-beauty/riot-social-feed.png
     alt: Riot Beauty Social Feed
-  - src: /assets/images/riot-beauty/riot-social-stories.png
-    alt: Riot Beauty Social Stories
-  - src: /assets/images/riot-beauty/riot-ads.png
-    alt: Riot Beauty PPC Ads
-  - src: /assets/images/riot-beauty/mockups.png
-    alt: Riot Beauty Product Mockups
   - src: /assets/images/riot-beauty/riot-amazon.png
     alt: Riot Beauty Amazon A+ Content
 
