@@ -79,50 +79,48 @@ caseSections:
         The website experience was designed to feel immersive and expressive while still supporting clear navigation and product discovery. Inspired by fashion editorials and music culture, the layouts use oversized typography and layered compositions to create movement and energy throughout the experience.
       </p>
 
-  - type: imageGrid
-    columns: 1
-    images:
-      - src: /assets/images/riot-beauty/riot-laptop.png
-        alt: Riot Beauty website homepage design
-
-  - type: imageGrid
-    columns: 1
-    images:
-      - src: /assets/images/riot-beauty/mockups.png
-        alt: Riot Beauty product mockups and packaging
+    image:
+      src: /assets/images/riot-beauty/riot-laptop.png
+      alt: Riot Beauty website homepage design
 
   - type: mediaText
     mediaPosition: left
+    eyebrow: Product Design
+    title: Packaging & Physical Touchpoints
+    body: >
+      <p>
+        The brand was extended into packaging and product mockups to reinforce its presence as a fully realized beauty system. The design approach balances bold visual identity with clean structure to ensure the products feel commercially viable while still expressive.
+      </p>
+
+    image:
+      src: /assets/images/riot-beauty/mockups.png
+      alt: Riot Beauty product mockups and packaging
+
+  - type: mediaText
+    mediaPosition: right
     eyebrow: Marketing & Social
     title: Extending the Brand Across Digital Campaigns
     body: >
       <p>
-        Beyond the website, the project expanded into marketing and marketplace touchpoints designed to maintain a consistent brand presence across platforms. Social content, PPC ads, and Amazon A+ layouts were created using the same visual language, ensuring cohesion while adapting to different formats and audiences.
+        Marketing assets were designed to maintain a consistent brand presence across social platforms and advertising channels. This included social feeds, stories, PPC ads, and Amazon A+ content, all built from the same visual language.
       </p>
+
     image:
       src: /assets/images/riot-beauty/riot-social-feed.png
       alt: Riot Beauty Instagram feed concepts
-    stackBottom:
-      - src: /assets/images/riot-beauty/riot-social-stories.png
-        alt: Riot Beauty Instagram story designs
-      - src: /assets/images/riot-beauty/riot-ads.png
-        alt: Riot Beauty PPC advertisement concepts
-
-  - type: imageGrid
-    columns: 1
-    images:
-      - src: /assets/images/riot-beauty/riot-amazon.png
-        alt: Riot Beauty Amazon A+ content layouts
 
 gallery:
-  - src: /assets/images/riot-beauty/riot-beauty-card.png
-    alt: Riot Beauty brand overview
-
   - src: /assets/images/riot-beauty/riot-social-stories.png
     alt: Riot Beauty social stories
 
   - src: /assets/images/riot-beauty/riot-ads.png
     alt: Riot Beauty PPC ads
+
+  - src: /assets/images/riot-beauty/riot-amazon.png
+    alt: Riot Beauty Amazon A+ content
+
+  - src: /assets/images/riot-beauty/riot-beauty-card.png
+    alt: Riot Beauty brand overview
 
 figmaEmbed: https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/4krOJdM6x3gpT5LmnbgrNy/riot-beauty?page-id=0%3A1&node-id=2-894&viewport=590%2C291%2C0.08&t=IFTeAPG1IOIN497h-1&scaling=scale-down-width&content-scaling=fixed
 ---
