@@ -69,6 +69,8 @@ caseSections:
     stackBottom:
       - src: /assets/images/riot-beauty/logo-vertical.png
         alt: Riot Beauty vertical logo variation
+      - src: /assets/images/riot-beauty/branding-guidelines.png
+        alt: Riot Beauty Branding Guidelines
 
   - type: mediaText
     mediaPosition: right
