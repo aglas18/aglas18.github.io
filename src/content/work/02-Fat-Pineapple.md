@@ -82,20 +82,28 @@ caseSections:
       alt: Fat Pineapple branding guidelines
 
   - type: imageGrid
-    columns: 3
-    images:
-      - src: /assets/images/fat-pineapple/fp-logo-colors.png
-        alt: Fat Pineapple logo color explorations
-      - src: /assets/images/fat-pineapple/fp-business-carsd.png
-        alt: Fat Pineapple business cards
-      - src: /assets/images/fat-pineapple/fp-mockup.png
-        alt: Fat Pineapple meal packaging mockup
-
-  - type: imageGrid
     columns: 2
     images:
       - src: /assets/images/fat-pineapple/fp-shirt.png
         alt: Fat Pineapple shirt mockup
       - src: /assets/images/fat-pineapple/fat-pineapple-social-media.png
         alt: Fat Pineapple social media mockups
+
+  - type: imageGrid
+    columns: 3
+    images:
+      - src: /assets/images/fat-pineapple/fp-logo-colors.png
+        alt: Fat Pineapple logo color explorations
+      - src: /assets/images/fat-pineapple/fp-mockup.png
+        alt: Fat Pineapple meal packaging mockup
+      - src: /assets/images/fat-pineapple/fp-business-carsd.png
+        alt: Fat Pineapple business cards
+
+gallery:
+  - src: /assets/images/fat-pineapple/fp-logo-colors.png
+    alt: FP Color Logo
+  - src: /assets/images/fat-pineapple/fp-mockup.png
+    alt: FP Meal Mockup
+  - src: /assets/images/fat-pineapple/fp-business-carsd.png
+    alt: Business Cards
 ---
