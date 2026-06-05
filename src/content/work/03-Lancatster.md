@@ -105,14 +105,6 @@ caseSections:
       - src: /assets/images/lancatster-cat-cafe/hat-mockup.png
         alt: Hat mockup
 
-  - type: imageGrid
-    columns: 2
-    images:
-      - src: /assets/images/lancatster-cat-cafe/new-cat-cafe-card.png
-        alt: Branding overview
-      - src: /assets/images/lancatster-cat-cafe/final-social.png
-        alt: Social preview
-
 gallery:
   - src: /assets/images/lancatster-cat-cafe/horizontal-logo.png
     alt: Horizontal Logo
