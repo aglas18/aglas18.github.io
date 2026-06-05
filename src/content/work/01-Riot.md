@@ -71,8 +71,6 @@ caseSections:
     stackBottom:
       - src: /assets/images/riot-beauty/logo-vertical.png
         alt: Riot Beauty vertical logo variation
-      - src: /assets/images/riot-beauty/branding-mockup.png
-        alt: Riot Beauty visual identity mockup
 
   - type: mediaText
     mediaPosition: right
@@ -120,14 +118,10 @@ caseSections:
         alt: Riot Beauty brand overview placeholder
 
 gallery:
-  - src: /assets/images/riot-beauty/branding-mockup.png
-    alt: Riot Beauty Branding Mockup
-  - src: /assets/images/riot-beauty/riot-foundation-packaging.png
-    alt: Riot Beauty Packaging
-  - src: /assets/images/riot-beauty/riot-social-feed.png
-    alt: Riot Beauty Social Feed
-  - src: /assets/images/riot-beauty/riot-amazon.png
-    alt: Riot Beauty Amazon A+ Content
+  - src: /assets/images/riot-beauty/riot-beauty-card.png
+    alt: Riot Beauty Brand Overview
+  - src: /assets/images/riot-beauty/mockups.png
+    alt: Riot Beauty Product Mockups
 
 figmaEmbed: https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/4krOJdM6x3gpT5LmnbgrNy/riot-beauty?page-id=0%3A1&node-id=2-894&viewport=590%2C291%2C0.08&t=IFTeAPG1IOIN497h-1&scaling=scale-down-width&content-scaling=fixed
 ---
