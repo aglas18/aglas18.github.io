@@ -97,11 +97,12 @@ caseSections:
         The identity was extended into physical applications including coffee cups and merchandise concepts, reinforcing the playful and community-driven nature of the brand across real-world touchpoints.
       </p>
     image:
-      src: /assets/images/lancatster-cat-cafe/coffee-cup-mockup.png
-      alt: Coffee cup branding mockup
+      src: /assets/images/lancatster-cat-cafe/tote-bag.png
+      alt: Tote bag mockup
+
     stackBottom:
-      - src: /assets/images/lancatster-cat-cafe/tote-bag.png
-        alt: Tote bag mockup
+      - src: /assets/images/lancatster-cat-cafe/coffee-cup-mockup.png
+        alt: Coffee cup branding mockup
       - src: /assets/images/lancatster-cat-cafe/hat-mockup.png
         alt: Hat mockup
 
