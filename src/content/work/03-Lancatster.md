@@ -26,7 +26,7 @@ heroIntro: >
   </p>
 
 heroImage:
-  src: /assets/images/lancatster-cat-cafe/cat-cafe-hero-img.png
+  src: /assets/images/lancatster-cat-cafe/new-card.png
   alt: LanCATster Cat Cafe website redesign displayed on desktop
 
 about:
@@ -49,7 +49,7 @@ goalSection:
 
     A major priority of the website redesign was improving usability and conversion flow — making it easier for users to understand the cafe’s mission, browse information, book visits, and engage with adoptable cats.
   image:
-    src: /assets/images/lancatster-cat-cafe/cat-cafe-card.png
+    src: /assets/images/lancatster-cat-cafe/cat-cafe-hero-img.png
     alt: Original LanCATster Cat Cafe branding reference
 
 caseSections:
@@ -67,7 +67,7 @@ caseSections:
     stackBottom:
       - src: /assets/images/lancatster-cat-cafe/lanc-cat-cafe-logo-light.png
         alt: Monochrome logo variation
-      - src: /assets/images/lancatster-cat-cafe/cat-cafe-hero-img.png
+      - src: /assets/images/lancatster-cat-cafe/cat-cafe-card.png
         alt: LanCATster reimagined branding
 
   - type: mediaText
