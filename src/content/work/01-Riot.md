@@ -5,7 +5,6 @@ brand: Riot Beauty
 cardSubtitle: Concept Brand & Website
 pageTemplate: "caseStudy"
 
-# Homepage / shared content
 cardImage:
   src: /assets/images/riot-beauty/riot-beauty-card.png
   alt: Riot Beauty branding and website preview
@@ -74,14 +73,17 @@ caseSections:
   - type: mediaText
     mediaPosition: right
     eyebrow: E-Commerce Experience
-    title: Designing an Editorial Shopping Experience
+    title: Designing a Scalable Shopping Experience
     body: >
       <p>
-        The website experience was designed to feel immersive, expressive, and visually engaging while still supporting clear navigation and product discovery. Inspired by fashion editorials and music culture, the layouts intentionally use oversized typography, layered imagery, and dynamic compositions to create movement throughout the experience.
+        The website experience was designed to feel immersive and expressive while still supporting clear navigation and product discovery. Inspired by fashion editorials and music culture, the layouts use oversized typography and layered compositions to create movement and energy throughout the experience.
       </p>
-    image:
-      src: /assets/images/riot-beauty/riot-laptop.png
-      alt: Riot Beauty website homepage design
+
+  - type: imageGrid
+    columns: 1
+    images:
+      - src: /assets/images/riot-beauty/riot-laptop.png
+        alt: Riot Beauty website homepage design
 
   - type: imageGrid
     columns: 1
