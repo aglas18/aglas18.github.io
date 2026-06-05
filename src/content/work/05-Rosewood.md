@@ -79,7 +79,7 @@ caseSections:
       </p>
     image:
       src: /assets/images/rosewood/rosewood-laptop.png
-      alt: Rosewood bourbon website homepage mockup test
+      alt: Rosewood bourbon website homepage mockup
 
   - type: imageGrid
     columns: 2
