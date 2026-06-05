@@ -6,7 +6,7 @@ cardSubtitle: Brand & Website Redesign
 pageTemplate: "caseStudy"
 
 cardImage:
-  src: /assets/images/lancatster-cat-cafe/new-cat-cafe-card.png
+  src: /assets/images/lancatster-cat-cafe/new-card.png
   alt: LanCATster Cat Cafe branding preview
 
 shortDescription: >
@@ -67,6 +67,8 @@ caseSections:
     stackBottom:
       - src: /assets/images/lancatster-cat-cafe/lanc-cat-cafe-logo-light.png
         alt: Monochrome logo variation
+      - src: /assets/images/lancatster-cat-cafe/cat-cafe-hero-img.png
+        alt: LanCATster reimagined branding
 
   - type: mediaText
     mediaPosition: right
