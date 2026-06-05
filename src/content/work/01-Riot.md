@@ -80,8 +80,8 @@ caseSections:
       </p>
 
     image:
-      src: /assets/images/riot-beauty/riot-laptop.png
-      alt: Riot Beauty website homepage design
+      src: /assets/images/riot-beauty/web-riot.png
+      alt: Homepage & product page design
 
   - type: mediaText
     mediaPosition: left
