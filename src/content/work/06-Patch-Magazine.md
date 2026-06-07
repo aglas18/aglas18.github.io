@@ -64,7 +64,7 @@ caseSections:
       </p>
     image:
       src: /assets/images/patch-magazine/ux-notes-1.png
-      alt: Patch Magazine subscription comparison and purchase paths
+      alt: Homepage redesign improvements focused on visual storytelling, SEO content, and subscription-focused calls-to-action.
 
   - type: mediaText
     mediaPosition: right
@@ -76,7 +76,7 @@ caseSections:
       </p>
     image:
       src: /assets/images/patch-magazine/ux-notes-2.png
-      alt: Patch Magazine editorial content and back issue visibility
+      alt: Subscription comparison experience featuring simplified plan selection, purchase actions, and supporting social proof.
 
   - type: mediaText
     mediaPosition: left
@@ -88,7 +88,7 @@ caseSections:
       </p>
     image:
       src: /assets/images/patch-magazine/ux-notes-3.png
-      alt: Patch Magazine community engagement and testimonial carousel
+      alt: Content discovery enhancements highlighting back issues, featured games, and interactive editorial content.
 
   - type: mediaText
     mediaPosition: right
@@ -100,7 +100,7 @@ caseSections:
       </p>
     image:
       src: /assets/images/patch-magazine/ux-notes-4.png
-      alt: Patch Magazine intentional user journey and conversion flow
+      alt: Community engagement and conversion-focused sections designed to guide users from exploration to subscription.
 
 gallery: []
 
