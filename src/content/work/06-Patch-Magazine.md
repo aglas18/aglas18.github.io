@@ -46,7 +46,7 @@ tools:
 goalSection:
   title: Redesigning the Homepage Experience
   body: >
-    *This project is a self-initiated conceptual redesign and was not commissioned by or affiliated with Patch Magazine.*
+    <em>This project is a self-initiated conceptual redesign and was not commissioned by or affiliated with Patch Magazine.</em>
 
     Before beginning the redesign, I reviewed the existing homepage experience to identify opportunities for improvement. Patch Magazine already provides subscriptions, editorial content, community resources, and e-commerce functionality, creating a strong foundation for users interested in indie gaming.
 
