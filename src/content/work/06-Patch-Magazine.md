@@ -46,12 +46,14 @@ tools:
 goalSection:
   title: Redesigning the Homepage Experience
   body: >
-    Patch Magazine already offered subscriptions, editorial content, and community resources, but opportunities existed to better guide users through the experience. This redesign focused on improving visual storytelling, strengthening content hierarchy, and creating clearer conversion pathways to help visitors discover the value of the publication and ultimately become subscribers.
+    *This project is a self-initiated conceptual redesign and was not commissioned by or affiliated with Patch Magazine.*
 
-    By making subscription options easier to compare, increasing visibility for editorial content and back issues, and introducing additional engagement opportunities throughout the page, the redesigned experience creates a more intentional journey from discovery to conversion.
+    Before beginning the redesign, I reviewed the existing homepage experience to identify opportunities for improvement. Patch Magazine already provides subscriptions, editorial content, community resources, and e-commerce functionality, creating a strong foundation for users interested in indie gaming.
+
+    The redesign focused on building upon these existing strengths by improving visual storytelling, strengthening content hierarchy, and creating clearer pathways to subscription. Key opportunities included making subscription options easier to compare, increasing visibility for editorial and archival content, and introducing additional engagement touchpoints throughout the page. The goal was to create a more intentional user journey that better supports both content discovery and subscription growth.
   image:
-    src: /assets/images/patch-magazine/patch-card.png
-    alt: Patch Magazine homepage redesign overview
+    src: /assets/images/patch-magazine/current.png
+    alt: Existing Patch Magazine homepage analyzed to identify opportunities for improved visual hierarchy, content discovery, and subscription conversion.
 
 caseSections:
   - type: mediaText
