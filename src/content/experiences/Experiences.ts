@@ -16,7 +16,14 @@ export const experienceList = [
 export const jobList = [
   {
     company: "WebFX",
-    date: "Jun 2024 - Present",
+    date: "Jun 2026 - Present",
+    title: "Lead Web Designer",
+    content:
+      "Provided leadership across website and landing page initiatives, guiding projects from concept through implementation while balancing user experience, business goals, and technical requirements. Actively supported team growth by mentoring designers, sharing knowledge through Lunch & Learn presentations, and establishing more efficient workflows and design processes. Partnered closely with cross-functional teams to improve collaboration, elevate design quality, and drive successful project outcomes.",
+  },
+  {
+    company: "WebFX",
+    date: "Jun 2024 - Jun 2026",
     title: "Associate Lead Web Designer",
     content:
       "Led complex website and landing page projects across multiple CMS platforms, balancing design quality, usability, and scalable implementation. Took on increased ownership through on-call design support, cross-team collaboration, and improving internal processes to elevate team efficiency.",
