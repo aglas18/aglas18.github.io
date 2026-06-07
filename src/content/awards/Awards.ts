@@ -1,5 +1,15 @@
 export const awardsList = [
   {
+    date: "2025",
+    title: "Horizon Award — Gold",
+    description:
+      "Gold Horizon Award awarded to WebFX for Restaurant / Food Website, with my contribution focused on overall design direction and visual refinement.",
+    category: "Agency Awards",
+    popupContent: "Horizon Award 2025 Gold",
+    linkUrl:
+      "https://www.horizoninteractiveawards.com/web-site-awards/2025/restaurant#:~:text=BAR%20209%20%2D%20WEBSITE%20REDESIGN",
+  },
+  {
     date: "2024",
     title: "Horizon Award — Gold",
     description:

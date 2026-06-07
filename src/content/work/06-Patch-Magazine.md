@@ -46,11 +46,11 @@ tools:
 goalSection:
   title: Redesigning the Homepage Experience
   body: >
-    <em>This project is a self-initiated conceptual redesign and was not commissioned by or affiliated with Patch Magazine.</em>
-
     Before beginning the redesign, I reviewed the existing homepage experience to identify opportunities for improvement. Patch Magazine already provides subscriptions, editorial content, community resources, and e-commerce functionality, creating a strong foundation for users interested in indie gaming.
 
     The redesign focused on building upon these existing strengths by improving visual storytelling, strengthening content hierarchy, and creating clearer pathways to subscription. Key opportunities included making subscription options easier to compare, increasing visibility for editorial and archival content, and introducing additional engagement touchpoints throughout the page. The goal was to create a more intentional user journey that better supports both content discovery and subscription growth.
+
+    <em>This project is a self-initiated conceptual redesign and was not commissioned by or affiliated with Patch Magazine.</em>
   image:
     src: /assets/images/patch-magazine/current.png
     alt: Existing Patch Magazine homepage analyzed to identify opportunities for improved visual hierarchy, content discovery, and subscription conversion.
