@@ -19,7 +19,7 @@ export const jobList = [
     date: "Jun 2026 - Present",
     title: "Lead Web Designer",
     content:
-      "Provided leadership across website and landing page initiatives, guiding projects from concept through implementation while balancing user experience, business goals, and technical requirements. Actively supported team growth by mentoring designers, sharing knowledge through Lunch & Learn presentations, and establishing more efficient workflows and design processes. Partnered closely with cross-functional teams to improve collaboration, elevate design quality, and drive successful project outcomes.",
+      "Provided leadership across website and landing page initiatives. Actively supported team growth by mentoring designers, sharing knowledge through Lunch & Learn presentations, and establishing more efficient workflows and design processes. Partnered closely with cross-functional teams to improve collaboration, elevate design quality, and drive successful project outcomes.",
   },
   {
     company: "WebFX",

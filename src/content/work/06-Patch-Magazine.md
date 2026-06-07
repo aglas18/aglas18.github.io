@@ -46,9 +46,9 @@ tools:
 goalSection:
   title: Redesigning the Homepage Experience
   body: >
-    As Patch Magazine continues to grow its audience and content offerings, the homepage presented an opportunity to better support content discovery, subscription engagement, and community participation. The redesign focused on refining the user journey through stronger visual hierarchy, clearer content organization, and more strategic placement of key actions throughout the page.
+    Patch Magazine already offered subscriptions, editorial content, and community resources, but opportunities existed to better guide users through the experience. This redesign focused on improving visual storytelling, strengthening content hierarchy, and creating clearer conversion pathways to help visitors discover the value of the publication and ultimately become subscribers.
 
-    The goal was not to reinvent the experience, but to build upon its existing strengths by making subscriptions easier to compare, surfacing more editorial content, and creating additional touchpoints that encourage users to engage with the broader Patch community.
+    By making subscription options easier to compare, increasing visibility for editorial content and back issues, and introducing additional engagement opportunities throughout the page, the redesigned experience creates a more intentional journey from discovery to conversion.
   image:
     src: /assets/images/patch-magazine/patch-card.png
     alt: Patch Magazine homepage redesign overview
@@ -57,25 +57,25 @@ caseSections:
   - type: mediaText
     mediaPosition: left
     eyebrow: CONVERSION
-    title: Enhancing the Subscription Experience
+    title: Strengthening the Path to Subscription
     body: >
       <p>
-        Patch Magazine already offers multiple subscription options and purchasing pathways, but the homepage presented an opportunity to make those offerings easier to understand and compare. The redesigned experience places greater emphasis on subscription discovery by introducing a more structured comparison section, clearer calls-to-action, and additional purchase opportunities throughout the page. A countdown banner was also added to highlight upcoming issue deadlines and create greater awareness around monthly releases.
+        The redesign focused on creating a stronger first impression while making it easier for visitors to understand the value of Patch Magazine. Above the fold, a dedicated call-to-action and expanded visual storytelling help direct attention toward the latest issue, while a countdown banner introduces urgency around upcoming releases. Additional editorial content was incorporated to better communicate the publication's mission and provide supporting context for both new readers and search engines, helping balance conversion goals with content discoverability.
       </p>
     image:
-      src: /assets/images/patch-magazine/conversion-01.png
+      src: /assets/images/patch-magazine/ux-notes-1.png
       alt: Patch Magazine subscription comparison and purchase paths
 
   - type: mediaText
     mediaPosition: right
     eyebrow: Content Discovery
-    title: Improving Content Discovery & Visibility
+    title: Reducing Friction in the Purchase Journey
     body: >
       <p>
-        As a publication dedicated to indie games, Patch produces a wide range of editorial content that extends beyond the magazine itself. The redesign introduces additional content-focused sections that give greater visibility to past issues, featured articles, and the publication's broader mission. Supporting editorial copy was incorporated to provide context for new visitors while creating opportunities to strengthen search visibility and improve discoverability of the brand.
+        Subscriptions are central to the Patch business model, making clarity and ease of comparison a key priority. The redesign introduces dedicated subscription cards that present available options in a more structured and scannable format, helping users quickly evaluate the benefits of each plan. Clear purchasing actions were integrated directly within each card to reduce friction and create a more direct path from consideration to conversion. Supporting testimonials and imagery provide additional trust signals throughout the decision-making process.
       </p>
     image:
-      src: /assets/images/patch-magazine/content-discovery-01.png
+      src: /assets/images/patch-magazine/ux-notes-2.png
       alt: Patch Magazine editorial content and back issue visibility
 
   - type: mediaText
@@ -84,22 +84,22 @@ caseSections:
     title: Strengthening Community Engagement
     body: >
       <p>
-        One of Patch's greatest strengths is the community that exists around the publication. To better showcase that community, the redesign introduces dedicated spaces for reader testimonials, featured games, social content, and ongoing editorial updates. Interactive components, including a tabbed content section and testimonial carousel, help surface more content within a smaller footprint while encouraging users to engage with the broader Patch ecosystem.
+        While subscriptions remain the primary goal, Patch offers a growing library of content that extends beyond the latest issue. The redesign increases visibility for back issues, featured games, and editorial content through dedicated content sections and improved organization. Interactive elements, including hover states and tabbed content areas, encourage exploration while helping surface more content without increasing visual complexity. The result is an experience that supports both user engagement and long-term content discovery.
       </p>
     image:
-      src: /assets/images/patch-magazine/community-01.png
+      src: /assets/images/patch-magazine/ux-notes-3.png
       alt: Patch Magazine community engagement and testimonial carousel
 
   - type: mediaText
     mediaPosition: right
-    eyebrow: User Journey
-    title: Creating a More Intentional User Journey
+    eyebrow: Engagement
+    title: Creating Additional Opportunities to Convert
     body: >
       <p>
-        The homepage was restructured to create a clearer flow from awareness to engagement. Additional calls-to-action were strategically placed throughout the experience to support different user goals, whether purchasing a subscription, browsing back issues, joining the community, or learning more about the publication. A dedicated community section and final conversion-focused call-to-action help create a stronger conclusion to the page while providing users with multiple opportunities to take action before leaving the site.
+        Not every visitor is ready to subscribe immediately. To support users at different stages of the journey, additional engagement opportunities were incorporated throughout the page, including community-focused calls-to-action for readers and indie developers. A dedicated closing section provides a final opportunity to subscribe while reinforcing the value of joining the Patch community. Together, these touchpoints create a more intentional experience that guides users from discovery to engagement and ultimately toward subscription.
       </p>
     image:
-      src: /assets/images/patch-magazine/responsive-01.png
+      src: /assets/images/patch-magazine/ux-notes-4.png
       alt: Patch Magazine intentional user journey and conversion flow
 
 gallery: []
