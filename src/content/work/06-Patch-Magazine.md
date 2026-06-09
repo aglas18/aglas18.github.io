@@ -11,7 +11,7 @@ cardImage:
   alt: Patch Magazine website redesign homepage preview
 
 shortDescription: >
-  A conceptual homepage redesign for an independent gaming publication focused on improving subscription conversion, content discovery, and community engagement. Through stronger visual storytelling, clearer content hierarchy, and a more intentional user journey, the redesign creates a more engaging experience for indie game enthusiasts.
+  A conceptual homepage redesign for an independent gaming publication focused on improving subscription conversion, content discovery, and community engagement through stronger UX and visual storytelling.
 
 projectType: >
   Homepage Redesign & UX

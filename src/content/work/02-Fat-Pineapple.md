@@ -11,7 +11,7 @@ cardImage:
   alt: Fat Pineapple Branding
 
 shortDescription: >
-  A strategic brand refresh for a growing catering company, focused on modernizing the visual identity while preserving its approachable personality. The project included a refined logo system, merchandise concepts, and brand assets designed to improve consistency across customer touchpoints.
+  A strategic brand refresh for a growing catering company, modernizing its visual identity while preserving the approachable personality that customers know and trust.
 
 projectType: >
   Logo & Brand Refresh
