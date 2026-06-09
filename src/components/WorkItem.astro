@@ -23,10 +23,14 @@ const allWork = Object.values(
         />
 
         <div class="project-info">
-          <h3>{work.frontmatter.brand ?? work.frontmatter.title}</h3>
           {work.frontmatter.cardSubtitle && (
             <h4>{work.frontmatter.cardSubtitle}</h4>
           )}
+          <h3>
+            {work.frontmatter.brand
+              ? work.frontmatter.brand
+              : work.frontmatter.title}
+          </h3>
           <p>{work.frontmatter.shortDescription}</p>
 
           <div class="link-btn">
