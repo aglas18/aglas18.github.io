@@ -44,11 +44,11 @@ import Flower from "../assets/flower.svg";
     content: "";
     position: absolute;
     inset: 0;
-    background: var(--gradient-accent);
+    background: linear-gradient(180deg, #540024, #89043d);
     z-index: 0;
   }
 
-  .masthead::after {
+  /* .masthead::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -57,7 +57,7 @@ import Flower from "../assets/flower.svg";
     opacity: 0.3;
     z-index: 1;
     pointer-events: none;
-  }
+  } */
 
   .masthead-inner {
     position: relative;
@@ -109,10 +109,10 @@ import Flower from "../assets/flower.svg";
   }
 
   @media (min-width: 1024px) {
-    .masthead::after {
+    /* .masthead::after {
       background-image: url("../assets/desktop-header-background.png");
       opacity: 0.5;
-    }
+    } */
 
     .decorative-flower {
       width: 200px;
