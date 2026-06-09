@@ -10,7 +10,7 @@ cardImage:
   alt: LanCATster Cat Cafe branding preview
 
 shortDescription: >
-  A personal redesign project for Lancaster Cat Cafe, featuring an updated brand identity, website redesign, social media visuals, and a more modern digital experience.
+  A self-initiated redesign created to help a local cat cafe better communicate its mission online. The project reimagines the brand identity and digital experience through a more cohesive visual system, improved user experience, and stronger storytelling for both visitors and potential adopters.
 
 projectType: >
   Brand & Website Redesign

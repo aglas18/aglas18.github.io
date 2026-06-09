@@ -11,7 +11,7 @@ cardImage:
   alt: Patch Magazine website redesign homepage preview
 
 shortDescription: >
-  A homepage redesign for Patch Magazine, an independent publication focused on indie games — improving conversion paths, content discovery, community engagement, and the overall user journey across desktop, tablet, and mobile.
+  A conceptual homepage redesign for an independent gaming publication focused on improving subscription conversion, content discovery, and community engagement. Through stronger visual storytelling, clearer content hierarchy, and a more intentional user journey, the redesign creates a more engaging experience for indie game enthusiasts.
 
 projectType: >
   Homepage Redesign & UX

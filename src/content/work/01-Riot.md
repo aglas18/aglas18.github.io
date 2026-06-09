@@ -10,7 +10,7 @@ cardImage:
   alt: Riot Beauty branding and website preview
 
 shortDescription: >
-  A conceptual beauty brand inspired by punk and rock culture, spanning e-commerce website design, branding, packaging, Amazon A+ content, social media, and digital advertising.
+  A conceptual cosmetics brand inspired by punk/alternative music and modern fashion culture. The project spans visual identity design, e-commerce website design, product packaging, social media content, digital advertising, and Amazon A+ content.
 
 projectType: >
   Concept Brand & E-Commerce Design

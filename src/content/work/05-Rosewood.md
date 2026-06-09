@@ -10,7 +10,7 @@ cardImage:
   alt: Rosewood Bourbon branding and identity concept
 
 shortDescription: >
-  A conceptual bourbon brand exploring luxury branding through logo design, packaging, stationery, merchandising, and a promotional website experience.
+  A premium bourbon concept exploring how heritage, craftsmanship, and luxury can be expressed through brand design. From packaging and stationery to merchandising and digital touchpoints, the project focuses on creating a cohesive brand experience inspired by high-end spirits and hospitality brands.
 
 projectType: >
   Concept Brand & Packaging Design
