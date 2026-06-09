@@ -22,7 +22,7 @@ longDescription: >
 
 heroIntro: >
   <p>
-    Riot Beauty is a conceptual cosmetics brand created to explore the intersection of alternative fashion, music culture, and modern beauty branding. Inspired by punk and rock aesthetics, the project combines expressive visuals with clean, contemporary layouts to create a brand that feels bold without sacrificing usability. The goal was to develop a cohesive visual identity and digital shopping experience that could exist as a fully realized beauty brand across e-commerce, social media, advertising, and marketplace platforms.
+    Riot Beauty is a conceptual cosmetics brand inspired by punk/alternative music and modern fashion culture. Created to explore how bold self-expression can coexist with everyday wearability, the project combines rebellious influences with clean, contemporary design to create a beauty brand that feels confident, accessible, and distinctly memorable. The goal was to develop a cohesive brand ecosystem spanning visual identity, e-commerce, packaging, social media, digital advertising, and marketplace experiences.
   </p>
 
 heroImage:
@@ -47,9 +47,9 @@ tools:
 goalSection:
   title: Building a Brand with Personality
   body: >
-    The beauty industry often leans heavily into minimal, clean aesthetics, but Riot Beauty was created to explore a more expressive direction. The goal was to build a beauty brand that felt energetic, rebellious, and fashion-forward while still remaining approachable for everyday consumers.
+    Many beauty brands rely on minimalist aesthetics and polished luxury cues, but Riot Beauty was created to explore a different perspective. The concept centers around consumers who embrace individuality and creative expression while still wanting products that fit naturally into their everyday routines.
 
-    Starting with the visual identity, the project expanded into a full digital ecosystem that included website design, social media content, product concepts, advertising assets, and Amazon A+ layouts. Every touchpoint was designed to feel cohesive while maintaining the brand’s bold personality and editorial-inspired aesthetic.
+    Starting with the visual identity, the project expanded into a complete brand system that included website design, packaging concepts, social media content, advertising assets, and Amazon A+ layouts. Every touchpoint was designed to balance personality with usability, creating a brand experience that feels expressive without becoming overwhelming.
   image:
     src: /assets/images/riot-beauty/branding-mockup.png
     alt: Riot Beauty visual identity and branding mockup
@@ -61,7 +61,9 @@ caseSections:
     title: Creating the Visual Language
     body: >
       <p>
-        The Riot Beauty identity was designed to balance edge and usability. Bold typography, high-contrast layouts, and punk-inspired influences help establish the brand’s personality, while structured spacing and clean compositions keep the experience modern and accessible. Multiple logo variations were developed to ensure flexibility across packaging, digital platforms, and social media applications.
+        The Riot Beauty identity was built around the contrast between alternative culture and modern simplicity. Bold typography, high-contrast layouts, and editorial-inspired compositions establish a strong sense of personality, while structured spacing and clean design systems maintain clarity and accessibility.
+
+        Multiple logo variations and supporting brand assets were developed to ensure flexibility across digital experiences, product packaging, social content, and future brand applications. The result is a visual system that feels distinctive enough to stand out while remaining adaptable across a wide range of touchpoints.
       </p>
     image:
       src: /assets/images/riot-beauty/horizontal-riot-logo.png
@@ -78,7 +80,9 @@ caseSections:
     title: Designing a Scalable Shopping Experience
     body: >
       <p>
-        The website experience was designed to feel immersive and expressive while still supporting clear navigation and product discovery. Inspired by fashion editorials and music culture, the layouts use oversized typography and layered compositions to create movement and energy throughout the experience.
+        The website experience was designed to translate the brand's personality into a functional shopping environment. Drawing inspiration from fashion editorials, music culture, and modern beauty brands, the layouts combine striking visuals with clear hierarchy to support product discovery and purchasing decisions.
+
+        Oversized typography, immersive imagery, and dynamic compositions create energy throughout the experience, while thoughtful navigation and structured content ensure the shopping journey remains intuitive and conversion-focused.
       </p>
 
     image:
@@ -91,7 +95,9 @@ caseSections:
     title: Packaging & Physical Touchpoints
     body: >
       <p>
-        The brand was extended into packaging and product mockups to reinforce its presence as a fully realized beauty system. The design approach balances bold visual identity with clean structure to ensure the products feel commercially viable while still expressive.
+        Packaging concepts and product mockups were developed to explore how the Riot Beauty identity could extend beyond digital channels. The packaging system emphasizes strong shelf presence while maintaining the clean, modern aesthetic established throughout the brand.
+
+        By balancing expressive visual elements with practical product design considerations, the concepts help position Riot Beauty as a commercially viable brand with a cohesive presence across both physical and digital environments.
       </p>
 
     image:
@@ -104,8 +110,9 @@ caseSections:
     title: Extending the Brand Across Digital Campaigns
     body: >
       <p>
-        Marketing assets were designed to maintain a consistent brand presence across social platforms and advertising channels. This included social feeds, stories, PPC ads, and Amazon A+ content, all built from the same visual language.
-      </p>
+       To support brand awareness and customer engagement, the visual identity was extended across a range of digital marketing channels. Social content, PPC advertisements, and Amazon A+ layouts were designed using the same core design principles established throughout the brand system.
+
+      Each asset was tailored to its platform while maintaining a consistent visual language, helping create a unified customer experience from discovery through purchase.
 
     image:
       src: /assets/images/riot-beauty/riot-social-feed.png
