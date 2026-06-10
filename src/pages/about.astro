@@ -31,23 +31,19 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <section class="about-content">
-      <div class="about-me-images">
-        <div class="education-images">
-          <img
-            class="about-me-img small-img-1"
-            src={"/assets/images/about/portfolio.png"}
-            width="100%"
-            height="10%"
-            alt="College Feedback"
-          /><img
-            class="about-me-img small-img-1"
-            src={"/assets/images/about/grad.jpg"}
-            width="100%"
-            height="10%"
-            alt="Graduation Photo"
-          />
-        </div>
-      </div>
+      <img
+        class="about-me-img small-img-1"
+        src={"/assets/images/about/portfolio.png"}
+        width="100%"
+        height="10%"
+        alt="College Feedback"
+      /><img
+        class="about-me-img small-img-1"
+        src={"/assets/images/about/grad.jpg"}
+        width="100%"
+        height="10%"
+        alt="Graduation Photo"
+      />
       <div class="education">
         <h2>Education</h2>
         <div class="education-stuff">
@@ -74,8 +70,11 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
     <section class="portfolio-brag">
-      <h2>Yes I built this website!</h2>
-      <img src={"/assets/images/about/yippe.jpg"} alt="Hehe" />
+      <div class="hehe">
+        <h2>Yes I built this website!</h2>
+        <img src={"/assets/images/about/yippe.jpg"} alt="Hehe" />
+      </div>
+
       <p>
         I'm very proud to say that I built this portfolio website myself, using
         Astro, TypeScript, and Tailwind CSS (all frameworks I learned in this
@@ -203,7 +202,14 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .about-content {
-      gap: 60px;
+      gap: 40px;
+    }
+
+    img.about-me-img {
+      height: 675px;
+      object-fit: cover;
+      border-radius: 30px;
+      width: 25%;
     }
   }
 </style>
