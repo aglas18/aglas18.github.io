@@ -72,6 +72,18 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
     </section>
+    <section class="portfolio-brag">
+      <div class="hehe">
+        <h2>Yes I built this website!</h2>
+        <img src={"/assets/images/about/yippe.jpg"} alt="Hehe" />
+      </div>
+      <p>
+        I'm very proud to say that I built this portfolio website myself, using
+        Astro, TypeScript, and Tailwind CSS (all frameworks I learned in this
+        process). As a web designer, I have learned a lot about development and
+        the structure behind websites and how to bring my designs to life.
+      </p>
+    </section>
 
     <CTA />
   </div>
@@ -149,6 +161,12 @@ import Layout from "../layouts/Layout.astro";
   .profile-pic {
     width: 400px;
     border-radius: 30px;
+  }
+
+  .hehe {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
   }
 
   /* Tablet */
