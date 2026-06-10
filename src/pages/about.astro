@@ -31,12 +31,25 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <section class="about-content">
-      <div class="image-column">
-        <img class="about-me-img" src="/assets/images/about/portfolio.png" />
-        <img class="about-me-img" src="/assets/images/about/grad.jpg" />
+      <div class="image-wrapper">
+        <img
+          class="about-me-img"
+          src="/assets/images/about/portfolio.png"
+          alt="Portfolio Review"
+        />
       </div>
+
+      <div class="image-wrapper">
+        <img
+          class="about-me-img"
+          src="/assets/images/about/grad.jpg"
+          alt="Graduation Photo"
+        />
+      </div>
+
       <div class="education">
         <h2>Education</h2>
+
         <div class="education-stuff">
           <p class="item major">
             B.S. in Digital Communications and Creative Arts
@@ -59,19 +72,6 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </div>
     </section>
-    <section class="portfolio-brag">
-      <div class="hehe">
-        <h2>Yes I built this website!</h2>
-        <img src={"/assets/images/about/yippe.jpg"} alt="Hehe" />
-      </div>
-
-      <p>
-        I'm very proud to say that I built this portfolio website myself, using
-        Astro, TypeScript, and Tailwind CSS (all frameworks I learned in this
-        process). As a web designer, I have learned a lot about development and
-        the structure behind websites and how to bring my designs to life.
-      </p>
-    </section>
 
     <CTA />
   </div>
@@ -80,10 +80,20 @@ import Layout from "../layouts/Layout.astro";
 <style>
   .about-hero {
     padding: 60px 25px 40px;
+    background-color: var(--amaranth);
+    border-radius: 30px;
+    padding: 50px !important;
+    display: flex;
+    flex-direction: column;
   }
 
   .about-hero h1 {
     margin-bottom: 15px;
+  }
+
+  .about-hero h1,
+  .about-hero p {
+    color: var(--platinum);
   }
 
   .about-content {
@@ -92,18 +102,24 @@ import Layout from "../layouts/Layout.astro";
     gap: 40px;
   }
 
-  .about-image img {
+  .image-wrapper {
     width: 100%;
-    border-radius: 20px;
+  }
+
+  .about-me-img {
+    width: 100%;
+    display: block;
+    border-radius: 30px;
     object-fit: cover;
   }
 
   .item {
     border-radius: 30px;
     padding: 5px 20px;
-    margin: 0px;
+    margin: 0;
     width: fit-content;
   }
+
   .major {
     background-color: var(--dust-gray);
     color: var(--ink-black) !important;
@@ -130,22 +146,6 @@ import Layout from "../layouts/Layout.astro";
     color: var(--platinum);
   }
 
-  .about-hero h1,
-  .about-hero p {
-    color: var(--platinum);
-  }
-
-  .about-hero {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about-hero {
-    background-color: var(--amaranth);
-    border-radius: 30px;
-    padding: 50px !important;
-  }
-
   .profile-pic {
     width: 400px;
     border-radius: 30px;
@@ -153,28 +153,12 @@ import Layout from "../layouts/Layout.astro";
 
   /* Tablet */
   @media (min-width: 768px) {
-    .about-content {
-      flex-direction: row;
-      align-items: center;
-    }
-
-    .about-text {
-      flex: 1;
-    }
-
-    .education {
-      flex: 1;
-    }
-
     .about-hero {
       flex-direction: row;
       align-items: flex-end;
     }
 
-    .left-content {
-      flex: 1;
-    }
-
+    .left-content,
     .right-content {
       flex: 1;
     }
@@ -185,35 +169,33 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .about-content {
-      display: flex;
+      flex-direction: row;
       gap: 40px;
-      align-items: stretch; /* important */
+      align-items: stretch;
     }
 
-    .image-column,
-    .education {
-      flex: 1;
-    }
-
-    .image-column {
+    /* Adjust these ratios to taste */
+    .image-wrapper {
+      flex: 0.8;
       display: flex;
-      flex-direction: column;
-      gap: 20px;
+    }
+
+    .education {
+      flex: 1.4;
     }
 
     .about-me-img {
-      flex: 1;
       width: 100%;
+      height: 100%;
       object-fit: cover;
       border-radius: 30px;
-      min-height: 0;
     }
   }
 
   /* Desktop */
   @media (min-width: 1024px) {
     .about-hero {
-      padding: 80px 0px 60px;
+      padding: 80px 0 60px;
     }
 
     .about-content {
