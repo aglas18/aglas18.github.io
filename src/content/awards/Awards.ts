@@ -23,7 +23,7 @@ export const awardsList = [
     date: "2023",
     title: "Horizon Award — Gold",
     description:
-      "Gold Horizon Award awarded to WebFX for Muni-Link, with my contributions supporting the overall creative and design direction.",
+      "Gold Horizon Award awarded to WebFX for Web Software Redesign, with my contributions supporting the overall creative and design direction.",
     category: "Agency Awards",
     popupContent: "Horizon Award 2023 Gold",
     linkUrl:
