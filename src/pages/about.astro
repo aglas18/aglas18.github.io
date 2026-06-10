@@ -31,24 +31,22 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <section class="about-content">
-      <div class="about-text">
-        <h2>My Background</h2>
-        <p>
-          I fell in love with graphic design through my art classes in high
-          school. I loved drawing and creating, but I ultimately found my
-          passion in visual storytelling and using design to solve problems. I
-          enjoy digging into the why behind a challenge just as much as crafting
-          the final solution, whether that means refining a design system,
-          shaping a brand's visual language, or polishing the small details that
-          make an experience feel intentional.
-        </p>
-
-        <p>
-          As a fan of TV shows, books, and video games, storytelling and
-          problem-solving sit at the core of my work. I am fascinated by how
-          thoughtful design can guide someone, clarify an idea, and make an
-          experience feel effortless.
-        </p>
+      <div class="about-images">
+        <div class="small-images">
+          <img
+            class="about-me-img small-img-1"
+            src={"/assets/images/about/portfolio.png"}
+            width="100%"
+            height="10%"
+            alt="Doodle of My Cats"
+          /><img
+            class="about-me-img small-img-1"
+            src={"/assets/images/about/grad.png"}
+            width="100%"
+            height="10%"
+            alt="Switch Controller and Hot Cocoa and Candle"
+          />
+        </div>
       </div>
       <div class="education">
         <h2>Education</h2>
@@ -60,16 +58,24 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <p>
-          My education gave me a strong foundation in visual design, typography,
-          color theory, and concept development, while also encouraging
-          experimentation and critical thinking. Through studio courses and
-          collaborative projects, I learned how to translate ideas into visual
-          systems and communicate effectively through design.
+          I first discovered design in high school through art classes, where I
+          was drawn to visual storytelling and problem-solving through creative
+          work. That interest led me to study Digital Communications and
+          Creative Arts at Lebanon Valley College, where I graduated in 2022.
+          There, I built a foundation in typography, color, composition, and
+          concept development, while learning how to translate ideas into clear,
+          cohesive visual systems through collaborative studio projects. Today,
+          I focus on designing thoughtful digital experiences that balance
+          storytelling, usability, and detail. I’m especially interested in how
+          design decisions shape clarity and emotion, and I’m often inspired by
+          storytelling in games, TV, and books—particularly how structure and
+          pacing influence how people understand and engage with an experience.
         </p>
       </div>
     </section>
     <section class="portfolio-brag">
       <h2>Yes I built this website!</h2>
+      <img src={"/assets/images/about/yippe.png"} alt="Portfolio Website" />
       <p>
         I'm very proud to say that I built this portfolio website myself, using
         Astro, TypeScript, and Tailwind CSS (all frameworks I learned in this
