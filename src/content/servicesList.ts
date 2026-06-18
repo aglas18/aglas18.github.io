@@ -21,9 +21,6 @@ export const servicesList = [
     service: "UI/UX Design",
   },
   {
-    service: "A/B Testing",
-  },
-  {
     service: "Micrographic & Conversion Assets",
   },
   {
@@ -46,6 +43,9 @@ export const toolsList = [
   },
   {
     tool: "InDesign",
+  },
+  {
+    tool: "XD",
   },
   {
     tool: "Canva",
@@ -82,6 +82,9 @@ export const toolsList = [
   },
   {
     tool: "Astro",
+  },
+  {
+    tool: "Version Control/Git",
   },
   {
     tool: "Unbounce",
