@@ -1,6 +1,6 @@
 export const servicesList = [
   {
-    service: "Website & Landing Page Redesigns",
+    service: "Website & Landing Page Design",
   },
   {
     service: "Responsive Design",
