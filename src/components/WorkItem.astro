@@ -81,6 +81,7 @@ const allWork = Object.values(
     background-color: #fff;
     padding: 18px;
     border-radius: 30px;
+    box-shadow: 0px 0px 20px #0000003b;
   }
 
   .link-btn span {
@@ -149,6 +150,11 @@ const allWork = Object.values(
         background-color 0.25s ease,
         box-shadow 0.25s ease,
         transform 0.25s ease;
+    }
+  }
+  @media (min-width: 1024px) {
+    .project-item {
+      box-shadow: none;
     }
   }
 

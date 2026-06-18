@@ -94,6 +94,7 @@ import logo from "../assets/logo.svg";
     justify-content: space-between;
     align-items: center;
     padding-bottom: 35px;
+    flex-direction: column;
   }
 
   .icon-btn {
@@ -115,5 +116,11 @@ import logo from "../assets/logo.svg";
 
   .icon-btn:hover {
     background-color: var(--amaranth);
+  }
+
+  @media (min-width: 768px) {
+    .footer {
+      flex-direction: row;
+    }
   }
 </style>
