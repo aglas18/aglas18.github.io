@@ -15,7 +15,7 @@ export const servicesList = [
     service: "Branding",
   },
   {
-    service: "Amazon Graphics",
+    service: "Amazon A+ Content",
   },
   {
     service: "UI/UX Design",
@@ -25,6 +25,12 @@ export const servicesList = [
   },
   {
     service: "Micrographic & Conversion Assets",
+  },
+  {
+    service: "A/B Testing & CRO",
+  },
+  {
+    service: "Email Design",
   },
 ];
 
@@ -39,10 +45,16 @@ export const toolsList = [
     tool: "Illustrator",
   },
   {
+    tool: "InDesign",
+  },
+  {
     tool: "Canva",
   },
   {
     tool: "AfterEffects",
+  },
+  {
+    tool: "Premiere Pro",
   },
   {
     tool: "The Brief",
@@ -70,5 +82,14 @@ export const toolsList = [
   },
   {
     tool: "Astro",
+  },
+  {
+    tool: "Unbounce",
+  },
+  {
+    tool: "Webflow",
+  },
+  {
+    tool: "Wix",
   },
 ];
