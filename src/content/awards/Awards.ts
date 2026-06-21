@@ -1,143 +1,146 @@
 export const awardsList = [
+  // ───────── Agency Recognition ─────────
+  
   {
-    date: "2025",
-    title: "Horizon Award — Gold",
-    description:
-      "Gold Horizon Award awarded to WebFX for Restaurant / Food Website, with my contribution focused on overall design direction and visual refinement.",
-    category: "Agency Awards",
-    popupContent: "Horizon Award 2025 Gold",
-    linkUrl:
-      "https://www.horizoninteractiveawards.com/web-site-awards/2025/restaurant#:~:text=BAR%20209%20%2D%20WEBSITE%20REDESIGN",
+  date: "2025",
+  title: "Horizon Award — Gold",
+  description:
+  "Contributed to an agency-recognized, award-winning digital project, supporting overall design execution and visual refinement.",
+  category: "Agency Recognition",
+  popupContent:
+  "Recognized as part of an award-winning agency project for contributions to design execution and cross-functional collaboration.",
   },
   {
-    date: "2024",
-    title: "Horizon Award — Gold",
-    description:
-      "Gold Horizon Award awarded to WebFX for Consumer Information Website, with my contribution focused on design execution and visual refinement.",
-    category: "Agency Awards",
-    popupContent: "Horizon Award 2024 Gold",
-    linkUrl:
-      "https://www.horizoninteractiveawards.com/2024/winners/winners_list_w",
+  date: "2024",
+  title: "Horizon Award — Gold",
+  description:
+  "Supported the design and refinement of an agency-recognized, award-winning digital experience.",
+  category: "Agency Recognition",
+  popupContent:
+  "Recognized as part of an award-winning agency project through collaborative design contributions and visual execution.",
   },
   {
-    date: "2023",
-    title: "Horizon Award — Gold",
-    description:
-      "Gold Horizon Award awarded to WebFX for Web Software Redesign, with my contributions supporting the overall creative and design direction.",
-    category: "Agency Awards",
-    popupContent: "Horizon Award 2023 Gold",
-    linkUrl:
-      "https://www.horizoninteractiveawards.com/web-site-awards/2023/software",
+  date: "2023",
+  title: "Horizon Award — Gold",
+  description:
+  "Contributed to an award-winning project through collaborative design and creative execution.",
+  category: "Agency Recognition",
+  popupContent:
+  "Recognized as part of an award-winning agency initiative for contributions to design and creative direction.",
   },
   {
-    date: "2022",
-    title: "Horizon Award — Gold",
-    description:
-      "Agency-awarded Gold Horizon Award for Holiday Online Ads, with design contributions supporting campaign visuals and consistency across placements.",
-    category: "Agency Awards",
-    popupContent: "Holiday Online Ads - Horizon Awards 2022 - Gold",
-    linkUrl:
-      "https://www.horizoninteractiveawards.com/2022/winners/winners_list_w",
+  date: "2022",
+  title: "Horizon Award — Gold",
+  description:
+  "Supported the development of an award-winning digital campaign through design contributions and cross-team collaboration.",
+  category: "Agency Recognition",
+  popupContent:
+  "Recognized as part of an award-winning digital campaign for contributions to design consistency and collaboration.",
   },
-
-  // ───────── Team Projects ─────────
-
+  
+  // ───────── Team Recognition ─────────
+  
   {
-    date: "Jan 2024",
-    title: "Highest Conversion Rate Increase",
-    description:
-      "Contributed to a high-performing Rainmaker project that increased goal conversion rate by 1,964.4% and form completions by 2,209.68%.",
-    category: "Team Projects",
-    popupContent:
-      "Highest Conversion Rate Increase for a Custom/Rainmaker Project - Arranmore Lighting - January 4, 2024 - Goal Conversion Rate: 1,964.4%, Form Completion Rate 2,209.68% (part of a team)",
-  },
-  {
-    date: "Jan 2024",
-    title: "Fastest Rainmaker Project",
-    description:
-      "Part of a cross-functional team that launched a fully custom Rainmaker project in just 23 days without sacrificing quality.",
-    category: "Team Projects",
-    popupContent:
-      "Fastest Project for a Custom/Rainmaker Project - JRM Construction Management - Jan. 4 2024 - launched in 23 days (part of a team)",
+  date: "Jan 2024",
+  title: "Performance Achievement",
+  description:
+  "Contributed to a high-performing project that delivered meaningful business impact and measurable improvements.",
+  category: "Team Recognition",
+  popupContent:
+  "Recognized as part of a team that delivered measurable project success and strong business outcomes.",
   },
   {
-    date: "2024",
-    title: "Most Profitable Rainmaker Project",
-    description:
-      "Contributed to a Rainmaker project that finished 87% under budget while maintaining a high level of design quality and performance.",
-    category: "Team Projects",
-    popupContent:
-      "Rainmaker Project - most Profitable - CCA - 87% under budget",
+  date: "Jan 2024",
+  title: "Project Delivery Recognition",
+  description:
+  "Collaborated on the successful launch of a complex project while maintaining high standards of quality and execution.",
+  category: "Team Recognition",
+  popupContent:
+  "Recognized for contributing to the efficient delivery of a complex, cross-functional project.",
   },
   {
-    date: "Jan 2025",
-    title: "Fastest Rainmaker Project",
-    description:
-      "Collaborated on a custom Rainmaker project launched in 49 days through efficient workflows and strong cross-team coordination.",
-    category: "Team Projects",
-    popupContent:
-      "Fastest Project for a Custom/Rainmaker Project - H2 Hospitalise Group - Jan 2025 - Launched in 49 days (part of a team)",
+  date: "2024",
+  title: "Project Performance Recognition",
+  description:
+  "Contributed to an efficient, high-performing project that balanced business goals, quality, and collaboration.",
+  category: "Team Recognition",
+  popupContent:
+  "Recognized as part of a team that delivered exceptional value through strong execution and collaboration.",
   },
   {
-    date: "Jan 2025",
-    title: "Most Profitable Rainmaker Project",
-    description:
-      "Contributed to a high-impact Rainmaker project that came in 468% under budget while exceeding performance expectations.",
-    category: "Team Projects",
-    popupContent:
-      "Most Profitable Rainmaker Project - H2 Hospitalist Group - Jan 2025 - 468% under budget (part of a team)",
+  date: "Jan 2025",
+  title: "Project Delivery Recognition",
+  description:
+  "Contributed to the successful delivery of a complex project through efficient workflows and cross-team coordination.",
+  category: "Team Recognition",
+  popupContent:
+  "Recognized for collaboration and effective project delivery in a fast-paced environment.",
   },
   {
-    date: "Jan 2025",
-    title: "Highest Conversion Rate Increase",
-    description:
-      "Supported a traditional project that drove a 204.44% increase in key events and a 657.38% increase in overall event count.",
-    category: "Team Projects",
-    popupContent:
-      "Highest Conversion Rate Increase on a Traditional Project - Forta Corp - Jan 2025 - Increase in Key Events: 204.44% & Increase in Event Count: 657.38%",
+  date: "Jan 2025",
+  title: "Project Performance Recognition",
+  description:
+  "Contributed to a high-impact project that exceeded expectations through collaboration and thoughtful execution.",
+  category: "Team Recognition",
+  popupContent:
+  "Recognized as part of a team that delivered exceptional project outcomes and value.",
   },
-
+  {
+  date: "Jan 2025",
+  title: "Performance Achievement",
+  description:
+  "Supported initiatives that drove meaningful improvements in engagement and overall project performance.",
+  category: "Team Recognition",
+  popupContent:
+  "Recognized for contributions to projects that delivered measurable improvements and positive outcomes.",
+  },
+  
   // ───────── Internal Recognition ─────────
-
+  
   {
-    date: "Apr 2024",
-    title: "Platinum Phone Award — Communication",
-    description:
-      "Recognized for clear, empathetic, and solution-oriented communication that supported both internal teams and client success.",
-    category: "Internal Recognition",
-    popupContent:
-      '"This month\'s WOW pillar for communication goes to Adrian, who consistently strikes to make project responses as possible for both colleagues and clients. In a recent helpdesk ticket, Adrian tackled a design challenge where the AM was looking for design guidance on how to achieve a transparent gradient effect with a specific online ad design tool. Despite the tool\'s limitations, Adrian proactively offered creative workarounds to achieve the desired outcome. To take things one step further, she ends her response with "I would be happy to create either of the above images if you can send me the assets!" While the initial helpdesk message may have seemed like a more hypothetical question, Adrian\'s final piece of communication demonstrates her understanding of the big picture and her dedication to creating a positive & productive customer experience at every turn!"',
+  date: "Apr 2024",
+  title: "Platinum Phone Award — Communication",
+  description:
+  "Recognized for clear, empathetic, and solution-oriented communication that supported both internal teams and stakeholders.",
+  category: "Internal Recognition",
+  popupContent:
+  "Recognized for thoughtful communication, proactive problem-solving, and creating positive experiences through collaboration.",
   },
   {
-    date: "Feb 2025",
-    title: "Platinum Phone Award — Communication",
-    description:
-      "Awarded for thoughtful, empathetic client communication and the ability to guide stakeholders through complex decisions.",
-    category: "Internal Recognition",
-    popupContent:
-      '"This month\'s WOW Pillar Award goes to Adrian, for her communication on a project with [client]! She did an amazing job of being both informative and empathetic, really tuning into the client\'s needs and the timing of everything. Using phrases like "I understand…""We can come up with a plan…" and "I\'m happy to look into this further!" helped show her collaborative approach. She also referenced her past experience & other details from the Technical Notes guru, which showed she was taking a the context of the client\'s prior experience into account with her proposed solutions. Adrian weighed the pros & cons of each option in order to guide [client] towards the best path forward!"',
+  date: "Feb 2025",
+  title: "Platinum Phone Award — Communication",
+  description:
+  "Awarded for thoughtful, empathetic communication and the ability to guide stakeholders through complex decisions.",
+  category: "Internal Recognition",
+  popupContent:
+  "Recognized for collaborative communication, active listening, and helping stakeholders navigate complex situations.",
   },
   {
-    date: "Nov 2025",
-    title: "Shiny Semi Award — Delivery",
-    description:
-      "Recognized for delivering beyond scope by identifying user pain points, improving internal documentation, and maximizing client value.",
-    category: "Internal Recognition",
-    popupContent:
-      '"This month\'s WOW Pillar Award for Delivery goes to someone who consistently strives not just to do what is asked, but what is NEEDED! This person has maximized value and efficiency for our clients on multiple fronts in the past month. For the [client] project, she finished early and leveraged her remaining time to tackle more pages, ensuring the project was completed on time! She went beyond the immediate request on an open-ended [client] project, digging into additional research to proactively identify user pain points and offering creative solutions that, as their AM raved "simplifies their current process SO much and is 100x more appealing" Her commitment to customizing the approach based on a client\'s needs, a cornerstone of Delivery, is evident in two other areas:updating our internal SSH resources with lessons learned, and drafting specs/instructions for the AM to ensure consistent results for [client] on future requests. Adrian\'s ability to deliver high-quality work, manage time impeccably, and customize our process for lasting value exemplifies this pillar! Way to go, Adrian!"',
+  date: "Nov 2025",
+  title: "Shiny Semi Award — Delivery",
+  description:
+  "Recognized for going beyond project requirements by identifying opportunities for improvement, sharing knowledge, and delivering additional value.",
+  category: "Internal Recognition",
+  popupContent:
+  "Recognized for proactive problem-solving, process improvement, knowledge sharing, and delivering value beyond expectations.",
   },
   {
-    date: "Dec 2025",
-    title: "Needle Driver Award",
-    description:
-      "Awarded for a redesign that increased event count by 2,351% and key events by 178.75%.",
-    category: "Internal Recognition",
+  date: "Dec 2025",
+  title: "Needle Driver Award",
+  description:
+  "Recognized for contributing to a high-impact redesign that delivered meaningful improvements in user experience and business performance.",
+  category: "Internal Recognition",
+  popupContent:
+  "Recognized for helping deliver a redesign that achieved significant positive outcomes.",
   },
   {
-    date: "2022–2026",
-    title: "Designasaur Award (6×)",
-    description:
-      "Team-nominated award recognizing standout design work, received five times since 2022.",
-    category: "Internal Recognition",
+  date: "2022–2026",
+  title: "Designasaur Award (6×)",
+  description:
+  "Team-nominated award recognizing creativity, craftsmanship, and consistent contributions to design excellence.",
+  category: "Internal Recognition",
+  popupContent:
+  "Peer-nominated recognition for consistently demonstrating creativity and high-quality design work.",
   },
-];
+  ];
+  
