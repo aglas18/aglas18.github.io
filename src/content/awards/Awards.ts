@@ -1,69 +1,70 @@
 export const awardsList = [
-  // ───────── Agency Recognition ─────────
+  // ───────── Agency Awards ─────────
   
   {
-  date: "2025",
-  title: "Horizon Award — Gold",
-  description:
-  "Contributed to an agency-recognized, award-winning digital project, supporting overall design execution and visual refinement.",
-  category: "Agency Recognition",
-  popupContent:
-  "Recognized as part of an award-winning agency project for contributions to design execution and cross-functional collaboration.",
-  },
-  {
-  date: "2024",
-  title: "Horizon Award — Gold",
-  description:
-  "Supported the design and refinement of an agency-recognized, award-winning digital experience.",
-  category: "Agency Recognition",
-  popupContent:
-  "Recognized as part of an award-winning agency project through collaborative design contributions and visual execution.",
-  },
-  {
-  date: "2023",
-  title: "Horizon Award — Gold",
-  description:
-  "Contributed to an award-winning project through collaborative design and creative execution.",
-  category: "Agency Recognition",
-  popupContent:
-  "Recognized as part of an award-winning agency initiative for contributions to design and creative direction.",
-  },
-  {
-  date: "2022",
-  title: "Horizon Award — Gold",
-  description:
-  "Supported the development of an award-winning digital campaign through design contributions and cross-team collaboration.",
-  category: "Agency Recognition",
-  popupContent:
-  "Recognized as part of an award-winning digital campaign for contributions to design consistency and collaboration.",
-  },
+    date: "2025",
+    title: "Horizon Award — Gold",
+    description:
+    "Agency-awarded Gold Horizon Award recognizing an award-winning digital project. Contributed as part of the design team through collaborative design execution and visual refinement.",
+    category: "Agency Awards",
+    popupContent:
+    "Gold Horizon Award presented to the agency for an award-winning digital project. Contributed as a member of the design team.",
+    },
+    {
+    date: "2024",
+    title: "Horizon Award — Gold",
+    description:
+    "Agency-awarded Gold Horizon Award recognizing an award-winning digital experience. Contributed as part of the design team through collaborative design and visual refinement.",
+    category: "Agency Awards",
+    popupContent:
+    "Gold Horizon Award presented to the agency for an award-winning digital experience. Contributed as a member of the design team.",
+    },
+    {
+    date: "2023",
+    title: "Horizon Award — Gold",
+    description:
+    "Agency-awarded Gold Horizon Award recognizing an award-winning digital initiative. Contributed as part of the design team through collaborative design and creative execution.",
+    category: "Agency Awards",
+    popupContent:
+    "Gold Horizon Award presented to the agency for an award-winning digital initiative. Contributed as a member of the design team.",
+    },
+    {
+    date: "2022",
+    title: "Horizon Award — Gold",
+    description:
+    "Agency-awarded Gold Horizon Award recognizing an award-winning digital campaign. Contributed as part of the design team through design support and cross-functional collaboration.",
+    category: "Agency Awards",
+    popupContent:
+    "Gold Horizon Award presented to the agency for an award-winning digital campaign. Contributed as a member of the design team.",
+    },
+    
   
-  // ───────── Team Recognition ─────────
+  // ───────── Team Projects ─────────
   
   {
   date: "Jan 2024",
   title: "Performance Achievement",
   description:
-  "Contributed to a high-performing project that delivered meaningful business impact and measurable improvements.",
-  category: "Team Recognition",
+  "Contributed to a high-performing initiative that delivered meaningful business impact and positive outcomes.",
+  category: "Team Projects",
   popupContent:
-  "Recognized as part of a team that delivered measurable project success and strong business outcomes.",
+  "Recognized as part of a team that delivered successful project outcomes through collaboration and thoughtful execution.",
   },
   {
   date: "Jan 2024",
   title: "Project Delivery Recognition",
   description:
-  "Collaborated on the successful launch of a complex project while maintaining high standards of quality and execution.",
-  category: "Team Recognition",
+  "Collaborated on the successful delivery of a complex initiative while maintaining high standards of quality and execution.",
+  category: "Team Projects",
   popupContent:
-  "Recognized for contributing to the efficient delivery of a complex, cross-functional project.",
+  "Recognized for contributing to the efficient delivery of a complex, cross-functional initiative.",
   },
   {
   date: "2024",
   title: "Project Performance Recognition",
   description:
-  "Contributed to an efficient, high-performing project that balanced business goals, quality, and collaboration.",
-  category: "Team Recognition",
+  "Contributed to an efficient, high-performing initiative that balanced business goals, quality, and collaboration.",
+  category: "Team Projects",
   popupContent:
   "Recognized as part of a team that delivered exceptional value through strong execution and collaboration.",
   },
@@ -71,8 +72,8 @@ export const awardsList = [
   date: "Jan 2025",
   title: "Project Delivery Recognition",
   description:
-  "Contributed to the successful delivery of a complex project through efficient workflows and cross-team coordination.",
-  category: "Team Recognition",
+  "Contributed to the successful delivery of a complex initiative through efficient workflows and cross-team coordination.",
+  category: "Team Projects",
   popupContent:
   "Recognized for collaboration and effective project delivery in a fast-paced environment.",
   },
@@ -80,19 +81,19 @@ export const awardsList = [
   date: "Jan 2025",
   title: "Project Performance Recognition",
   description:
-  "Contributed to a high-impact project that exceeded expectations through collaboration and thoughtful execution.",
-  category: "Team Recognition",
+  "Contributed to a high-impact initiative that exceeded expectations through collaboration and thoughtful execution.",
+  category: "Team Projects",
   popupContent:
-  "Recognized as part of a team that delivered exceptional project outcomes and value.",
+  "Recognized as part of a team that delivered exceptional outcomes and value.",
   },
   {
   date: "Jan 2025",
   title: "Performance Achievement",
   description:
-  "Supported initiatives that drove meaningful improvements in engagement and overall project performance.",
-  category: "Team Recognition",
+  "Supported initiatives that drove meaningful improvements and delivered positive outcomes.",
+  category: "Team Projects",
   popupContent:
-  "Recognized for contributions to projects that delivered measurable improvements and positive outcomes.",
+  "Recognized for contributions to initiatives that achieved measurable success and positive impact.",
   },
   
   // ───────── Internal Recognition ─────────
@@ -128,7 +129,7 @@ export const awardsList = [
   date: "Dec 2025",
   title: "Needle Driver Award",
   description:
-  "Recognized for contributing to a high-impact redesign that delivered meaningful improvements in user experience and business performance.",
+  "Recognized for contributing to a high-impact redesign that delivered meaningful improvements and positive outcomes.",
   category: "Internal Recognition",
   popupContent:
   "Recognized for helping deliver a redesign that achieved significant positive outcomes.",
