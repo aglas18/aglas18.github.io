@@ -58,9 +58,9 @@ const { frontmatter } = Astro.props;
 
   .hero img {
     width: 100%;
+    aspect-ratio: 11 / 10;
     border-radius: 20px;
     margin-bottom: 2rem;
-    max-height: 340px;
     object-fit: cover;
     object-position: center;
   }
@@ -91,6 +91,10 @@ const { frontmatter } = Astro.props;
     margin-bottom: 20px;
   }
 
+  .project-description {
+    padding-bottom: 0.5rem;
+  }
+
   .project-cards {
     width: 100%;
     display: flex;
@@ -119,6 +123,7 @@ const { frontmatter } = Astro.props;
     padding: 10px 20px;
     width: fit-content;
     border-radius: 100px;
+    text-align: center;
   }
 
   .card-one {
@@ -152,7 +157,7 @@ const { frontmatter } = Astro.props;
     .hero img {
       flex: 0.55 !important;
       width: 55% !important;
-      max-height: 420px;
+      max-height: none;
     }
 
     .project-info {
