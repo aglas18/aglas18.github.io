@@ -114,11 +114,13 @@ const galleryStart = nextIndex;
         )
       }
     </div>
-    <img
-      src={frontmatter.heroImage.src}
-      alt={frontmatter.heroImage.alt}
-      class="cs-hero-image"
-    />
+    <div class="cs-hero-media">
+      <img
+        src={frontmatter.heroImage.src}
+        alt={frontmatter.heroImage.alt}
+        class="cs-hero-image"
+      />
+    </div>
   </section>
 
   <section class="cs-dark-stack">
@@ -325,14 +327,13 @@ const galleryStart = nextIndex;
 
   .cs-hero {
     display: flex;
-    flex-direction: column-reverse;
-    gap: 0;
+    flex-direction: column;
+    gap: 1.5rem;
     padding-bottom: 1.5rem;
   }
 
   .cs-hero-text {
-    flex: 1;
-    min-width: 0;
+    width: 100%;
   }
 
   .cs-hero-text h1 {
@@ -347,15 +348,19 @@ const galleryStart = nextIndex;
     color: var(--navy-blue);
   }
 
+  .cs-hero-media {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    line-height: 0;
+  }
+
   .cs-hero-image {
     display: block;
     width: 100%;
     height: auto;
-    max-height: clamp(220px, 40vh, 380px);
-    border-radius: 20px;
-    margin-bottom: 2rem;
-    object-fit: contain;
-    object-position: center right;
+    max-height: min(240px, 55vw);
   }
 
   .cs-dark-band .cs-cards {
@@ -588,29 +593,35 @@ const galleryStart = nextIndex;
     cursor: zoom-in;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
     .cs-hero {
       flex-direction: row;
-      align-items: flex-start;
+      align-items: flex-end;
       gap: 50px;
       justify-content: space-between;
       padding-bottom: 2.5rem;
     }
 
     .cs-hero-text {
-      flex: 0 1 40%;
-      max-width: 40%;
+      flex: 1;
+      min-width: 0;
+      padding-bottom: 0.25rem;
+    }
+
+    .cs-hero-media {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: min(420px, 46%);
     }
 
     .cs-hero-image {
-      flex: 0 1 52%;
-      width: 52%;
-      max-width: 52%;
-      max-height: clamp(280px, 48vh, 440px);
-      margin-bottom: 0;
-      align-self: flex-start;
+      width: auto;
+      max-width: 100%;
+      max-height: min(340px, 42vh);
     }
+  }
 
+  @media (min-width: 769px) {
     .cs-body {
       padding-top: 0;
     }
