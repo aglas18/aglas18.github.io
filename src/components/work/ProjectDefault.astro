@@ -54,15 +54,18 @@ const { frontmatter } = Astro.props;
     display: flex;
     flex-direction: column-reverse;
     gap: 0px;
+    padding-bottom: 1.5rem;
   }
 
   .hero img {
+    display: block;
     width: 100%;
-    aspect-ratio: 11 / 10;
+    height: auto;
+    max-height: clamp(220px, 40vh, 380px);
     border-radius: 20px;
     margin-bottom: 2rem;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
+    object-position: center right;
   }
 
   .hero h1 {
@@ -149,15 +152,23 @@ const { frontmatter } = Astro.props;
   @media (min-width: 769px) {
     .hero {
       flex-direction: row;
-      align-items: flex-end;
+      align-items: flex-start;
       gap: 50px;
       justify-content: space-between;
+      padding-bottom: 2.5rem;
+    }
+
+    .hero > div:first-child {
+      flex: 0 1 40%;
+      max-width: 40%;
     }
 
     .hero img {
-      flex: 0.55 !important;
-      width: 55% !important;
-      max-height: none;
+      flex: 0 1 52% !important;
+      width: 52% !important;
+      max-width: 52% !important;
+      max-height: clamp(280px, 48vh, 440px);
+      align-self: flex-start;
     }
 
     .project-info {

@@ -20,11 +20,11 @@ projectType: >
 longDescription: >
   Ryan Haas and Matt Lykens approached me to refresh the visual identity for their catering and event services company, Fat Pineapple.
 
-  The goal was to create a brand system that better reflected their approach to food — vibrant, fresh, approachable, and full of personality — while modernizing the identity across both digital and physical touchpoints.
+  The goal was to create a brand system that better reflected their approach to food (vibrant, fresh, approachable, and full of personality) while modernizing the identity across both digital and physical touchpoints.
 
 heroIntro: >
   <p>
-    Fat Pineapple is a catering and event services company focused on creating vibrant, fresh food experiences with a strong sense of personality and hospitality. Founders Ryan Haas and Matt Lykens wanted the brand to better reflect their approach to food — colorful, approachable, energetic, and modern — while creating a system flexible enough to work across event materials, packaging, apparel, and digital platforms. The existing identity had recognition, but lacked consistency and versatility across different applications. This project focused on evolving the brand without losing the personality that made it recognizable.
+    Fat Pineapple is a catering and event services company focused on creating vibrant, fresh food experiences with a strong sense of personality and hospitality. Founders Ryan Haas and Matt Lykens wanted the brand to better reflect their approach to food (colorful, approachable, energetic, and modern) while creating a system flexible enough to work across event materials, packaging, apparel, and digital platforms. The existing identity had recognition, but lacked consistency and versatility across different applications. This project focused on evolving the brand without losing the personality that made it recognizable.
   </p>
 
 heroImage:
@@ -44,9 +44,9 @@ tools:
 goalSection:
   title: Before the refresh
   body: >
-    At the start of the project, Fat Pineapple’s identity relied almost entirely on a single logo. While recognizable, it didn’t have a broader system to support it. There were limited brand assets, no clear visual language, and the overall identity felt dated in places — making it difficult to apply consistently across different formats and touchpoints.
+    At the start of the project, Fat Pineapple’s identity relied almost entirely on a single logo. While recognizable, it didn’t have a broader system to support it. There were limited brand assets, no clear visual language, and the overall identity felt dated in places; making it difficult to apply consistently across different formats and touchpoints.
 
-    My goal was to build a modern, fresh visual identity that reflects their vibrant food and confident hospitality. Starting with the logo, the system would then extend across merchandise, social, and print — ensuring every touchpoint feels cohesive and intentional.
+    My goal was to build a modern, fresh visual identity that reflects their vibrant food and confident hospitality. Starting with the logo, the system would then extend across merchandise, social, and print to ensure every touchpoint feels cohesive and intentional.
   image:
     src: /assets/images/fat-pineapple/fat-pineapple-before.png
     alt: Previous Fat Pineapple Logo

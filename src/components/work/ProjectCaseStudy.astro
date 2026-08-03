@@ -327,6 +327,12 @@ const galleryStart = nextIndex;
     display: flex;
     flex-direction: column-reverse;
     gap: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .cs-hero-text {
+    flex: 1;
+    min-width: 0;
   }
 
   .cs-hero-text h1 {
@@ -342,12 +348,14 @@ const galleryStart = nextIndex;
   }
 
   .cs-hero-image {
+    display: block;
     width: 100%;
-    aspect-ratio: 11 / 10;
+    height: auto;
+    max-height: clamp(220px, 40vh, 380px);
     border-radius: 20px;
     margin-bottom: 2rem;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
+    object-position: center right;
   }
 
   .cs-dark-band .cs-cards {
@@ -583,16 +591,24 @@ const galleryStart = nextIndex;
   @media (min-width: 769px) {
     .cs-hero {
       flex-direction: row;
-      align-items: flex-end;
+      align-items: flex-start;
       gap: 50px;
       justify-content: space-between;
-      padding-bottom: 100px;
+      padding-bottom: 2.5rem;
+    }
+
+    .cs-hero-text {
+      flex: 0 1 40%;
+      max-width: 40%;
     }
 
     .cs-hero-image {
-      flex: 0.55;
-      width: 55%;
+      flex: 0 1 52%;
+      width: 52%;
+      max-width: 52%;
+      max-height: clamp(280px, 48vh, 440px);
       margin-bottom: 0;
+      align-self: flex-start;
     }
 
     .cs-body {
