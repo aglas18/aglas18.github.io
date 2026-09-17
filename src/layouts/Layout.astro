@@ -14,7 +14,11 @@ import PasswordGate from "../components/PasswordGate.astro";
       rel="stylesheet"
     />
     <script is:inline>
-      document.documentElement.classList.add("password-locked");
+      if (sessionStorage.getItem("site_password")) {
+        document.documentElement.classList.add("password-restoring");
+      } else {
+        document.documentElement.classList.add("password-locked");
+      }
     </script>
 
     <title>Adrian Glasmyre | Brand & Digital Designer</title>

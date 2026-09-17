@@ -4,6 +4,8 @@ import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const PBKDF2_ITERATIONS = 100_000;
+// Public site-wide salt so the AES key can be cached across page navigations.
+const SITE_SALT = Buffer.from("aglasmyre-portfolio-site-v1");
 const DIST_DIR = fileURLToPath(new URL("../dist/", import.meta.url));
 
 function loadEnvFile() {
@@ -68,11 +70,11 @@ function extractSiteContent(html) {
   return null;
 }
 
+const siteKey = pbkdf2Sync(password, SITE_SALT, PBKDF2_ITERATIONS, 32, "sha256");
+
 function encryptHtml(plaintext) {
-  const salt = randomBytes(16);
   const iv = randomBytes(12);
-  const key = pbkdf2Sync(password, salt, PBKDF2_ITERATIONS, 32, "sha256");
-  const cipher = createCipheriv("aes-256-gcm", key, iv);
+  const cipher = createCipheriv("aes-256-gcm", siteKey, iv);
   const encrypted = Buffer.concat([
     cipher.update(plaintext, "utf8"),
     cipher.final(),
@@ -81,9 +83,9 @@ function encryptHtml(plaintext) {
   const ciphertext = Buffer.concat([encrypted, tag]);
 
   return {
-    v: 1,
+    v: 2,
     iter: PBKDF2_ITERATIONS,
-    salt: salt.toString("base64"),
+    salt: SITE_SALT.toString("base64"),
     iv: iv.toString("base64"),
     data: ciphertext.toString("base64"),
   };
