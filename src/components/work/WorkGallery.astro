@@ -24,7 +24,7 @@ const n = images.length;
               class="gallery-image"
               data-index={startIndex + 0}
             />
-            <span class="gallery-plus-icon"></span>
+            <span class="gallery-plus-icon" />
           </div>
 
           <div class="bottom-row">
@@ -35,7 +35,7 @@ const n = images.length;
                 class="gallery-image"
                 data-index={startIndex + 1}
               />
-              <span class="gallery-plus-icon"></span>
+              <span class="gallery-plus-icon" />
             </div>
             <div class="gallery-item">
               <img
@@ -44,7 +44,7 @@ const n = images.length;
                 class="gallery-image"
                 data-index={startIndex + 2}
               />
-              <span class="gallery-plus-icon"></span>
+              <span class="gallery-plus-icon" />
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ const n = images.length;
               class="gallery-image"
               data-index={startIndex + 3}
             />
-            <span class="gallery-plus-icon"></span>
+            <span class="gallery-plus-icon" />
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@ const n = images.length;
             class="gallery-image"
             data-index={startIndex + 4}
           />
-          <span class="gallery-plus-icon"></span>
+          <span class="gallery-plus-icon" />
         </div>
         <div class="gallery-item">
           <img
@@ -79,7 +79,7 @@ const n = images.length;
             class="gallery-image"
             data-index={startIndex + 5}
           />
-          <span class="gallery-plus-icon"></span>
+          <span class="gallery-plus-icon" />
         </div>
       </div>
 
@@ -91,7 +91,7 @@ const n = images.length;
             class="gallery-image"
             data-index={startIndex + 6}
           />
-          <span class="gallery-plus-icon"></span>
+          <span class="gallery-plus-icon" />
         </div>
         <div class="gallery-item">
           <img
@@ -100,7 +100,7 @@ const n = images.length;
             class="gallery-image"
             data-index={startIndex + 7}
           />
-          <span class="gallery-plus-icon"></span>
+          <span class="gallery-plus-icon" />
         </div>
         <div class="gallery-item">
           <img
@@ -109,7 +109,7 @@ const n = images.length;
             class="gallery-image"
             data-index={startIndex + 8}
           />
-          <span class="gallery-plus-icon"></span>
+          <span class="gallery-plus-icon" />
         </div>
       </div>
     </section>
@@ -123,7 +123,7 @@ const n = images.length;
             class="gallery-image"
             data-index={startIndex + i}
           />
-          <span class="gallery-plus-icon"></span>
+          <span class="gallery-plus-icon" />
         </div>
       ))}
     </section>
@@ -135,6 +135,7 @@ const n = images.length;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   .row-1,
@@ -148,6 +149,8 @@ const n = images.length;
   .gallery-item {
     position: relative;
     display: block;
+    overflow: hidden;
+    border-radius: 15px;
   }
 
   .row-1 .gallery-item,
@@ -156,13 +159,34 @@ const n = images.length;
     width: 100%;
   }
 
+  .row-1 .col-left > .gallery-item {
+    aspect-ratio: 11 / 10;
+  }
+
+  .col-left .bottom-row .gallery-item {
+    aspect-ratio: 1 / 1;
+  }
+
+  .row-1 .col-right .gallery-item {
+    aspect-ratio: 3 / 4;
+  }
+
+  .row-2 .gallery-item {
+    aspect-ratio: 11 / 10;
+  }
+
+  .row-3 .gallery-item {
+    aspect-ratio: 5 / 4;
+  }
+
   .row-1 .gallery-item img,
   .row-2 .gallery-item img,
   .row-3 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    display: block;
   }
 
   .gallery--adaptive {
@@ -171,13 +195,16 @@ const n = images.length;
     gap: 1rem;
   }
 
+  .gallery--adaptive .gallery-item--tile {
+    aspect-ratio: 11 / 10;
+  }
+
   .gallery--adaptive .gallery-item--tile img {
     width: 100%;
-    height: auto;
-    min-height: 200px;
-    max-height: 520px;
+    height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    display: block;
   }
 
   .col-left,
@@ -201,6 +228,19 @@ const n = images.length;
   }
 
   @media (min-width: 769px) {
+    .gallery {
+      margin-top: 0;
+    }
+
+    .row-1 .col-left > .gallery-item,
+    .col-left .bottom-row .gallery-item,
+    .row-1 .col-right .gallery-item,
+    .row-2 .gallery-item,
+    .row-3 .gallery-item,
+    .gallery--adaptive .gallery-item--tile {
+      aspect-ratio: auto;
+    }
+
     .row-1 {
       flex-direction: row;
     }

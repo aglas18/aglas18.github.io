@@ -18,13 +18,13 @@ projectType: >
 
 # Individual project page content
 longDescription: >
-  Patch Magazine is an independent publication dedicated to indie games, serving both readers and developers within a growing creative community. The homepage redesign focused on transforming a limited, action-light experience into a more intentional user journey — one that makes it easier to purchase issues and subscriptions, discover editorial content, and engage with the Patch community.
+  Patch Magazine is an independent publication dedicated to indie games, serving both readers and developers within a growing creative community. The homepage redesign focused on transforming a limited, action-light experience into a more intentional user journey that makes it easier to purchase issues and subscriptions, discover editorial content, and engage with the Patch community.
 
   The updated design introduces stronger visual hierarchy, multiple conversion touchpoints, and responsive layouts adapted across desktop, tablet, and mobile breakpoints to ensure a consistent and engaging experience regardless of device.
 
 heroIntro: >
   <p>
-    Patch Magazine is an independent publication focused on indie games, serving as both a magazine and a community hub for gamers and developers. This homepage redesign aimed to strengthen the digital experience by improving how visitors shop, discover content, and connect with the Patch ecosystem — creating clearer paths from first impression to conversion while supporting long-term engagement across devices.
+    Patch Magazine is an independent publication focused on indie games, serving as both a magazine and a community hub for gamers and developers. This homepage redesign aimed to strengthen the digital experience by improving how visitors shop, discover content, and connect with the Patch ecosystem to create clearer paths from first impression to conversion while supporting long-term engagement across devices.
   </p>
 
 heroImage:

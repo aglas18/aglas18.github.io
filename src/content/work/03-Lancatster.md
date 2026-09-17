@@ -47,7 +47,7 @@ goalSection:
   body: >
     The original brand had a strong sense of personality and community recognition, but the visual identity and website experience felt dated and lacked consistency across touchpoints. The redesign focused on modernizing the overall presentation while maintaining the warmth and friendliness central to the cafe’s identity.
 
-    A major priority of the website redesign was improving usability and conversion flow — making it easier for users to understand the cafe’s mission, browse information, book visits, and engage with adoptable cats.
+    A major priority of the website redesign was improving usability and conversion flow; making it easier for users to understand the cafe’s mission, browse information, book visits, and engage with adoptable cats.
 
     <em>This project is a self-initiated conceptual redesign and was not commissioned by or affiliated with LanCATster Cat Cafe.</em>
   image:

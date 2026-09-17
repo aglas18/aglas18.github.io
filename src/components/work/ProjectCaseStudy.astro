@@ -114,11 +114,13 @@ const galleryStart = nextIndex;
         )
       }
     </div>
-    <img
-      src={frontmatter.heroImage.src}
-      alt={frontmatter.heroImage.alt}
-      class="cs-hero-image"
-    />
+    <div class="cs-hero-media">
+      <img
+        src={frontmatter.heroImage.src}
+        alt={frontmatter.heroImage.alt}
+        class="cs-hero-image"
+      />
+    </div>
   </section>
 
   <section class="cs-dark-stack">
@@ -325,8 +327,13 @@ const galleryStart = nextIndex;
 
   .cs-hero {
     display: flex;
-    flex-direction: column-reverse;
-    gap: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .cs-hero-text {
+    width: 100%;
   }
 
   .cs-hero-text h1 {
@@ -341,13 +348,19 @@ const galleryStart = nextIndex;
     color: var(--navy-blue);
   }
 
-  .cs-hero-image {
+  .cs-hero-media {
     width: 100%;
+    max-width: 100%;
     border-radius: 20px;
-    margin-bottom: 2rem;
-    max-height: 340px;
-    object-fit: cover;
-    object-position: center;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .cs-hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: min(240px, 55vw);
   }
 
   .cs-dark-band .cs-cards {
@@ -378,6 +391,7 @@ const galleryStart = nextIndex;
     padding: 10px 20px;
     width: fit-content;
     border-radius: 100px;
+    text-align: center;
   }
 
   .card-one {
@@ -414,14 +428,14 @@ const galleryStart = nextIndex;
     border-radius: 20px;
     overflow: hidden;
     line-height: 0;
+    aspect-ratio: 11 / 10;
   }
 
   .cs-goal-frame img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
-    max-height: 480px;
   }
 
   .cs-goal-copy h2 {
@@ -442,14 +456,14 @@ const galleryStart = nextIndex;
   }
 
   .cs-body {
-    padding: 0;
+    padding: 3rem 0 0;
   }
 
-  /* .cs-body > .cs-row,
+  .cs-body > .cs-row,
   .cs-body > .cs-grid,
   .cs-body > .cs-text-block {
-    margin-bottom: 50px;
-  } */
+    margin-bottom: 3rem;
+  }
 
   .cs-body > :last-child {
     margin-bottom: 0;
@@ -486,12 +500,12 @@ const galleryStart = nextIndex;
     border-radius: 12px;
     overflow: hidden;
     line-height: 0;
+    aspect-ratio: 5 / 4;
   }
 
   .cs-row-stack-cell img {
     width: 100%;
-    height: auto;
-    max-height: 220px;
+    height: 100%;
     object-fit: cover;
     display: block;
   }
@@ -500,12 +514,12 @@ const galleryStart = nextIndex;
     border-radius: 20px;
     overflow: hidden;
     line-height: 0;
+    aspect-ratio: 11 / 10;
   }
 
   .cs-row-frame img {
     width: 100%;
-    height: auto;
-    max-height: 420px;
+    height: 100%;
     object-fit: cover;
     display: block;
   }
@@ -556,13 +570,12 @@ const galleryStart = nextIndex;
     border-radius: 16px;
     overflow: hidden;
     line-height: 0;
+    aspect-ratio: 11 / 10;
   }
 
   .cs-grid-cell img {
     width: 100%;
-    height: auto;
-    min-height: 200px;
-    max-height: 400px;
+    height: 100%;
     object-fit: cover;
     display: block;
   }
@@ -580,19 +593,42 @@ const galleryStart = nextIndex;
     cursor: zoom-in;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
     .cs-hero {
       flex-direction: row;
       align-items: flex-end;
       gap: 50px;
       justify-content: space-between;
-      padding-bottom: 100px;
+      padding-bottom: 2.5rem;
+    }
+
+    .cs-hero-text {
+      flex: 1;
+      min-width: 0;
+      padding-bottom: 0.25rem;
+    }
+
+    .cs-hero-media {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: min(600px, 52%);
     }
 
     .cs-hero-image {
-      flex: 0.55;
-      width: 55%;
-      max-height: 600px;
+      width: auto;
+      max-width: 100%;
+      max-height: min(400px, 46vh);
+    }
+  }
+
+  @media (min-width: 769px) {
+    .cs-body {
+      padding-top: 0;
+    }
+
+    .cs-body > .cs-row,
+    .cs-body > .cs-grid,
+    .cs-body > .cs-text-block {
       margin-bottom: 0;
     }
 
@@ -658,12 +694,28 @@ const galleryStart = nextIndex;
       grid-template-columns: repeat(3, 1fr);
     }
 
-    .cs-row-stack-cell img {
-      max-height: 280px;
+    .cs-goal-frame,
+    .cs-row-frame,
+    .cs-grid-cell {
+      aspect-ratio: auto;
+    }
+
+    .cs-row-stack-cell {
+      aspect-ratio: auto;
     }
 
     .cs-goal-frame img {
+      height: auto;
       max-height: 560px;
+    }
+
+    .cs-row-frame img {
+      height: auto;
+    }
+
+    .cs-row-stack-cell img {
+      height: auto;
+      max-height: 280px;
     }
 
     .cs-eyebrow--media-row {
@@ -672,7 +724,7 @@ const galleryStart = nextIndex;
     }
 
     .cs-grid-cell img {
-      height: 100%;
+      height: auto;
       max-height: 615px;
     }
 
