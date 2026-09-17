@@ -147,8 +147,8 @@ a:hover {
   justify-content: center;
   width: fit-content;
   margin-top: 20px;
-  /* Facile Sans has extra metric space below caps; bias padding so text looks centered */
-  padding: 0.95em 1.55em 0.7em;
+  /* Slight top bias offsets Facile Sans's extra bottom metrics without dropping the label */
+  padding: 0.82em 1.55em 0.7em;
 }
 
 .secondary-btn {
