@@ -22,6 +22,8 @@ jobs:
         with:
           node-version: 20
           package-manager: npm
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
 
   deploy:
     needs: build

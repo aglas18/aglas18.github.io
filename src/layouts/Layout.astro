@@ -1,3 +1,7 @@
+---
+import PasswordGate from "../components/PasswordGate.astro";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,11 +13,16 @@
       href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap"
       rel="stylesheet"
     />
+    <script is:inline>
+      document.documentElement.classList.add("password-locked");
+    </script>
 
     <title>Adrian Glasmyre | Brand & Digital Designer</title>
   </head>
   <body>
-    <slot />
+    <PasswordGate>
+      <slot />
+    </PasswordGate>
   </body>
 </html>
 
