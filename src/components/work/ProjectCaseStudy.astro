@@ -751,20 +751,25 @@ const galleryStart = nextIndex;
   }
 
   @media (min-width: 1024px) and (max-width: 1799px) {
+    .cs-hero-media {
+      max-width: min(640px, 55%);
+    }
+
     .cs-hero-image {
-      max-height: min(320px, 38vh);
+      max-height: 450px;
     }
 
     .cs-goal-frame img,
-    .cs-row-frame img,
+    .cs-row:not(:has(.cs-row-stack-bottom)) .cs-row-frame img,
     .cs-grid-cell img {
-      min-height: 0;
-      height: auto;
-      max-height: 380px;
+      height: 450px;
+      min-height: 450px;
+      max-height: 450px;
+      object-fit: cover;
     }
 
     .cs-row-stack-cell img {
-      max-height: 200px;
+      max-height: 220px;
     }
   }
 </style>
