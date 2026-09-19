@@ -18,8 +18,6 @@ const allWork = Object.values(
           class="project-image"
           src={work.frontmatter.cardImage.src}
           alt={work.frontmatter.cardImage.alt}
-          width="100%"
-          height="100%"
         />
 
         <div class="project-info">
@@ -97,9 +95,13 @@ const allWork = Object.values(
   }
 
   .project-image {
-    border-radius: 20px;
+    display: block;
+    width: 100%;
     height: auto;
+    border-radius: 20px;
     margin-bottom: 15px;
+    object-fit: contain;
+    object-position: center;
   }
 
   .project-items {
@@ -174,8 +176,6 @@ const allWork = Object.values(
 
     .project-image {
       margin-bottom: 20px;
-      height: 375px;
-      object-fit: cover;
     }
   }
 </style>
