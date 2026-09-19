@@ -31,17 +31,17 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <section class="about-content">
-      <div class="image-wrapper">
+      <div class="image-wrapper portfolio-wrap">
         <img
-          class="about-me-img"
+          class="about-me-img portfolio-img"
           src="/assets/images/about/portfolio.png"
           alt="Portfolio Review"
         />
       </div>
 
-      <div class="image-wrapper">
+      <div class="image-wrapper grad-wrap">
         <img
-          class="about-me-img"
+          class="about-me-img grad-img"
           src="/assets/images/about/grad.jpg"
           alt="Graduation Photo"
         />
@@ -127,6 +127,7 @@ import Layout from "../layouts/Layout.astro";
     display: block;
     border-radius: 30px;
     object-fit: cover;
+    object-position: center;
   }
 
   .item {
@@ -170,15 +171,22 @@ import Layout from "../layouts/Layout.astro";
   .hehe {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
   }
 
   .yippe-img {
+    display: block;
     height: 60px;
+    width: auto;
+    flex-shrink: 0;
+    /* Facile Sans sits slightly high in the line box */
+    transform: translateY(-0.1em);
   }
 
   .hehe h2 {
-    margin-bottom: 10px;
+    margin: 0;
   }
 
   /* Tablet */
@@ -201,22 +209,18 @@ import Layout from "../layouts/Layout.astro";
     /* Adjust these ratios to taste */
     .image-wrapper {
       flex: 0.8;
+      min-width: 0;
       display: flex;
+      height: auto;
     }
 
     .education {
       flex: 1.4;
-    }
-
-    .about-me-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 30px;
+      min-width: 0;
     }
   }
 
-  /* Desktop */
+  /* Desktop / laptop */
   @media (min-width: 1024px) {
     .about-hero {
       padding: 80px 0 60px;
@@ -227,13 +231,52 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .about-content {
-      gap: 40px;
+      flex-direction: row;
+      gap: 20px;
+      align-items: stretch;
     }
 
-    .about-content {
-      flex-direction: row;
-      gap: 40px;
-      align-items: stretch;
+    .image-wrapper {
+      height: auto;
+      align-self: stretch;
+    }
+
+    .portfolio-wrap {
+      flex: 1.35;
+    }
+
+    .grad-wrap {
+      flex: 0.88;
+    }
+
+    .education {
+      flex: 2.35;
+      padding: 60px 44px;
+    }
+
+    .education h2 {
+      margin-bottom: 10px;
+    }
+
+    .education > p {
+      margin: 12px 0 0;
+    }
+
+    .about-me-img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: auto;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 30px;
+    }
+
+    .portfolio-img {
+      object-position: 22% center;
+    }
+
+    .grad-img {
+      object-position: 48% center;
     }
   }
 </style>

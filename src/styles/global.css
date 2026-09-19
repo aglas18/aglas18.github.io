@@ -165,24 +165,20 @@ a:hover {
 
 .flower-heading {
   position: relative;
-  padding-left: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 
 .flower-heading::before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 63%;
-  transform: translateY(-50%);
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
   background: var(--flower-stroke) no-repeat center / contain;
-}
-
-.flower-heading {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+  /* Facile Sans sits slightly high in the line box */
+  transform: translateY(-0.1em);
 }
 
 .main-wrapper {
@@ -271,10 +267,6 @@ a:hover {
   .flower-heading::before {
     width: 40px;
     height: 40px;
-  }
-
-  .flower-heading {
-    padding-left: 55px;
   }
 
   .link {
