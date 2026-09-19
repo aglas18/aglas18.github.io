@@ -274,6 +274,8 @@ a:hover {
   }
 }
 
-.cs-row:not(:has(.cs-row-stack-bottom)) .cs-row-frame img {
-  min-height: 550px;
+@media (min-width: 1800px) {
+  .cs-row:not(:has(.cs-row-stack-bottom)) .cs-row-frame img {
+    min-height: 550px;
+  }
 }

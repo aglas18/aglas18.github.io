@@ -749,4 +749,22 @@ const galleryStart = nextIndex;
       margin-bottom: 22px;
     }
   }
+
+  @media (min-width: 1024px) and (max-width: 1799px) {
+    .cs-hero-image {
+      max-height: min(320px, 38vh);
+    }
+
+    .cs-goal-frame img,
+    .cs-row-frame img,
+    .cs-grid-cell img {
+      min-height: 0;
+      height: auto;
+      max-height: 380px;
+    }
+
+    .cs-row-stack-cell img {
+      max-height: 200px;
+    }
+  }
 </style>

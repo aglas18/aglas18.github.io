@@ -187,6 +187,12 @@ const { frontmatter } = Astro.props;
     }
   }
 
+  @media (min-width: 1024px) and (max-width: 1799px) {
+    .hero-media img {
+      max-height: min(320px, 38vh);
+    }
+  }
+
   @media (min-width: 769px) {
     .project-info {
       flex-direction: row;
