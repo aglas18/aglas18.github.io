@@ -49,6 +49,17 @@ const allWork = Object.values(
       </a>
     ))
   }
+
+  <div class="project-item project-teaser">
+    <div class="project-info teaser-info">
+      <h3>Want to See More Projects?</h3>
+      <p>
+        Beyond the projects featured here, I have additional work available to
+        share privately. Feel free to schedule a call to see more.
+      </p>
+      <a class="btn teaser-btn" href="/contact">Get in touch</a>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -132,15 +143,49 @@ const allWork = Object.values(
     flex: 1 1 auto;
   }
 
+  .project-teaser {
+    background: var(--gradient-accent);
+    justify-content: center;
+    box-shadow: none;
+  }
+
+  .teaser-info {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .project-teaser h3,
+  .project-teaser p {
+    color: var(--platinum);
+  }
+
+  .teaser-info p {
+    flex: 0 0 auto;
+  }
+
+  .teaser-btn {
+    background-color: var(--platinum);
+    color: var(--amaranth);
+    margin-top: 20px;
+  }
+
   @media (min-width: 768px) {
     .project-items {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .project-item:hover {
+    .project-item:hover:not(.project-teaser) {
       box-shadow: 0px 0px 20px #0e171b29;
       transform: translateY(-2px);
       border-color: transparent;
+    }
+
+    .teaser-btn:hover {
+      background-color: transparent;
+      border-color: var(--platinum);
+      color: var(--platinum);
     }
 
     .project-item:hover .link-btn a {
@@ -163,6 +208,10 @@ const allWork = Object.values(
     .project-item {
       box-shadow: none;
       border-color: var(--dust-gray);
+    }
+
+    .project-teaser {
+      border-color: transparent;
     }
   }
 
